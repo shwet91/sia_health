@@ -1,11 +1,13 @@
-  import Hero from "@/components/landingPage/Hero";
-  import Navbar from "@/components/landingPage/Navbar";
+import Hero from "@/components/landingPage/Hero";
+import Navbar from "@/components/landingPage/Navbar";
 
 export default function Home() {
   return (
-  <div>
-    <Navbar></Navbar>
-    <Hero></Hero>
-  </div>
+    <main className="h-[200vh] w-full">
+      <Navbar />
+      <div className="w-full">
+        <Hero />
+      </div>
+    </main>
   );
 }

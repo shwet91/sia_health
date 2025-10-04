@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div
-      className="w-full min-h-[calc(100vh-64px)] md:min-h-[420px] lg:min-h-[520px] flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 bg-orange-200 1bg-gradient-to-br from-[#FFF4EB] via-[#FFD4B3] to-[#FFB380] overflow-hidden"
+      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 bg-orange-200 1bg-gradient-to-br from-[#FFF4EB] via-[#FFD4B3] to-[#FFB380] overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
     >

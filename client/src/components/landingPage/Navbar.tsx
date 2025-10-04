@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="sticky top-0 z-50 bg-[#FFF4EBA6] shadow-[0px_10px_30px_-10px_rgba(46,19,0,0.1)] w-full"
+      className="fixed top-0 left-0 right-0 z-50 shadow-[0px_10px_30px_-10px_rgba(46,19,0,0.1)] w-full"
       data-name="Navbar"
       data-node-id="42:2054"
       style={{ backdropFilter: "blur(8px)" }}
