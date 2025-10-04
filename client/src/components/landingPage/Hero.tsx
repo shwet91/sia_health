@@ -68,8 +68,22 @@ export default function Hero() {
               </button>
             </div>
 
+            {/* Large themed CTA placed just below the two buttons */}
+            <div className="mt-4 w-full sm:w-auto">
+              <button
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-xl transition-transform hover:scale-[0.995]"
+                style={{
+                  background:
+                    "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
+                }}
+                aria-label="Give a Harmone Test in a minute"
+              >
+                Give a Harmone Test in a minute
+              </button>
+            </div>
+
             <div className="mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center md:text-left ">
-              4.9/5 average rating ★★★★★
+             92% of users reported improved symptoms within 3 months.
             </div>
           </div>
 
