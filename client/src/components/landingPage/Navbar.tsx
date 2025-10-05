@@ -2,16 +2,19 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Rubik } from "next/font/google";
+
+const rubikFont = Rubik({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-50 shadow-[0px_10px_30px_-10px_rgba(46,19,0,0.1)] w-full"
+      className={` ${rubikFont.className} bg-white fixed top-0 left-0 right-0 z-50 shadow-[0px_10px_30px_-10px_rgba(46,19,0,0.1)] w-full`}
       data-name="Navbar"
       data-node-id="42:2054"
-      style={{ backdropFilter: "blur(8px)" }}
+      // style={{ backdropFilter: "blur(8px)" }}
     >
       <div
         className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8"
@@ -74,19 +77,22 @@ export default function Navbar() {
             href="#approach"
             className="hover:text-[#EB5200] transition-colors"
           >
-            Our Approach
+            Home
           </a>
           <a href="#team" className="hover:text-[#EB5200] transition-colors">
-            Team
+            Solutions
           </a>
           <a
             href="#resources"
             className="hover:text-[#EB5200] transition-colors"
           >
-            Resources
+            About us
           </a>
           <a href="#faq" className="hover:text-[#EB5200] transition-colors">
-            FAQ
+            Contact
+          </a>
+              <a href="#faq" className="hover:text-[#EB5200] transition-colors">
+            Learn
           </a>
         </nav>
 
@@ -95,9 +101,6 @@ export default function Navbar() {
           data-name="cta"
           data-node-id="42:2089"
         >
-          <button className="px-6 py-2 rounded-full border border-[rgba(235,82,0,0.2)] bg-[#fff4eb] text-[#2e1300] font-medium text-sm hover:bg-[#FFE4D1] transition-colors">
-            Login
-          </button>
           <button
             className="px-6 py-2 rounded-full text-white font-medium text-sm hover:opacity-90 transition-opacity"
             style={{

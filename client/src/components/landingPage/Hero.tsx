@@ -1,55 +1,46 @@
 "use client";
 
 import Image from "next/image";
+import { Rubik } from "next/font/google";
+import { Lato } from "next/font/google";
+
+const rubikFont = Rubik({ subsets: ["latin"], weight: ["400", "700", "700"] });
+const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Hero() {
   return (
     <div
-      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 bg-orange-200 1bg-gradient-to-br from-[#FFF4EB] via-[#FFD4B3] to-[#FFB380] overflow-hidden"
+      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
+      style={{ background: "#fcd5b3" }}
     >
-      <div className="container mx-auto max-w-7xl">
+      <div className={` ${latoFont.className} container mx-auto max-w-7xl`}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
-          <div className="w-full md:w-[60%] flex flex-col gap-6 items-center md:items-start justify-center text-center md:text-left">
+          <div className="w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
             <div className="bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-full text-[#2e1300] text-sm md:text-base font-medium">
               Hormonal empathy meets warm science
             </div>
 
-            <div className="flex flex-col items-center md:items-start gap-3 w-full">
-              <h1 className="font-['Playball:Regular',_sans-serif] text-[#2e1300] text-3xl sm:text-4xl md:text-5xl font-light leading-tight">
-                Your Hormones,{" "}
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
-                  }}
-                >
-                  Decoded
-                </span>
+            <div className={` ${rubikFont.className} flex flex-col items-center gap-0 w-full `}>
+              <h1 className=" text-[#2e1300] text-3xl sm:text-4xl md:text-7xl 1font-light 1leading-tight">
+                Reclaim your
               </h1>
-              <h2 className="font-['Playball:Regular',_sans-serif] text-[#2e1300] text-3xl sm:text-4xl md:text-5xl font-light leading-tight">
-                Your Health,{" "}
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
-                  }}
-                >
-                  Reclaimed
-                </span>
-              </h2>
+              <h1
+                className="bg-clip-text text-transparent text-7xl"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
+                }}
+              >
+                Harmonal Health
+              </h1>
             </div>
 
-            <div className="flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
-              <p className="text-base sm:text-lg md:text-xl font-normal">
-                Personalized, science-backed care for PCOS, thyroid, fertility,
-                weight & more.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-normal">
-                Because you deserve more than symptom silencing.
+            <div className=" flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
+              <p className="text-base sm:text-lg md:text-xl font-normal text-center">
+                Personalized, expert-led care for PCOS, thyroid, fertility &
+                more.
               </p>
             </div>
 
@@ -69,7 +60,7 @@ export default function Hero() {
             </div>
 
             {/* Large themed CTA placed just below the two buttons */}
-            <div className="mt-4 w-full sm:w-auto">
+            <div className={` ${rubikFont.className} mt-4 w-full sm:w-auto`}>
               <button
                 className="w-full sm:w-auto px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{
@@ -83,7 +74,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center md:text-left ">
-             92% of users reported improved symptoms within 3 months.
+              92% of users reported improved symptoms within 3 months.
             </div>
           </div>
 

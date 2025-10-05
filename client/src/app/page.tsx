@@ -3,7 +3,7 @@ import Navbar from "@/components/landingPage/Navbar";
 
 export default function Home() {
   return (
-    <main className="h-[200vh] w-full bg-orange-100">
+    <main className="h-[200vh] w-full " style={{ background: "fff2e8" }}>
       <Navbar />
       <div className="w-full">
         <Hero />
