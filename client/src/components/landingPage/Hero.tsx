@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { Rubik } from "next/font/google";
-import { Lato } from "next/font/google";
+// import { Rubik } from "next/font/google";
+// import { Lato } from "next/font/google";
+import { Merriweather } from "next/font/google";
+import "../../styles/landingPage.css";
 
-const rubikFont = Rubik({ subsets: ["latin"], weight: ["300", "300", "700"] });
-const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
+const merriweatherFont = Merriweather({ subsets: ["latin"], weight: ["400", "700"] });
+
+// const rubikFont = Rubik({ subsets: ["latin"], weight: ["300", "300", "700"] });
+// const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Hero() {
   return (
@@ -15,7 +19,7 @@ export default function Hero() {
       data-node-id="42:1942"
       style={{ background: "#fef7e5" }}
     >
-      <div className={` ${latoFont.className} container mx-auto max-w-7xl`}>
+      <div className={` Helvetica container mx-auto max-w-7xl`}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
             <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-xl text-[#2e1300] text-sm md:text-base font-medium">
@@ -23,7 +27,7 @@ export default function Hero() {
             </div>
 
             <div
-              className={` ${rubikFont.className} flex flex-col items-center gap-0 w-full `}
+              className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
             >
               <h1
                 className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-7xl 1font-light 1leading-tight"
@@ -53,7 +57,7 @@ export default function Hero() {
             </div>
 
             {/* Large themed CTA placed just below the two buttons */}
-            <div className={` ${rubikFont.className} mt-0 w-full sm:w-auto`}>
+            <div className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}>
               <button
                 className="w-full sm:w-auto px-8 py-4 rounded-xl text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{
