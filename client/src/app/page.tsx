@@ -1,7 +1,8 @@
 import Hero from "@/components/landingPage/Hero";
 import Navbar from "@/components/landingPage/Navbar";
-import ProblemStatement from "@/components/landingPage/ProblemStatement";
-import Mission from "@/components/landingPage/Mission";
+// import ProblemStatement from "@/components/landingPage/ProblemStatement";
+// import Mission from "@/components/landingPage/Mission";
+import Testimonials from "@/components/landingPage/Testimonials";
 
 export default function Home() {
   return (
@@ -9,8 +10,9 @@ export default function Home() {
       <Navbar />
       <div className="w-full">
         <Hero />
-        <ProblemStatement />
-        <Mission />
+        {/* <ProblemStatement /> */}
+        {/* <Mission /> */}
+        <Testimonials />
       </div>
     </main>
   );
