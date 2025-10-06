@@ -1,5 +1,6 @@
 import Hero from "@/components/landingPage/Hero";
 import Navbar from "@/components/landingPage/Navbar";
+import ProblemStatement from "@/components/landingPage/ProblemStatement";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <div className="w-full">
         <Hero />
+        <ProblemStatement />
       </div>
     </main>
   );

@@ -37,6 +37,7 @@ export default function Navbar() {
         </div>
 
         <button
+          type="button"
           className="md:hidden p-2 text-[#2e1300] hover:bg-[#FFF4EB] rounded-lg transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
@@ -67,31 +68,47 @@ export default function Navbar() {
         </button>
 
         <nav
-          className={`${
-            isMenuOpen ? "flex" : "hidden"
-          } md:flex absolute md:relative top-16 left-0 md:top-auto md:left-auto w-full md:w-auto flex-col md:flex-row bg-[#FFF4EBA6] md:bg-transparent py-4 md:py-0 px-4 md:px-0 space-y-4 md:space-y-0 md:space-x-6 font-medium text-[#2e1300] text-base backdrop-blur-sm md:backdrop-blur-none border-t md:border-t-0 border-[#FFD4B3] shadow-lg md:shadow-none`}
+          className={`flex absolute md:relative top-16 left-0 md:top-auto md:left-auto w-full md:w-auto flex-col md:flex-row bg-[#FFF4EBA6] md:bg-transparent px-4 md:px-0 space-y-4 md:space-y-0 md:space-x-6 font-medium text-[#2e1300] text-base backdrop-blur-sm md:backdrop-blur-none border-t md:border-t-0 border-[#FFD4B3] shadow-lg md:shadow-none z-[60] overflow-visible transition-all duration-300 ease-in-out transform origin-top ${
+            isMenuOpen
+              ? "opacity-100 max-h-[420px] py-4 pointer-events-auto translate-y-0"
+              : "opacity-0 max-h-0 py-0 pointer-events-none -translate-y-2"
+          } md:opacity-100 md:max-h-full md:py-0 md:pointer-events-auto md:translate-y-0`}
           data-name="nav-items"
           data-node-id="42:2084"
         >
           <a
             href="#approach"
+            onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             Home
           </a>
-          <a href="#team" className="hover:text-[#EB5200] transition-colors">
+          <a
+            href="#team"
+            onClick={() => setIsMenuOpen(false)}
+            className="hover:text-[#EB5200] transition-colors"
+          >
             Solutions
           </a>
           <a
             href="#resources"
+            onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             About us
           </a>
-          <a href="#faq" className="hover:text-[#EB5200] transition-colors">
+          <a
+            href="#faq"
+            onClick={() => setIsMenuOpen(false)}
+            className="hover:text-[#EB5200] transition-colors"
+          >
             Contact
           </a>
-              <a href="#faq" className="hover:text-[#EB5200] transition-colors">
+          <a
+            href="#faq"
+            onClick={() => setIsMenuOpen(false)}
+            className="hover:text-[#EB5200] transition-colors"
+          >
             Learn
           </a>
         </nav>
@@ -113,23 +130,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile CTA */}
-      <div
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } md:hidden flex-col gap-4 px-4 pb-4 bg-[#FFF4EBA6] backdrop-blur-sm border-t border-[#FFD4B3]`}
-      >
-        <button className="w-full px-6 py-2 rounded-full border border-[rgba(235,82,0,0.2)] bg-[#fff4eb] text-[#2e1300] font-medium text-sm hover:bg-[#FFE4D1] transition-colors">
-          Login
-        </button>
-        <button
-          className="w-full px-6 py-2 rounded-full text-white font-medium text-sm hover:opacity-90 transition-opacity"
-          style={{
-            background: "linear-gradient(90deg, #EB5200 0%, #FF7E29 100%)",
-          }}
-        >
-          Start Free Quiz
-        </button>
-      </div>
+      {/* mobile CTA removed from here — moved into nav for combined animation */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Rubik } from "next/font/google";
 import { Lato } from "next/font/google";
 
-const rubikFont = Rubik({ subsets: ["latin"], weight: ["400", "700", "700"] });
+const rubikFont = Rubik({ subsets: ["latin"], weight: ["300", "300", "700"] });
 const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Hero() {
@@ -13,18 +13,20 @@ export default function Hero() {
       className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
-      style={{ background: "#fcd5b3" }}
+      style={{ background: "#fef7e5" }}
     >
       <div className={` ${latoFont.className} container mx-auto max-w-7xl`}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
-            <div className="bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-full text-[#2e1300] text-sm md:text-base font-medium">
+            <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-xl text-[#2e1300] text-sm md:text-base font-medium">
               Hormonal empathy meets warm science
             </div>
 
-            <div className={` ${rubikFont.className} flex flex-col items-center gap-0 w-full `}>
-              <h1 className=" text-[#2e1300] text-3xl sm:text-4xl md:text-7xl 1font-light 1leading-tight">
-                Reclaim your
+            <div
+              className={` ${rubikFont.className} flex flex-col items-center gap-0 w-full `}
+            >
+              <h1 className=" text-[#2e1300] text-5xl sm:text-4xl md:text-7xl 1font-light 1leading-tight">
+                Reclaim Your
               </h1>
               <h1
                 className="bg-clip-text text-transparent text-7xl"
@@ -45,24 +47,15 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <button
-                className="px-6 sm:px-8 py-3 rounded-full shadow-md text-white font-medium text-sm sm:text-base w-full sm:w-auto hover:opacity-90 transition-opacity"
-                style={{
-                  background:
-                    "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
-                }}
-              >
-                Do you have PCOS ?
-              </button>
-              <button className="px-6 sm:px-8 py-3 rounded-full border border-[#EB5200] bg-[#fff4eb] text-[#2e1300] font-medium text-sm sm:text-base w-full sm:w-auto hover:bg-[#FFE4D1] transition-colors">
+              <button className="px-6 sm:px-8 py-3 rounded-xl border border-[#EB5200] bg-[#fff4eb] text-[#2e1300] font-medium text-sm sm:text-base w-full sm:w-auto hover:bg-[#FFE4D1] transition-colors">
                 Free Discovery Call
               </button>
             </div>
 
             {/* Large themed CTA placed just below the two buttons */}
-            <div className={` ${rubikFont.className} mt-4 w-full sm:w-auto`}>
+            <div className={` ${rubikFont.className} mt-0 w-full sm:w-auto`}>
               <button
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-xl transition-transform hover:scale-[0.995]"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{
                   background:
                     "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
