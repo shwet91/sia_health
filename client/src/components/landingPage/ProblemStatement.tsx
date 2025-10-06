@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import { Lato } from "next/font/google";
+import Image from "next/image";
+
+const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function ProblemStatement() {
   return (
@@ -13,7 +17,7 @@ export default function ProblemStatement() {
           <div>
             <h3
               id="problem-heading"
-              className="text-3xl md:text-4xl font-extrabold text-[#2e1300] leading-tight"
+              className={`text-3xl md:text-4xl ${latoFont.className} text-[#2e1300] leading-tight`}
             >
               Why women struggle with hormonal health today
             </h3>
@@ -66,89 +70,13 @@ export default function ProblemStatement() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="grid grid-cols-3 gap-4 max-w-sm">
-              <div className="bg-[#fff7f0] rounded-xl p-4 flex flex-col items-center text-center shadow-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-[#ff7e29]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 2v6"
-                    stroke="#FF7E29"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M7 8c0 3.866 3.134 7 7 7s7-3.134 7-7"
-                    stroke="#FF7E29"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="mt-3 font-semibold text-sm text-[#2e1300]">
-                  Fatigue
-                </div>
-                <div className="text-xs text-[#6b6158] mt-1">
-                  Low energy, brain fog
-                </div>
-              </div>
-
-              <div className="bg-[#fff7f0] rounded-xl p-4 flex flex-col items-center text-center shadow-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-[#ff7e29]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 3c1.657 0 3 1.343 3 3 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3z"
-                    stroke="#FF7E29"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M5 21c1.5-4 6-7 7-7s5.5 3 7 7"
-                    stroke="#FF7E29"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="mt-3 font-semibold text-sm text-[#2e1300]">
-                  Mood
-                </div>
-                <div className="text-xs text-[#6b6158] mt-1">
-                  Anxiety & swings
-                </div>
-              </div>
-
-              <div className="bg-[#fff7f0] rounded-xl p-4 flex flex-col items-center text-center shadow-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-[#ff7e29]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M4 7h16M7 11h10M9 15h6"
-                    stroke="#FF7E29"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="mt-3 font-semibold text-sm text-[#2e1300]">
-                  Weight
-                </div>
-                <div className="text-xs text-[#6b6158] mt-1">
-                  Unexplained gain
-                </div>
-              </div>
+            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/girl_swings.jpg"
+                alt="woman illustrating fatigue"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
