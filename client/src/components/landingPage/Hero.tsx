@@ -25,16 +25,16 @@ export default function Hero() {
             <div
               className={` ${rubikFont.className} flex flex-col items-center gap-0 w-full `}
             >
-              <h1 className=" text-[#2e1300] text-5xl sm:text-4xl md:text-7xl 1font-light 1leading-tight">
-                Reclaim Your
-              </h1>
               <h1
-                className="bg-clip-text text-transparent text-7xl"
+                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-7xl 1font-light 1leading-tight"
                 style={{
                   backgroundImage:
                     "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
                 }}
               >
+                Reclaim Your
+              </h1>
+              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-7xl">
                 Harmonal Health
               </h1>
             </div>
