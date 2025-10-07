@@ -1,6 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import { Merriweather } from "next/font/google";
+import "../../styles/landingPage.css";
+
+const merriweather = Merriweather({ subsets: ["latin"] });
 
 interface FormData {
   fullName: string;
@@ -42,7 +46,19 @@ export default function Contact() {
   };
 
   return (
-    <section className="w-full bg-white p-8 rounded-2xl max-w-4xl mx-auto">
+    <section className="w-full Helvetica bg-gradient-to-br from-[#FFF4EB] to-[#FFE4D3] p-8 rounded-2xl max-w-6xl mx-auto  mb-10">
+      <div className={`text-center mb-12 ${merriweather.className}`}>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Ready to reclaim your health?
+          <br />
+          <span className="text-[#FF4B00]">Book your appointment now.</span>
+        </h2>
+        <p className="text-xl text-[#663014]">
+          Take the first step towards hormonal wellness with a comprehensive
+          consultation.
+        </p>
+      </div>
+
       <form
         onSubmit={handleSubmit}
         className="grid grid-cols-1 md:grid-cols-2 gap-6"

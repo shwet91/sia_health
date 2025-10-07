@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Merriweather } from "next/font/google";
 import { ChevronDown } from "lucide-react";
+import "../../styles/landingPage.css";
 
 const merriweather = Merriweather({ subsets: ["latin"] });
 
@@ -47,7 +48,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full bg-white py-16 md:py-20 Helvetica">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-12">
           <h2

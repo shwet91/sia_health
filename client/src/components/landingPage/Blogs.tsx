@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import "../../styles/landingPage.css";
 
 interface BlogPost {
   id: number;
@@ -63,7 +64,7 @@ const blogPosts: BlogPost[] = [
 
 export default function Blogs() {
   return (
-    <section className="w-full bg-gradient-to-br from-[#FFF4EB] to-[#FFE4D3] py-16 md:py-20">
+    <section className="w-full bg-gradient-to-br from-[#FFF4EB] to-[#FFE4D3] py-16 md:py-20 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (

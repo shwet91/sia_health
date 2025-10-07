@@ -7,6 +7,7 @@ import {
   Users,
   RefreshCcw,
 } from "lucide-react";
+import "../../styles/landingPage.css";
 
 const merriweather = Merriweather({ subsets: ["latin"] });
 
@@ -43,7 +44,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full bg-white py-16 md:py-20 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center max-w-4xl mx-auto">
           <h2

@@ -7,20 +7,20 @@ const merriweather = Merriweather({ subsets: ["latin"] });
 
 export default function WhySia() {
   return (
-    <section className="w-full Helvetica bg-white py-16 md:py-20">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="w-full Helvetica bg-white py-12 md:py-16 lg:py-20 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <h2
           className={
             merriweather.className +
-            " text-4xl md:text-5xl font-bold mb-12 max-w-3xl"
+            " text-3xl md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-12 max-w-3xl px-4 lg:px-0"
           }
         >
           Why Choose <span className="text-[#FF4B00]">SIA Health</span>?
         </h2>
 
-        <div className="flex gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Left side - Benefits list */}
-          <div className="flex-1">
+          <div className="w-full lg:w-1/2">
             <div className="space-y-6">
               {/* Each benefit item */}
               <div className="flex items-start gap-4">
@@ -100,7 +100,7 @@ export default function WhySia() {
           </div>
 
           {/* Right side - Comparison cards */}
-          <div className="flex-1">
+          <div className="w-full lg:w-1/2">
             <div className="space-y-6">
               {/* Generic Plans Card */}
               <div className="bg-[#FFF4EB] rounded-2xl p-8">

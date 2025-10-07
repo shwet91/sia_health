@@ -3,10 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Heart } from "lucide-react";
+import "../../styles/landingPage.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A0A03] text-white py-16">
+    <footer className="bg-[#1A0A03] text-white py-16 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
