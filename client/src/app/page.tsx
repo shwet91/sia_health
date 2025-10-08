@@ -13,6 +13,7 @@ import Blogs from "@/components/landingPage/Blogs";
 import FAQ from "@/components/landingPage/FAQ";
 import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/landingPage/Footer";
+import WhySia2 from "@/components/landingPage/WhySia2";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Team />
         <Services />
         <WhySia />
+        <WhySia2 />
         <WhatWeDo />
         <Blogs />
         <FAQ />
