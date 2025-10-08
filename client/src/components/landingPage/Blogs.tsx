@@ -36,30 +36,30 @@ const blogPosts: BlogPost[] = [
     description:
       "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
   },
-  {
-    id: 4,
-    image: "/blogs/4.jpg",
-    readTime: "10 min read",
-    title: "The Hormone-Weight Connection",
-    description:
-      "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
-  },
-  {
-    id: 5,
-    image: "/blogs/5.jpg",
-    readTime: "10 min read",
-    title: "The Hormone-Weight Connection",
-    description:
-      "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
-  },
-  {
-    id: 6,
-    image: "/blogs/6.jpg",
-    readTime: "10 min read",
-    title: "The Hormone-Weight Connection",
-    description:
-      "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
-  },
+  // {
+  //   id: 4,
+  //   image: "/blogs/4.jpg",
+  //   readTime: "10 min read",
+  //   title: "The Hormone-Weight Connection",
+  //   description:
+  //     "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
+  // },
+  // {
+  //   id: 5,
+  //   image: "/blogs/5.jpg",
+  //   readTime: "10 min read",
+  //   title: "The Hormone-Weight Connection",
+  //   description:
+  //     "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
+  // },
+  // {
+  //   id: 6,
+  //   image: "/blogs/6.jpg",
+  //   readTime: "10 min read",
+  //   title: "The Hormone-Weight Connection",
+  //   description:
+  //     "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
+  // },
 ];
 
 export default function Blogs() {

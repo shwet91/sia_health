@@ -7,7 +7,7 @@ import Testimonials from "@/components/landingPage/Testimonials";
 import LovableProblem from "@/components/landingPage/LovableProblem";
 import Team from "@/components/landingPage/Team";
 import Services from "@/components/landingPage/Services";
-import WhySia from "@/components/landingPage/WhySia";
+// import WhySia from "@/components/landingPage/WhySia";
 import WhatWeDo from "@/components/landingPage/WhatWeDo";
 import Blogs from "@/components/landingPage/Blogs";
 import FAQ from "@/components/landingPage/FAQ";
@@ -28,7 +28,7 @@ export default function Home() {
         <LovableProblem />
         <Team />
         <Services />
-        <WhySia />
+        {/* <WhySia /> */}
         <WhySia2 />
         <WhatWeDo />
         <Blogs />
