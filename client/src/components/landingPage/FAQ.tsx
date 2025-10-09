@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Merriweather } from "next/font/google";
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import "../../styles/landingPage.css";
 
 const merriweather = Merriweather({ subsets: ["latin"] });
@@ -41,55 +41,99 @@ const faqItems: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number>(-1);
+  const [openIndex, setOpenIndex] = useState<number>(0);
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-20 Helvetica">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <div className="text-center mb-12">
+    <section className="w-full bg-white py-12 md:py-16 Helvetica">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-10">
           <h2
-            className={`${merriweather.className} text-4xl md:text-5xl font-bold mb-4`}
+            className={`${merriweather.className} text-3xl md:text-4xl font-bold mb-2 text-[#100f2f]`}
           >
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-[#663014]">
+          <p className="text-sm text-[#663014]">
             Get answers to the most common questions about our approach and
             services.
           </p>
         </div>
 
-        <div className="space-y-4">
-          {faqItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#FFF4EB] rounded-2xl overflow-hidden transition-all duration-300"
-            >
-              <button
-                onClick={() => toggleAccordion(index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left"
-              >
-                <span className="text-lg font-semibold text-[#2D1810]">
-                  {item.question}
-                </span>
-                <ChevronDown
-                  className={`w-5 h-5 text-[#FF4B00] transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* FAQ Section - Left Side */}
+          <div className="space-y-3">
+            {faqItems.map((item, index) => (
               <div
-                className={`px-8 transition-all duration-300 ${
-                  openIndex === index ? "pb-6" : "h-0 overflow-hidden"
-                }`}
+                key={index}
+                className="border border-gray-200 rounded-lg overflow-hidden bg-white transition-all duration-300"
               >
-                <p className="text-[#663014] leading-relaxed">{item.answer}</p>
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="w-full px-5 py-3 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <span className="flex-grow text-sm md:text-base font-medium text-[#1a4d3e]">
+                    {item.question}
+                  </span>
+                  <ChevronRight
+                    className={`flex-shrink-0 w-4 h-4 text-gray-600 transition-transform duration-300 ${
+                      openIndex === index ? "rotate-90" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`transition-all duration-300 ease-in-out ${
+                    openIndex === index
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0 overflow-hidden"
+                  }`}
+                >
+                  <div className="px-5 pb-3 pl-[3.5rem]">
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Right Side Content Panel */}
+          <div className=" bg-[#FFE4D3] 1bg-gray-200 rounded-xl p-6 text-gray-900 flex flex-col justify-center">
+            <div className="space-y-4">
+              <h3
+                className={`${merriweather.className} text-xl md:text-2xl font-bold`}
+              >
+                Have More Questions?
+              </h3>
+              <p className="text-sm leading-relaxed opacity-90">
+                We&apos;re here to help you on your health journey.
+              </p>
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg">📧</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">info@siahealth.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg">📞</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+              </div>
+              <button className="mt-4 w-full bg-white text-[#1a4d3e] px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm">
+                Schedule a Consultation
+              </button>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

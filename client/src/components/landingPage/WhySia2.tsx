@@ -1,11 +1,16 @@
 import React from "react";
+import Image from "next/image";
+import "../../styles/landingPage.css";
+import { Patrick_Hand } from "next/font/google";
+
+const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
 
 function WhySia2() {
   const services = [
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -20,7 +25,7 @@ function WhySia2() {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -36,7 +41,7 @@ function WhySia2() {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -51,7 +56,7 @@ function WhySia2() {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -66,7 +71,7 @@ function WhySia2() {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -81,7 +86,7 @@ function WhySia2() {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-[#e91e63]"
+          className="w-10 h-10 md:w-12 md:h-12 text-[#FF4B00]"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -96,40 +101,51 @@ function WhySia2() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-8 md:py-12 lg:py-14 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-3">
-            Why choose Sia Health ?
-          </h2>
-          <div className="w-12 h-0.5 bg-[#e91e63] mx-auto mb-3"></div>
-          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto px-4">
-            Designed by women who truly understand your journey not just your
-            symptoms. Because you deserve science-backed support that heals your
-            body and empowers your mind.
-          </p>
-        </div>
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg p-4 lg:p-5 hover:shadow-lg transition-shadow duration-300 border border-gray-100"
-            >
-              <div className="mb-3">{service.icon}</div>
-              <h3 className="text-lg lg:text-xl font-semibold text-[#1e3a5f] mb-1.5">
-                {service.title}
-              </h3>
-              <p className="text-sm lg:text-base font-medium text-gray-700 mb-2">
-                {service.subtitle}
-              </p>
-              <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">
-                {service.description}
-              </p>
+    <section className="bg-white py-6 md:py-8 Helvetica lg:py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-center">
+          {/* Left Side - Heading and Description */}
+          <div className="lg:pr-4">
+            <div className="mb-4 md:mb-6 relative w-full h-[250px] md:h-[343px]">
+              <Image
+                src="/yoga.jpg"
+                alt="Woman practicing wellness"
+                fill
+                className="rounded-2xl object-cover"
+              />
             </div>
-          ))}
+            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight ${patrickHand.className}`}>
+              Why choose <span className="text-[#FF4B00]">Sia Health ?</span>
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
+              From curated properties to end-to-end management, we simplify
+              investing so you can focus on growing your wealth
+            </p>
+            <button className="bg-[#FF4B00] text-white px-6 py-2 rounded-md hover:bg-[#ff6827] transition-colors duration-300 text-xs md:text-sm font-medium">
+              Find the best for you
+            </button>
+          </div>
+
+          {/* Right Side - Cards Grid */}
+          <div className="grid grid-cols-2 gap-2.5 md:gap-3">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 rounded-xl p-3 md:p-4 hover:shadow-md transition-all duration-300 border border-gray-100"
+              >
+                <div className="mb-2">{service.icon}</div>
+                <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-0.5">
+                  {service.title}
+                </h3>
+                <p className="text-xs font-medium text-gray-700 mb-1">
+                  {service.subtitle}
+                </p>
+                <p className="text-xs text-gray-600 leading-snug">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
