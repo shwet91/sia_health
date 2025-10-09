@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { Lato } from "next/font/google";
+// import { Lato } from "next/font/google";
 import Image from "next/image";
 
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 
-const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
+// const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 const merriweather = Merriweather({ subsets: ["latin"] });
 
 export default function ProblemStatement() {
