@@ -1,202 +1,211 @@
 "use client";
 
 import React, { useState } from "react";
-import { Merriweather } from "next/font/google";
-import "../../styles/landingPage.css";
-
-const merriweather = Merriweather({ subsets: ["latin"] });
-
-interface FormData {
-  fullName: string;
-  email: string;
-  phone: string;
-  primaryConcern: string;
-  preferredDate: string;
-  preferredTime: string;
-  notes: string;
-}
+import Image from "next/image";
 
 export default function Contact() {
-  const [formData, setFormData] = useState<FormData>({
-    fullName: "",
+  const [formData, setFormData] = useState({
+    name: "",
     email: "",
     phone: "",
-    primaryConcern: "",
-    preferredDate: "",
-    preferredTime: "",
-    notes: "",
+    date: "",
+    service: "",
+    department: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    console.log("Form submitted:", formData);
+    // Add your form submission logic here
   };
 
   return (
-    <section className="w-full Helvetica bg-gradient-to-br from-[#FFF4EB] to-[#FFE4D3] p-8 rounded-2xl max-w-6xl mx-auto  mb-10">
-      <div className={`text-center mb-12 ${merriweather.className}`}>
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Ready to reclaim your health?
-          <br />
-          <span className="text-[#FF4B00]">Book your appointment now.</span>
-        </h2>
-        <p className="text-xl text-[#663014]">
-          Take the first step towards hormonal wellness with a comprehensive
-          consultation.
-        </p>
+    <section id="contact" className="w-full bg-gray-1001 bg-[#FFE4D3] p-0 m-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-full h-screen min-h-[700px]">
+        {/* Left Side - Image */}
+        <div className="relative overflow-hidden bg-gray-300">
+          <Image
+            src="/contact.jpg"
+            alt="Healthcare professionals"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+
+        {/* Right Side - Form */}
+        <div className="bg-[#1a1a1a]1 flex items-center justify-center px-10 py-16 lg:px-20">
+          <div className="w-full max-w-[600px]">
+            {/* Subtitle with line */}
+            <p className="text-[#FF4B00] text-sm font-medium tracking-wider mb-3 uppercase flex items-center">
+              <span className="inline-block w-10 h-0.5 bg-[#FF4B00] mr-3"></span>
+              Reservation
+            </p>
+
+            {/* Title */}
+            <h2 className="text-[#130e2e] text-4xl lg:text-[42px] font-bold mb-5 leading-tight">
+              Book An <span className="text-[#FF4B00]">Appointment Now!</span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-[#b0b0b0] text-[15px] leading-relaxed mb-9">
+              Sia Health provides great services. We are dedicated to helping
+              you achieve optimal health and wellness through personalized care
+              and expert guidance.
+            </p>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              {/* Row 1: Name & Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-white text-[15px] outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#808080]"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-white text-[15px] outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#808080]"
+                  required
+                />
+              </div>
+
+              {/* Row 2: Phone & Date */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-white text-[15px] outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#808080]"
+                  required
+                />
+                <input
+                  type="date"
+                  name="date"
+                  placeholder="Appointment Date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-[#808080] text-[15px] outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#808080] [color-scheme:dark]"
+                  required
+                />
+              </div>
+
+              {/* Row 3: Service & Department Dropdowns */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="relative">
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-[#808080] text-[15px] outline-none focus:border-[#FF4B00] transition-colors cursor-pointer appearance-none pr-8 invalid:text-[#808080]"
+                    required
+                  >
+                    <option value="">- Select Service</option>
+                    <option
+                      value="nutrition"
+                      className="bg-[#1a1a1a] text-white"
+                    >
+                      Nutrition Consulting
+                    </option>
+                    <option value="fitness" className="bg-[#1a1a1a] text-white">
+                      Fitness Training
+                    </option>
+                    <option
+                      value="wellness"
+                      className="bg-[#1a1a1a] text-white"
+                    >
+                      Wellness Coaching
+                    </option>
+                    <option value="therapy" className="bg-[#1a1a1a] text-white">
+                      Therapy Sessions
+                    </option>
+                  </select>
+                  <svg
+                    className="absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#808080"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+                <div className="relative">
+                  <select
+                    name="department"
+                    value={formData.department}
+                    onChange={handleChange}
+                    className="w-full py-4 bg-transparent border-0 border-b border-[#404040] text-[#808080] text-[15px] outline-none focus:border-[#FF4B00] transition-colors cursor-pointer appearance-none pr-8 invalid:text-[#808080]"
+                    required
+                  >
+                    <option value="">- Select Department</option>
+                    <option
+                      value="nutrition"
+                      className="bg-[#1a1a1a] text-white"
+                    >
+                      Nutrition
+                    </option>
+                    <option value="fitness" className="bg-[#1a1a1a] text-white">
+                      Fitness
+                    </option>
+                    <option
+                      value="mental-health"
+                      className="bg-[#1a1a1a] text-white"
+                    >
+                      Mental Health
+                    </option>
+                    <option value="general" className="bg-[#1a1a1a] text-white">
+                      General Wellness
+                    </option>
+                  </select>
+                  <svg
+                    className="absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#808080"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="bg-[#FF4B00] text-[#130e2e] border-none py-[18px] px-10 text-sm font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit mt-2 rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0"
+              >
+                MAKE APPOINTMENT
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-
-      <form
-        onSubmit={handleSubmit}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        {/* Full Name */}
-        <div className="flex flex-col">
-          <label htmlFor="fullName" className="text-[#2D1810] mb-2">
-            Full Name <span className="text-[#FF4B00]">*</span>
-          </label>
-          <input
-            type="text"
-            id="fullName"
-            name="fullName"
-            required
-            placeholder="Enter your full name"
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white"
-            value={formData.fullName}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Email */}
-        <div className="flex flex-col">
-          <label htmlFor="email" className="text-[#2D1810] mb-2">
-            Email Address <span className="text-[#FF4B00]">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Enter your email address"
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Phone */}
-        <div className="flex flex-col">
-          <label htmlFor="phone" className="text-[#2D1810] mb-2">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Primary Concern */}
-        <div className="flex flex-col">
-          <label htmlFor="primaryConcern" className="text-[#2D1810] mb-2">
-            Primary Concern <span className="text-[#FF4B00]">*</span>
-          </label>
-          <select
-            id="primaryConcern"
-            name="primaryConcern"
-            required
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white appearance-none"
-            value={formData.primaryConcern}
-            onChange={handleChange}
-          >
-            <option value="">Select your main concern</option>
-            <option value="PCOS">PCOS</option>
-            <option value="Thyroid">Thyroid</option>
-            <option value="Weight">Weight</option>
-            <option value="Skin">Skin</option>
-            <option value="Periods">Periods</option>
-            <option value="Fertility">Fertility</option>
-            <option value="Mood">Mood</option>
-          </select>
-        </div>
-
-        {/* Preferred Date */}
-        <div className="flex flex-col">
-          <label htmlFor="preferredDate" className="text-[#2D1810] mb-2">
-            Preferred Date
-          </label>
-          <input
-            type="date"
-            id="preferredDate"
-            name="preferredDate"
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white"
-            value={formData.preferredDate}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Preferred Time */}
-        <div className="flex flex-col">
-          <label htmlFor="preferredTime" className="text-[#2D1810] mb-2">
-            Preferred Time
-          </label>
-          <select
-            id="preferredTime"
-            name="preferredTime"
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white appearance-none"
-            value={formData.preferredTime}
-            onChange={handleChange}
-          >
-            <option value="">Select preferred time</option>
-            <option value="morning">Morning (9AM - 12PM)</option>
-            <option value="afternoon">Afternoon (12PM - 4PM)</option>
-            <option value="evening">Evening (4PM - 7PM)</option>
-          </select>
-        </div>
-
-        {/* Additional Notes */}
-        <div className="flex flex-col md:col-span-2">
-          <label htmlFor="notes" className="text-[#2D1810] mb-2">
-            Additional Notes
-          </label>
-          <textarea
-            id="notes"
-            name="notes"
-            rows={4}
-            placeholder="Tell us more about your symptoms, concerns, or questions..."
-            className="px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF4B00] bg-white resize-none"
-            value={formData.notes}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Submit Button */}
-        <div className="md:col-span-2 mt-4">
-          <button
-            type="submit"
-            className="w-full bg-[#FF4B00] text-white px-8 py-4 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 flex items-center justify-center"
-          >
-            Book My Appointment →
-          </button>
-        </div>
-      </form>
     </section>
   );
 }

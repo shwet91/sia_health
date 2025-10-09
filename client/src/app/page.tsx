@@ -31,9 +31,9 @@ export default function Home() {
         {/* <WhySia /> */}
         <WhySia2 />
         <WhatWeDo />
+        <Contact />
         <Blogs />
         <FAQ />
-        <Contact />
         <Footer />
       </div>
     </main>
