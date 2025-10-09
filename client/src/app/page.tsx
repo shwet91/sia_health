@@ -1,10 +1,10 @@
 import Hero from "@/components/landingPage/Hero";
 import Navbar from "@/components/landingPage/Navbar";
-// import ProblemStatement from "@/components/landingPage/ProblemStatement";
+import ProblemStatement from "@/components/landingPage/ProblemStatement";
 // import Mission from "@/components/landingPage/Mission";
 import Testimonials from "@/components/landingPage/Testimonials";
 // import Approach from "@/components/landingPage/Approach";
-import LovableProblem from "@/components/landingPage/LovableProblem";
+// import LovableProblem from "@/components/landingPage/LovableProblem";
 import Team from "@/components/landingPage/Team";
 import Services from "@/components/landingPage/Services";
 // import WhySia from "@/components/landingPage/WhySia";
@@ -21,11 +21,11 @@ export default function Home() {
       <Navbar />
       <div className="w-full">
         <Hero />
-        {/* <ProblemStatement /> */}
         {/* <Mission /> */}
         <Testimonials />
         {/* <Approach /> */}
-        <LovableProblem />
+        <ProblemStatement />
+        {/* <LovableProblem /> */}
         <Team />
         <Services />
         {/* <WhySia /> */}

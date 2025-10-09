@@ -7,10 +7,7 @@ const merriweather = Merriweather({ subsets: ["latin"] });
 
 export default function LovableProblem() {
   return (
-    <section className="w-full Helvetica min-h-screen bg-gradient-to-br from-[#FFF4EB] to-[#FFE4D3] relative overflow-hidden">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2">
-        <div className="w-96 h-96 rounded-full bg-[#FF4B00] opacity-20 blur-3xl"></div>
-      </div>
+    <section className="w-full Helvetica min-h-screen bg-white relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 py-20 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
