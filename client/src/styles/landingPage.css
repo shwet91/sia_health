@@ -1,3 +1,4 @@
 .Helvetica {
   font-family: "Helvetica", "Arial", sans-serif;
 }
+/* Keep only minimal non-tailwind utility (font-family) — visuals handled by Tailwind classes */
