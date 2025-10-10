@@ -173,7 +173,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-[#090718]1 bg-[#F97B4F] py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#090718]1 bg-[#F97B4F]  bg-gradient-to-br1 from-[#FFF4EB]1 to-[#FFE4D3]1 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 md:gap-x-12 md:gap-y-16 items-start">
           {services.map((service) => (

@@ -23,17 +23,18 @@ export default function Home() {
         <Hero />
         {/* <Mission /> */}
         <Testimonials />
+        <WhatWeDo />
+        <WhySia2 />
+        <Services />
         {/* <Approach /> */}
-        <ProblemStatement />
+        {/* <ProblemStatement /> */}
         {/* <LovableProblem /> */}
         <Team />
-        <Services />
-        {/* <WhySia /> */}
-        <WhySia2 />
-        <WhatWeDo />
         <Contact />
-        <Blogs />
         <FAQ />
+        <Blogs />
+        {/* <WhySia /> */}
+
         <Footer />
       </div>
     </main>
