@@ -2,19 +2,23 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { Merriweather } from "next/font/google";
+import "../../styles/landingPage.css";
+
+const merriweather = Merriweather({ subsets: ["latin"] , weight: ["400", "700"] });
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    date: "",
-    service: "",
-    department: "",
+    message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     setFormData({
       ...formData,
@@ -31,7 +35,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full bg-gray-1001 bg-white p-0 m-0 flex justify-center"
+      className="w-full Helvetica bg-gray-1001 bg-white p-0 my-5 flex justify-center px-4 sm:px-0"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl w-full min-h-[500px]  bg-[#FFE4D3] rounded-2xl overflow-hidden ">
         {/* Left Side - Image */}
@@ -55,7 +59,7 @@ export default function Contact() {
             </p>
 
             {/* Title */}
-            <h2 className="text-[#130e2e] text-2xl lg:text-3xl font-bold mb-3 leading-tight">
+            <h2 className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-3 leading-tight ${merriweather.className}`}>
               Book An <span className="text-[#FF4B00]">Appointment Now!</span>
             </h2>
 
@@ -76,7 +80,7 @@ export default function Contact() {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#130e2e]"
+                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
                   required
                 />
                 <input
@@ -85,137 +89,42 @@ export default function Contact() {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#130e2e]"
+                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
                   required
                 />
               </div>
 
-              {/* Row 2: Phone & Date */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Row 2: Phone */}
+              <div className="grid grid-cols-1 gap-4">
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
+                  placeholder="Contact Number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#130e2e]"
-                  required
-                />
-                <input
-                  type="date"
-                  name="date"
-                  placeholder="Appointment Date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors placeholder:text-[#130e2e] [color-scheme:dark]"
+                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
                   required
                 />
               </div>
 
-              {/* Row 3: Service & Department Dropdowns */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="relative">
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors cursor-pointer appearance-none pr-6 invalid:text-[#130e2e]"
-                    required
-                  >
-                    <option value="">- Select Service</option>
-                    <option
-                      value="nutrition"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Nutrition Consulting
-                    </option>
-                    <option
-                      value="fitness"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Fitness Training
-                    </option>
-                    <option
-                      value="wellness"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Wellness Coaching
-                    </option>
-                    <option
-                      value="therapy"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Therapy Sessions
-                    </option>
-                  </select>
-                  <svg
-                    className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#808080"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </div>
-                <div className="relative">
-                  <select
-                    name="department"
-                    value={formData.department}
-                    onChange={handleChange}
-                    className="w-full py-2.5 bg-transparent border-0 border-b border-[#404040] text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] transition-colors cursor-pointer appearance-none pr-6 invalid:text-[#130e2e]"
-                    required
-                  >
-                    <option value="">- Select Department</option>
-                    <option
-                      value="nutrition"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Nutrition
-                    </option>
-                    <option
-                      value="fitness"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Fitness
-                    </option>
-                    <option
-                      value="mental-health"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      Mental Health
-                    </option>
-                    <option
-                      value="general"
-                      className="bg-[#1a1a1a] text-[#130e2e]"
-                    >
-                      General Wellness
-                    </option>
-                  </select>
-                  <svg
-                    className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#808080"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </div>
+              {/* Row 3: Message */}
+              <div className="grid grid-cols-1 gap-4">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af] resize-none"
+                />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-[#FF4B00] text-[#130e2e] border-none py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit mt-1 rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0"
+                className={` ${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit mt-1 rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0`}
               >
-                MAKE APPOINTMENT
+                Book A Call
               </button>
             </form>
           </div>

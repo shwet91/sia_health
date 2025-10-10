@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Rubik } from "next/font/google";
+import Link from "next/dist/client/link";
 
 const rubikFont = Rubik({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -76,36 +77,44 @@ export default function Navbar() {
           data-name="nav-items"
           data-node-id="42:2084"
         >
-          <a
-            href="#approach"
+          {/* <a
+            href="/"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             Home
-          </a>
+          </a> */}
+
+          <Link
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="hover:text-[#EB5200] transition-colors"
+          >
+            Home
+          </Link>
           <a
-            href="#team"
+            href="/solutions"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             Solutions
           </a>
           <a
-            href="#resources"
+            href="/aboutUs"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             About us
           </a>
           <a
-            href="#faq"
+            href="/contact"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             Contact
           </a>
           <a
-            href="#faq"
+            href="/learn"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >

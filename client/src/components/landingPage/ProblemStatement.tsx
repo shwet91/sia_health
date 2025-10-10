@@ -75,9 +75,9 @@ export default function ProblemStatement() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[40rem] lg:h-[30rem] rounded-xl overflow-hidden shadow-lg">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[30rem] lg:h-[30rem] rounded-xl overflow-hidden 1shadow-lg">
               <Image
-                src="/girl_swings.jpg"
+                src="/gitl_weight.jpg"
                 alt="woman illustrating fatigue"
                 fill
                 className="object-cover"

@@ -1,0 +1,139 @@
+.section {
+  width: 100%;
+  padding: 48px 0 72px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+}
+
+.pageHeading {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+}
+
+.pageTitle {
+  font-size: 64px;
+  margin: 0;
+  color: #0b0b0b;
+}
+
+.pageSubtitle {
+  color: #d9661b;
+  font-style: italic;
+  font-size: 36px;
+  margin-top: 8px;
+}
+
+.content {
+  padding-right: 8px;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.02;
+  color: #d9661b; /* orange similar to screenshot */
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.subtitle {
+  display: block;
+  color: #111111;
+  font-size: 56px;
+}
+
+.paragraphs p {
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 16px 0;
+}
+
+.signature {
+  margin-top: 12px;
+  font-style: italic;
+  color: #111111;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+  width: 360px;
+  height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+
+  .imageWrap {
+    width: 100%;
+    height: 360px;
+    border-radius: 16px;
+  }
+}
+
+/* Top article styles */
+.topArticle {
+  max-width: 1200px;
+  margin: 32px auto;
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.topImageWrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.topText p {
+  color: #222222;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+@media (max-width: 900px) {
+  .topArticle {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
