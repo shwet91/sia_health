@@ -37,7 +37,7 @@ export default function Contact() {
       id="contact"
       className="w-full Helvetica bg-gray-1001 bg-white p-0 my-5 flex justify-center px-4 sm:px-0"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl w-full min-h-[500px]  bg-[#FFE4D3] rounded-2xl overflow-hidden ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl w-full min-h-[500px]  bg-[#FFE4D3] rounded-md overflow-hidden ">
         {/* Left Side - Image */}
         <div className="relative overflow-hidden bg-gray-300">
           <Image

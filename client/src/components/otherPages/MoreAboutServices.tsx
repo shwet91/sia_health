@@ -27,15 +27,15 @@ export default function MoreAboutServices() {
           </p>
         </div>
         {/* Article 1: Image left, text right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16 lg:mb-24">
           <div className="order-1 lg:order-1">
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
                 src="/founder.avif"
                 alt="Health Analysis"
                 width={900}
-                height={560}
-                className="w-full h-auto object-cover"
+                height={280}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function MoreAboutServices() {
         </div>
 
         {/* Article 2: Text left, image right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16 lg:mb-24">
           <div className="order-2 lg:order-1">
             <h2
               className={
@@ -79,28 +79,28 @@ export default function MoreAboutServices() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
                 src="/del.avif"
                 alt="Nutrition Support"
                 width={900}
-                height={560}
-                className="w-full h-auto object-cover"
+                height={280}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         </div>
 
         {/* Article 3: Image left, text right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="order-1 lg:order-1">
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
                 src="/founder.avif"
                 alt="Health Analysis"
                 width={900}
-                height={560}
-                className="w-full h-auto object-cover"
+                height={280}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
