@@ -18,7 +18,7 @@ CTA: See More Transformations
 
 
 
-3. How we HELP?
+3. How we HELP? this one
 We TAKE CARE of all your health needs.
 WE help you from getting diagnosis to daily nutrition and lifestyle changes. As women we handle multiple things and at Sia we  take all your mental load awa and provide you expert solutions for all your needs filled with expertise and empathy.
 Health Analysis: Diagnosis, Understanding root causes and blood reports

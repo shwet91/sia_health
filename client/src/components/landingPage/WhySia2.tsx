@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import "../../styles/landingPage.css";
 import { Patrick_Hand } from "next/font/google";
+import { Merriweather } from "next/font/google";
 
 const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
+const merriweather = Merriweather({ subsets: ["latin"], weight: ["400" , "400"] });
 
 function WhySia2() {
   const services = [
@@ -114,8 +116,8 @@ function WhySia2() {
                 className="rounded-2xl object-cover"
               />
             </div>
-            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight ${patrickHand.className}`}>
-              Why choose <span className="text-[#FF4B00]">Sia Health ?</span>
+            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight ${merriweather.className}`}>
+              Why choose <span className="text-[#FF4B00] font-bold">Sia Health ?</span>
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
               From curated properties to end-to-end management, we simplify

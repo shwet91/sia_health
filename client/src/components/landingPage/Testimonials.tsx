@@ -38,7 +38,7 @@ export default function Testimonials() {
         <h2
           className={`${merriweatherFont.className} text-4xl md:text-6xl font-bold text-center mb-4 mx-auto`}
         >
-          Real Stories. Real Results.
+          Real Stories <span className="text-[#FF4B00] font-bold">Real Results</span>
         </h2>
         <p className="text-2xl text-center text-[#663014]1 text-[#522b1c] mb-12 w-full md:w-1/2 mx-auto">
           See how women like you have transformed their health with our

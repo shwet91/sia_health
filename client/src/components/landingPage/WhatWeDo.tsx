@@ -167,13 +167,12 @@ export default function WhatWeDo() {
                       {index + 1}
                     </div>
 
-                    {/* Pulse effect */}
+                    {/* Subtle static glow (removed continuous blinking) */}
                     {isVisible && (
                       <div
-                        className="absolute inset-0 bg-[#FF4B00] rounded-full animate-ping opacity-20"
+                        className="absolute inset-0 bg-[#FF4B00] rounded-full opacity-15"
                         style={{
-                          animationDelay: `${index * 0.2}s`,
-                          animationDuration: "2s",
+                          boxShadow: "0 0 18px rgba(255,75,0,0.35)",
                         }}
                       ></div>
                     )}
