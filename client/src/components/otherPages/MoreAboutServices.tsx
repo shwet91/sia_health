@@ -31,7 +31,7 @@ export default function MoreAboutServices() {
           <div className="order-1 lg:order-1">
             <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
-                src="/founder.avif"
+                src="/Solutions/1.avif"
                 alt="Health Analysis"
                 width={900}
                 height={280}
@@ -81,7 +81,7 @@ export default function MoreAboutServices() {
           <div className="order-1 lg:order-2">
             <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
-                src="/del.avif"
+                src="/Solutions/2.avif"
                 alt="Nutrition Support"
                 width={900}
                 height={280}
@@ -96,7 +96,7 @@ export default function MoreAboutServices() {
           <div className="order-1 lg:order-1">
             <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
               <Image
-                src="/founder.avif"
+                src="/Solutions/3.avif"
                 alt="Health Analysis"
                 width={900}
                 height={280}

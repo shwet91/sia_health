@@ -7,28 +7,18 @@ const merriweather = Merriweather({ subsets: ["latin"] });
 
 const teamMembers = [
   {
-    name: "Dr. Sarah Chen",
-    role: "Endocrinologist",
-    image: "/team/sarah-chen.jpg",
+    name: "Dr. Anupama Gangwal",
+    role: "Senior Gynaecologist",
+    image: "/doc1.avif",
+    experience: 30,
     quote: "Every woman deserves to feel heard and understood.",
   },
   {
-    name: "Maria Rodriguez",
-    role: "Registered Dietitian",
-    image: "/team/maria-rodriguez.jpg",
+    name: "Rashmeet Kaur Gupta",
+    role: "Nutrition Expert ",
+    image: "/doc2.avif",
+    experience: 8,
     quote: "Nutrition is medicine, and food should be your friend.",
-  },
-  {
-    name: "Dr. Amanda Kim",
-    role: "Functional Medicine",
-    image: "/team/amanda-kim.jpg",
-    quote: "We treat the root cause, not just the symptoms.",
-  },
-  {
-    name: "Jessica Thompson",
-    role: "Health Coach",
-    image: "/team/jessica-thompson.jpg",
-    quote: "Your journey to wellness should feel supported every step.",
   },
 ];
 
@@ -50,7 +40,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-6 place-items-center justify-items-center w-full">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-20 w-full">
           {teamMembers.map((member, index) => (
             <div
               key={index}
@@ -67,7 +57,11 @@ export default function Team() {
 
               <h3 className="text-xl font-bold mb-2">{member.name}</h3>
 
-              <p className="text-[#FF4B00] font-medium mb-3">{member.role}</p>
+              <p className="text-[#FF4B00] font-medium mb-1">{member.role}</p>
+
+              <p className="text-[#663014] text-sm font-semibold mb-3">
+                {member.experience}+ years of experience
+              </p>
 
               <p className="text-[#663014] italic text-sm">
                 &ldquo;{member.quote}&rdquo;

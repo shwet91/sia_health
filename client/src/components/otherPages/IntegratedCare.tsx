@@ -31,7 +31,7 @@ export default function IntegratedCare() {
           <article className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="h-48 w-full relative">
               <Image
-                src="/founder.avif"
+                src="/Solutions/4.avif"
                 alt="Lifestyle"
                 fill
                 className="object-cover"
@@ -55,7 +55,7 @@ export default function IntegratedCare() {
           <article className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="h-48 w-full relative">
               <Image
-                src="/del.avif"
+                src="/Solutions/5.avif"
                 alt="Medical Access"
                 fill
                 className="object-cover"
@@ -77,7 +77,7 @@ export default function IntegratedCare() {
           <article className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="h-48 w-full relative">
               <Image
-                src="/yoga.jpg"
+                src="/Solutions/6.avif"
                 alt="Community"
                 fill
                 className="object-cover"

@@ -4,7 +4,7 @@ import Image from "next/image";
 const articles = [
   {
     id: 1,
-    img: "/blogs/5.jpg",
+    img: "/blogs/7.avif",
     tags: ["INSULIN SENSITIVITY", "PCOS", "INSULIN RESISTANCE", "STRESS"],
     title: "How Fad Diets Mess up Your Hormones?",
     excerpt:
@@ -13,7 +13,7 @@ const articles = [
   },
   {
     id: 2,
-    img: "/blogs/6.jpg",
+    img: "/blogs/8.avif",
     tags: ["PCOS", "STRESS"],
     title: "Stress and PCOS: How Cortisol Worsens Hormonal Imbalance",
     excerpt:
@@ -22,7 +22,7 @@ const articles = [
   },
   {
     id: 3,
-    img: "/blogs/4.jpg",
+    img: "/blogs/9.avif",
     tags: ["INSULIN SENSITIVITY", "PCOS", "INSULIN RESISTANCE", "STRESS"],
     title: "How Fad Diets Mess up Your Hormones?",
     excerpt:
@@ -31,7 +31,7 @@ const articles = [
   },
   {
     id: 4,
-    img: "/blogs/3.jpg",
+    img: "/blogs/10.avif",
     tags: ["PCOS", "STRESS"],
     title: "Stress and PCOS: How Cortisol Worsens Hormonal Imbalance",
     excerpt:
@@ -80,16 +80,6 @@ function ArticleCard({ article }: { article: (typeof articles)[number] }) {
 export default function LearningArticles() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-12 mt-10">
-      <div className="flex justify-end mb-8">
-        <nav className="space-x-6 text-gray-700">
-          <a className="">Home</a>
-          <a className="">Solutions</a>
-          <a className="">About Us</a>
-          <a className="">Contact</a>
-          <a className="underline font-medium">Learn</a>
-        </nav>
-      </div>
-
       <div className="flex flex-wrap -mx-6">
         {articles.map((a) => (
           <ArticleCard key={a.id} article={a} />
