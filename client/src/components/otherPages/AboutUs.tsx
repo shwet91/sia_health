@@ -43,12 +43,12 @@ export default function AboutUs() {
           </p>
 
           <p className="text-sm md:text-base text-[#222222] leading-relaxed mb-4">
-            Whether it&apos;s PCOS, thyroid, perimenopause or anything, we know
-            the journey is confusing, often dismissed, and lonely.
+            Whether it's PCOS, thyroid, perimenopause or anything, we know the
+            journey is confusing, often dismissed, and lonely.
           </p>
 
           <p className="text-sm md:text-base text-[#222222] leading-relaxed">
-            That’s why we’re building a root-cause, expert-led platform to give
+            That&rsquo;s why we&rsquo;re building a root-cause, expert-led platform to give
             women the care they deserve, all in one place.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function AboutUs() {
 
           <div className="mt-8">
             <p className="text-sm md:text-base text-[#222222] leading-relaxed my-4">
-              “I’ve struggled with <strong>PCOS</strong> for over 12 years:
+              “I&rsquo;ve struggled with <strong>PCOS</strong> for over 12 years:
               irregular cycles, mood swings, hair growth, hair fall, hormonal
               acne, weight gain, unexplained fatigue. I tried everything - birth
               control, crash diets, endless doctor visits (without lifestyle
@@ -79,7 +79,7 @@ export default function AboutUs() {
             </p>
 
             <p className="text-sm md:text-base text-[#222222] leading-relaxed my-4">
-              It wasn’t until I connected the dots between medical support,
+              It wasn&rsquo;t until I connected the dots between medical support,
               lifestyle changes, and root-cause care that things truly started
               to shift.
             </p>
@@ -88,7 +88,7 @@ export default function AboutUs() {
               SIA Health was born out of that struggle. Not as a shortcut , but
               as a <strong>support system I wish I had.</strong>
               <br />
-              Now, we’re building that system for every woman who’s still trying
+              Now, we&rsquo;re building that system for every woman who&rsquo;s still trying
               to figure it out.”
             </p>
 

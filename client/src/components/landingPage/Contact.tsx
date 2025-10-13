@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Merriweather } from "next/font/google";
-import { useForm } from "react-hook-form";
+import { useForm, FieldErrors } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import {
@@ -15,7 +15,10 @@ import {
 } from "@/components/ui/form";
 import "../../styles/landingPage.css";
 
-const merriweather = Merriweather({ subsets: ["latin"] , weight: ["400", "700"] });
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 // Define form validation schema
 const formSchema = z.object({
@@ -23,7 +26,9 @@ const formSchema = z.object({
     .string()
     .min(2, { message: "Name must be at least 2 characters" })
     .max(50, { message: "Name must be less than 50 characters" })
-    .regex(/^[a-zA-Z\s]+$/, { message: "Name can only contain letters and spaces" }),
+    .regex(/^[a-zA-Z\s]+$/, {
+      message: "Name can only contain letters and spaces",
+    }),
   email: z
     .string()
     .min(1, { message: "Email is required" })
@@ -32,8 +37,8 @@ const formSchema = z.object({
   phone: z
     .string()
     .min(1, { message: "Phone number is required" })
-    .regex(/^[0-9]{10,15}$/, { 
-      message: "Please enter a valid phone number (10-15 digits only)" 
+    .regex(/^[0-9]{10,15}$/, {
+      message: "Please enter a valid phone number (10-15 digits only)",
     }),
   message: z.string().optional(),
 });
@@ -56,16 +61,16 @@ export default function Contact() {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log("✅ Form validation passed! Submitted values:", values);
     // Add your form submission logic here
-    
+
     // Show success message to user
     alert("Form submitted successfully!");
-    
+
     // Reset form after submission if needed
     form.reset();
   };
 
   // Handle form errors
-  const onError = (errors: any) => {
+  const onError = (errors: FieldErrors<z.infer<typeof formSchema>>) => {
     console.log("❌ Form validation failed! Errors:", errors);
   };
 
@@ -96,7 +101,9 @@ export default function Contact() {
             </p>
 
             {/* Title */}
-            <h2 className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-3 leading-tight ${merriweather.className}`}>
+            <h2
+              className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-3 leading-tight ${merriweather.className}`}
+            >
               Book An <span className="text-[#FF4B00]">Appointment Now!</span>
             </h2>
 
@@ -109,7 +116,10 @@ export default function Contact() {
 
             {/* Form */}
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit, onError)} className="flex flex-col gap-4">
+              <form
+                onSubmit={form.handleSubmit(onSubmit, onError)}
+                className="flex flex-col gap-4"
+              >
                 {/* Row 1: Name & Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField
@@ -123,9 +133,9 @@ export default function Contact() {
                             type="text"
                             placeholder="Your Name"
                             className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
-                              fieldState.error 
-                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
-                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                              fieldState.error
+                                ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+                                : "border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]"
                             }`}
                           />
                         </FormControl>
@@ -146,9 +156,9 @@ export default function Contact() {
                             type="email"
                             placeholder="Your Email"
                             className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
-                              fieldState.error 
-                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
-                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                              fieldState.error
+                                ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+                                : "border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]"
                             }`}
                           />
                         </FormControl>
@@ -173,9 +183,9 @@ export default function Contact() {
                             type="tel"
                             placeholder="Contact Number"
                             className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
-                              fieldState.error 
-                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
-                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                              fieldState.error
+                                ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+                                : "border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]"
                             }`}
                           />
                         </FormControl>
@@ -215,7 +225,9 @@ export default function Contact() {
                   <button
                     type="button"
                     className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0`}
-                    onClick={() => console.log("Current form values:", form.getValues())}
+                    onClick={() =>
+                      console.log("Current form values:", form.getValues())
+                    }
                   >
                     Submit
                   </button>
