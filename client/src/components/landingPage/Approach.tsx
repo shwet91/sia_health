@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { Merriweather } from "next/font/google";
 
+const merriweather = Merriweather({ subsets: ['latin'], weight: '400' });
+import "../../styles/landingPage.css"
 const steps = [
   {
     title: "Health Analysis",
@@ -42,7 +45,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 Helvetica">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left image with overlay card */}
         <div className="relative">
@@ -61,15 +64,30 @@ export default function Approach() {
 
         {/* Right content */}
         <div>
-          <p className="text-sm text-[#FF4B00] font-semibold">How we healp ?</p>
-          <h2 className="mt-3 text-4xl lg:text-5xl font-serif text-gray-900">Better Eat, Better Life</h2>
-          <p className="mt-4 text-gray-500 max-w-xl">If You Get A Better Nutrition, You Can Enjoy A Healthy Age</p>
+          {/* <p className="text-sm text-[#FF4B00] font-semibold">At Sia Health, we understand that</p> */}
+          <h2 className={`mt-3 text-4xl lg:text-4xl font-serif text-gray-900 ${merriweather.className}`}> <span>We Take Care of Everything, So You Don’t Have To.</span></h2>
+          <p className="mt-4 text-gray-500 max-w-xl">At SIA Health, we know women already juggle a lot — work, family, responsibilities — and their health often takes the back seat.</p>
 
-          <p className="mt-6 text-gray-400 max-w-xl">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div className="mt-6 text-gray-700 max-w-xl space-y-4">
+            <p className="text-gray-700">
+              We take the mental load off your shoulders, guiding you from diagnosis to daily nutrition and lifestyle changes — all with continuous support, clinical expertise, and empathy.
+            </p>
 
-          <h3 className="mt-8 text-2xl font-serif text-gray-900">We Can Help You</h3>
+            <h4 className="text-[#FF4B00] text-lg font-semibold">Here’s how we help you heal and thrive</h4>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-3">
+              {steps.map((step) => (
+                <div key={step.title}>
+                  <h5 className="text-gray-900 font-medium">{step.title}</h5>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h3 className="mt-8 text-2xl font-serif text-gray-900 hidden">We Can Help You</h3>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 hidden">
             <ul className="space-y-3">
               <li className="flex items-start">
                 <span className="flex-shrink-0 mt-1 text-[#FF4B00]">

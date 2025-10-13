@@ -28,7 +28,7 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6 my-8">
         <div className="relative w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/contact.jpg"
+            src="/sunflower.avif"
             alt="Women in field"
             fill
             className="object-cover"
@@ -54,22 +54,22 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-16">
         <div className="md:col-span-2">
           <h1
             className={
               merriweather.className +
-              " text-3xl md:text-4xl lg:text-5xl font-bold text-[#d9661b]"
+              " text-3xl md:text-4xl lg:text-5xl font-bold text-[#d9661b] leading-tight mb-6"
             }
           >
             Why am I building this
             <br />
-            <span className="block text-4xl md:text-5xl text-[#111111]">
-              & what’s my goal?
+            <span className="block text-4xl md:text-5xl text-[#111111] mt-2">
+              & what's my goal?
             </span>
           </h1>
 
-          <div>
+          <div className="mt-8">
             <p className="text-sm md:text-base text-[#222222] leading-relaxed my-4">
               “I’ve struggled with <strong>PCOS</strong> for over 12 years:
               irregular cycles, mood swings, hair growth, hair fall, hormonal

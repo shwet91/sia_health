@@ -1,35 +1,72 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Merriweather } from "next/font/google";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import "../../styles/landingPage.css";
 
 const merriweather = Merriweather({ subsets: ["latin"] , weight: ["400", "700"] });
 
+// Define form validation schema
+const formSchema = z.object({
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters" })
+    .max(50, { message: "Name must be less than 50 characters" })
+    .regex(/^[a-zA-Z\s]+$/, { message: "Name can only contain letters and spaces" }),
+  email: z
+    .string()
+    .min(1, { message: "Email is required" })
+    .email({ message: "Please enter a valid email address" })
+    .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, { message: "Invalid email format" }),
+  phone: z
+    .string()
+    .min(1, { message: "Phone number is required" })
+    .regex(/^[0-9]{10,15}$/, { 
+      message: "Please enter a valid phone number (10-15 digits only)" 
+    }),
+  message: z.string().optional(),
+});
+
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+  // Initialize form with react-hook-form and zod validation
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    mode: "onBlur", // Validate on blur (when user leaves field)
+    reValidateMode: "onChange", // Re-validate on change after first validation
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  // Handle form submission
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log("✅ Form validation passed! Submitted values:", values);
+    // Add your form submission logic here
+    
+    // Show success message to user
+    alert("Form submitted successfully!");
+    
+    // Reset form after submission if needed
+    form.reset();
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+  // Handle form errors
+  const onError = (errors: any) => {
+    console.log("❌ Form validation failed! Errors:", errors);
   };
 
   return (
@@ -71,72 +108,127 @@ export default function Contact() {
             </p>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              {/* Row 1: Name & Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
-                  required
-                />
-              </div>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit, onError)} className="flex flex-col gap-4">
+                {/* Row 1: Name & Email */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field, fieldState }) => (
+                      <FormItem className="space-y-0">
+                        <FormControl>
+                          <input
+                            {...field}
+                            type="text"
+                            placeholder="Your Name"
+                            className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
+                              fieldState.error 
+                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
+                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                            }`}
+                          />
+                        </FormControl>
+                        <div className="h-5 mt-1">
+                          <FormMessage className="text-xs text-red-600" />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field, fieldState }) => (
+                      <FormItem className="space-y-0">
+                        <FormControl>
+                          <input
+                            {...field}
+                            type="email"
+                            placeholder="Your Email"
+                            className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
+                              fieldState.error 
+                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
+                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                            }`}
+                          />
+                        </FormControl>
+                        <div className="h-5 mt-1">
+                          <FormMessage className="text-xs text-red-600" />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-              {/* Row 2: Phone */}
-              <div className="grid grid-cols-1 gap-4">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Contact Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af]"
-                  required
-                />
-              </div>
+                {/* Row 2: Phone */}
+                <div className="grid grid-cols-1 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field, fieldState }) => (
+                      <FormItem className="space-y-0">
+                        <FormControl>
+                          <input
+                            {...field}
+                            type="tel"
+                            placeholder="Contact Number"
+                            className={`w-full py-2.5 px-3 bg-white border rounded-md text-[#130e2e] text-sm outline-none focus:ring-1 transition-colors placeholder:text-[#9ca3af] ${
+                              fieldState.error 
+                                ? 'border-red-500 focus:border-red-500 focus:ring-red-200' 
+                                : 'border-[#e6e6e6] focus:border-[#FF4B00] focus:ring-[#FFE7D8]'
+                            }`}
+                          />
+                        </FormControl>
+                        <div className="h-5 mt-1">
+                          <FormMessage className="text-xs text-red-600" />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-              {/* Row 3: Message */}
-              <div className="grid grid-cols-1 gap-4">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af] resize-none"
-                />
-              </div>
+                {/* Row 3: Message */}
+                <div className="grid grid-cols-1 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem className="space-y-0">
+                        <FormControl>
+                          <textarea
+                            {...field}
+                            placeholder="Your Message"
+                            rows={4}
+                            className="w-full py-2.5 px-3 bg-white border border-[#e6e6e6] rounded-md text-[#130e2e] text-sm outline-none focus:border-[#FF4B00] focus:ring-1 focus:ring-[#FFE7D8] transition-colors placeholder:text-[#9ca3af] resize-none"
+                          />
+                        </FormControl>
+                        <div className="h-5 mt-1">
+                          <FormMessage className="text-xs text-red-600" />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-              {/* Submit Button */}
-              <div className="flex items-center gap-3 mt-1">
-                <button
-                  type="button"
-                  className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0`}
-                  onClick={() => console.log("Submit button clicked", formData)}
-                >
-                  Submit
-                </button>
+                {/* Submit Button */}
+                <div className="flex items-center gap-3 mt-1">
+                  <button
+                    type="button"
+                    className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0`}
+                    onClick={() => console.log("Current form values:", form.getValues())}
+                  >
+                    Submit
+                  </button>
 
-                <button
-                  type="submit"
-                  className={` ${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0`}
-                >
-                  Book A Call
-                </button>
-              </div>
-            </form>
+                  <button
+                    type="submit"
+                    className={` ${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0`}
+                  >
+                    Book A Call
+                  </button>
+                </div>
+              </form>
+            </Form>
           </div>
         </div>
       </div>
