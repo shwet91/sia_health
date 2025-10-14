@@ -45,7 +45,7 @@ export default function Hero() {
                 for
               </p>
               <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-6xl text-center">
-                Women's Hormonal Health
+                Women`s Hormonal Health
               </h1>
             </div>
 
