@@ -6,7 +6,10 @@ import Image from "next/image";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 
-const merriweatherFont = Merriweather({ subsets: ["latin"], weight: ["400", "700"] });
+const merriweatherFont = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 // const rubikFont = Rubik({ subsets: ["latin"], weight: ["300", "300", "700"] });
 // const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
@@ -30,16 +33,19 @@ export default function Hero() {
               className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
             >
               <h1
-                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-7xl 1font-light 1leading-tight"
+                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-6xl 1font-light 1leading-tight"
                 style={{
                   backgroundImage:
                     "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
                 }}
               >
-                Reclaim Your
+                Personalised Support
               </h1>
-              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-7xl">
-                Harmonal Health
+              <p className="text-[#522b1c] text-xl md:text-2xl font-normal">
+                for
+              </p>
+              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-6xl text-center">
+                Women's Hormonal Health
               </h1>
             </div>
 
@@ -51,13 +57,21 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <button className="px-6 sm:px-8 py-3 rounded-xl border border-[#EB5200] bg-[#fff4eb] text-[#2e1300] font-medium text-sm sm:text-base w-full sm:w-auto hover:bg-[#FFE4D1] transition-colors">
-                Free Discovery Call
+              <button
+                style={{
+                  background:
+                    "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
+                }}
+                className={`px-6 sm:px-8 py-3 rounded-xl border1 border-[#EB5200]1 bg-[#EB5200]1 text-white font-medium text-sm sm:text-base w-full sm:w-auto hover:bg-[#FFE4D1] transition-colors ${merriweatherFont.className}`}
+              >
+                Book a Free Expert Consult
               </button>
             </div>
 
             {/* Large themed CTA placed just below the two buttons */}
-            <div className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}>
+            <div
+              className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}
+            >
               <button
                 className="w-full sm:w-auto px-8 py-4 rounded-xl text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{

@@ -14,7 +14,7 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    image: "/blogs/1.jpg",
+    image: "/blogs/6.jpg",
     readTime: "5 min read",
     title: "Understanding PCOS: Beyond the Diagnosis",
     description:
