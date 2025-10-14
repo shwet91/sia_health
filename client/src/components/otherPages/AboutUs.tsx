@@ -19,7 +19,7 @@ export default function AboutUs() {
         >
           Our Why?
         </h2>
-        <p className="text-2xl md:text-3xl text-[#d9661b] italic mt-2">
+        <p className="text-2xl md:text-3xl text-[#d9661b] italic mt-2">``
           Because Women Deserve Better.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function AboutUs() {
           </p>
 
           <p className="text-sm md:text-base text-[#222222] leading-relaxed mb-4">
-            Whether it's PCOS, thyroid, perimenopause or anything, we know the
+            Whether it`s PCOS, thyroid, perimenopause or anything, we know the
             journey is confusing, often dismissed, and lonely.
           </p>
 
@@ -65,7 +65,7 @@ export default function AboutUs() {
             Why am I building this
             <br />
             <span className="block text-4xl md:text-5xl text-[#111111] mt-2">
-              & what's my goal?
+              & what`s my goal?
             </span>
           </h1>
 
