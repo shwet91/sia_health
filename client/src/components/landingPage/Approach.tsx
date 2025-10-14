@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Merriweather } from "next/font/google";
+import "../../styles/landingPage.css";
 
 const merriweather = Merriweather({ subsets: ["latin"], weight: "400" });
 import "../../styles/landingPage.css";
