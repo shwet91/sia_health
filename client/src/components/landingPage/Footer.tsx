@@ -34,7 +34,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-900">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-gray-900">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -79,64 +81,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* We Treat */}
-          <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-900">We Treat</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/treatments/pcos"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  PCOS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/thyroid"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  Thyroid Disorders
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/weight"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  Weight Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/fertility"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  Fertility Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/acne"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  Hormonal Acne
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/treatments/mood"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
-                >
-                  Mood & Energy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Get in Touch */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-900">Get in Touch</h3>
+            <h3 className="text-lg font-bold mb-6 text-gray-900">
+              Get in Touch
+            </h3>
             <ul className="space-y-5">
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-[#FF4B00] flex-shrink-0" />
@@ -158,6 +107,30 @@ export default function Footer() {
                 </span>
               </li>
             </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-gray-900">
+              Join our community
+            </h3>
+            <p className="text-gray-600 mb-4 text-sm text-center1">
+              Get wellness tips and updates delivered to your inbox and stay healthy with us!
+            </p>
+            <form className="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF4B00] focus:border-transparent"
+                required
+              />
+              <button
+                type="submit"
+                className="w-full px-6 py-3 bg-[#FF4B00] text-white rounded-lg font-semibold hover:bg-[#E04300] transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
 
