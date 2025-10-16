@@ -17,7 +17,7 @@ const merriweatherFont = Merriweather({
 export default function Hero() {
   return (
     <div
-      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-6 md:px-10 overflow-hidden"
+      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
       style={{ background: "#fef7e5" }}
@@ -45,7 +45,7 @@ export default function Hero() {
                 for
               </p>
               <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-6xl text-center">
-                Women`s Hormonal Health
+                Women&apos;s Hormonal Health
               </h1>
             </div>
 
@@ -54,18 +54,6 @@ export default function Hero() {
                 Personalized, expert-led care for PCOS, thyroid, fertility &
                 more.
               </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <button
-                style={{
-                  background:
-                    "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
-                }}
-                className={`px-6 sm:px-8 py-3 rounded-xl border1 border-[#EB5200]1 bg-[#EB5200]1 text-white font-medium text-sm sm:text-base w-full sm:w-auto hover:bg-[#FFE4D1] transition-colors ${merriweatherFont.className}`}
-              >
-                Book a Free Expert Consult
-              </button>
             </div>
 
             {/* Large themed CTA placed just below the two buttons */}
@@ -80,7 +68,7 @@ export default function Hero() {
                 }}
                 aria-label="Give a Harmone Test in a minute"
               >
-                Give a Harmone Test in a minute
+                Book a Free Expert Consult
               </button>
             </div>
 
@@ -101,6 +89,14 @@ export default function Hero() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center w-full mt-18">
+          <button
+            className={`px-6 sm:px-8 py-4 rounded-xl bg-[#EB5200] text-white font-medium text-sm sm:text-base hover:bg-[#FF7E29] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${merriweatherFont.className}`}
+          >
+            Take the Hormone Test Now !
+          </button>
         </div>
       </div>
     </div>

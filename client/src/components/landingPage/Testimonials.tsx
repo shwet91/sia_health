@@ -69,25 +69,25 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  // Carousel state: show 3 cards at a time, advance by 2
+  // Carousel state: show 3 cards at a time, advance by 1
   const visible = 3;
-  const step = 2; // advance by 2 cards at a time
+  const step = 1; // advance by 1 card at a time
   const [currentIndex, setCurrentIndex] = React.useState(0); // index of left-most visible card
   const slideCount = testimonials.length;
   const maxIndex = slideCount - visible; // maximum index for sliding
-  const autoplayInterval = 1000; // 3 seconds
+  const autoplayInterval = 3000; // 3 seconds
   const autoplayRef = React.useRef<number | null>(null);
   const isHoveredRef = React.useRef(false);
 
   React.useEffect(() => {
-    // autoplay: advance by 2 every interval
+    // autoplay: advance by 1 every interval
     function play() {
       if (autoplayRef.current) window.clearInterval(autoplayRef.current);
       autoplayRef.current = window.setInterval(() => {
         if (!isHoveredRef.current) {
           setCurrentIndex((i) => {
             const nextIndex = i + step;
-            return nextIndex >= maxIndex ? 0 : nextIndex;
+            return nextIndex > maxIndex ? 0 : nextIndex;
           });
         }
       }, autoplayInterval);
@@ -104,12 +104,12 @@ export default function Testimonials() {
   const next = () =>
     setCurrentIndex((i) => {
       const nextIndex = i + step;
-      return nextIndex >= maxIndex ? 0 : nextIndex;
+      return nextIndex > maxIndex ? 0 : nextIndex;
     });
   const prev = () =>
     setCurrentIndex((i) => {
       const prevIndex = i - step;
-      return prevIndex <= 0 ? 0 : prevIndex;
+      return prevIndex < 0 ? 0 : prevIndex;
     });
 
   return (
@@ -144,7 +144,7 @@ export default function Testimonials() {
                 <div
                   key={idx}
                   className="px-2"
-                  style={{ width: `${100 / visible}%` }}
+                  style={{ width: `${100 / slideCount}%` }}
                 >
                   <div className="p-4 h-full flex items-stretch">
                     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer w-full">

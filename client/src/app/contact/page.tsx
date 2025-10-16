@@ -6,12 +6,14 @@ import Approach from "@/components/landingPage/Approach";
 import MembersJoining from "@/components/landingPage/MembersJoining";
 import Testimonials from "@/components/landingPage/Testimonials";
 import WhatWeDo from "@/components/landingPage/WhatWeDo";
+import Roadmap from "@/components/landingPage/Roadmap";
 
 function page() {
   return (
     <div>
       <Navbar />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
+      <Roadmap />
       <Contact />
       <Testimonials />
       <Footer />

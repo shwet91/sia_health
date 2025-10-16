@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   About Us
                 </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Our Services
                 </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/team"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Meet the Team
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/resources"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Hormone Library
                 </Link>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quiz"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Take the Quiz
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/pcos"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   PCOS
                 </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/thyroid"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Thyroid Disorders
                 </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/weight"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Weight Management
                 </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/fertility"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Fertility Support
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/acne"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Hormonal Acne
                 </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/treatments/mood"
-                  className="text-gray-600 hover:text-white transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Mood & Energy
                 </Link>
@@ -170,19 +170,19 @@ export default function Footer() {
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-gray-600 hover:text-white text-sm transition-colors"
+                className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-600 hover:text-white text-sm transition-colors"
+                className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/hipaa"
-                className="text-gray-600 hover:text-white text-sm transition-colors"
+                className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
               >
                 HIPAA Notice
               </Link>
