@@ -8,7 +8,7 @@ import "../../styles/landingPage.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A0A03]1 text-white py-16 Helvetica  bg-gray-100">
+    <footer className="bg-gray-100 text-white py-16 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-x-12 lg:gap-y-12 mb-12">
           {/* Company Info */}
@@ -20,6 +20,7 @@ export default function Footer() {
                 width={120}
                 height={40}
                 className="object-contain"
+                priority
               />
             </div>
             <p className="text-gray-600 leading-relaxed">
@@ -28,7 +29,9 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-[#FF4B00]">
               <Heart size={16} />
-              <span>Made with care for women&apos;s wellness</span>
+              <span className="text-sm">
+                Made with care for women&apos;s wellness
+              </span>
             </div>
           </div>
 
@@ -83,7 +86,10 @@ export default function Footer() {
 
           {/* Get in Touch */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-900">
+            <h3
+              className="text-lg font-bold mb-6 text-gray-900"
+              suppressHydrationWarning
+            >
               Get in Touch
             </h3>
             <ul className="space-y-5">
@@ -114,8 +120,9 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-gray-900">
               Join our community
             </h3>
-            <p className="text-gray-600 mb-4 text-sm text-center1">
-              Get wellness tips and updates delivered to your inbox and stay healthy with us!
+            <p className="text-gray-600 mb-4 text-sm">
+              Get wellness tips and updates delivered to your inbox and stay
+              healthy with us!
             </p>
             <form className="flex flex-col gap-3">
               <input
