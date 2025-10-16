@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Merriweather } from "next/font/google";
 import { useForm, FieldErrors } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { Loader2 } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -43,6 +44,8 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   // Initialize form with react-hook-form and zod validation
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,15 +60,40 @@ export default function Contact() {
   });
 
   // Handle form submission
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log("✅ Form validation passed! Submitted values:", values);
-    // Add your form submission logic here
 
-    // Show success message to user
-    alert("Form submitted successfully!");
+    setIsSubmitting(true);
 
-    // Reset form after submission if needed
-    form.reset();
+    try {
+      // Call the API to save data to database
+      const response = await fetch("/api/ContactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Show success message to user
+        alert("Form submitted successfully! We'll get back to you soon.");
+
+        // Reset form after successful submission
+        form.reset();
+      } else {
+        // Handle error response
+        console.error("Error:", data);
+        alert(data.message || "Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      alert("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Handle form errors
@@ -212,7 +240,8 @@ export default function Contact() {
                 <div className="flex items-center gap-3 mt-0">
                   <button
                     type="button"
-                    className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0`}
+                    disabled={isSubmitting}
+                    className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0`}
                     onClick={() =>
                       console.log("Current form values:", form.getValues())
                     }
@@ -222,9 +251,17 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className={` ${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider cursor-pointer transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0`}
+                    disabled={isSubmitting}
+                    className={`${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-[#FF4B00] flex items-center gap-2`}
                   >
-                    Book A Call
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      "Book A Call"
+                    )}
                   </button>
                 </div>
               </form>
