@@ -17,7 +17,8 @@ const contactFormSchema = z.object({
     .string()
     .email({ message: "Please enter a valid email address" })
     .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, { message: "Invalid email format" })
-    .optional(),
+    .optional()
+    .or(z.literal("")),
   phone: z
     .string()
     .min(1, { message: "Phone number is required" })

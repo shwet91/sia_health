@@ -6,6 +6,7 @@ import { useForm, FieldErrors } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -31,9 +32,10 @@ const formSchema = z.object({
     }),
   email: z
     .string()
-    .min(1, { message: "Email is required" })
     .email({ message: "Please enter a valid email address" })
-    .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, { message: "Invalid email format" }),
+    .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, { message: "Invalid email format" })
+    .optional()
+    .or(z.literal("")),
   phone: z
     .string()
     .min(1, { message: "Phone number is required" })
@@ -78,19 +80,38 @@ export default function Contact() {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        // Show success message to user
-        alert("Form submitted successfully! We'll get back to you soon.");
+        // Show success toast notification
+        toast.success(
+          <span className="text-[#FF4B00] font-semibold">
+            Form submitted successfully!
+          </span>,
+          {
+            description: (
+              <span className="text-[#FF4B00]">
+                We'll get back to you soon. Thank you for contacting us!
+              </span>
+            ),
+            duration: 5000,
+          }
+        );
 
         // Reset form after successful submission
         form.reset();
       } else {
         // Handle error response
         console.error("Error:", data);
-        alert(data.message || "Failed to submit form. Please try again.");
+        toast.error("Submission failed", {
+          description:
+            data.message || "Failed to submit form. Please try again.",
+          duration: 5000,
+        });
       }
     } catch (error) {
       console.error("Network error:", error);
-      alert("Network error. Please check your connection and try again.");
+      toast.error("Network error", {
+        description: "Please check your connection and try again.",
+        duration: 5000,
+      });
     } finally {
       setIsSubmitting(false);
     }
