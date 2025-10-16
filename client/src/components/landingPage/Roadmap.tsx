@@ -10,10 +10,12 @@ import {
   RefreshCcw,
 } from "lucide-react";
 import "../../styles/landingPage.css";
+import { useRouter } from "next/navigation";
 
 const merriweather = Merriweather({ subsets: ["latin"] });
 
 export default function Roadmap() {
+  const router = useRouter();
   const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
   const [progressWidth, setProgressWidth] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -208,7 +210,9 @@ export default function Roadmap() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div
+        onClick={() => router.push("/aboutUs")}
+        className="text-center mt-12">
           <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
             Explore Your Journey
             <svg

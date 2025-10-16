@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Merriweather } from "next/font/google";
 import { ChevronRight } from "lucide-react";
 import "../../styles/landingPage.css";
+import { useRouter } from "next/navigation";
 
 const merriweather = Merriweather({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ const faqItems: FAQItem[] = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number>(0);
+  const router = useRouter();
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -129,7 +131,10 @@ export default function FAQ() {
                   </div>
                 </div>
               </div>
-              <button className="mt-4 w-full bg-white text-[#1a4d3e] px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm">
+              <button
+                onClick={() => router.push("/contact")}
+                className="mt-4 w-full bg-white text-[#1a4d3e] px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
                 Schedule a Consultation
               </button>
             </div>

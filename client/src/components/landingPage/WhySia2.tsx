@@ -1,8 +1,11 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
 import "../../styles/landingPage.css";
 import { Patrick_Hand } from "next/font/google";
 import { Merriweather } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
 const merriweather = Merriweather({ subsets: ["latin"], weight: ["400" , "400"] });
@@ -101,6 +104,7 @@ function WhySia2() {
         "Women see real change — from balanced hormones to renewed confidence.",
     },
   ];
+  const router = useRouter();
 
   return (
     <section className="bg-white py-6 md:py-8 Helvetica lg:py-10 px-4 sm:px-6 lg:px-8">
@@ -123,7 +127,9 @@ function WhySia2() {
               From curated properties to end-to-end management, we simplify
               investing so you can focus on growing your wealth
             </p>
-            <button className="bg-[#FF4B00] text-white px-6 py-2 rounded-md hover:bg-[#ff6827] transition-colors duration-300 text-xs md:text-sm font-medium">
+            <button
+            onClick={() => router.push("https://quiz.siahealth.in")}
+            className="bg-[#FF4B00] text-white px-6 py-2 rounded-md hover:bg-[#ff6827] transition-colors duration-300 text-xs md:text-sm font-medium">
               Find the best for you
             </button>
           </div>

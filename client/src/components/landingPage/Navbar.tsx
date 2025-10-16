@@ -4,11 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { Rubik } from "next/font/google";
 import Link from "next/dist/client/link";
+import { useRouter } from "next/navigation";
 
 const rubikFont = Rubik({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div
@@ -23,6 +25,7 @@ export default function Navbar() {
         data-node-id="42:2055"
       >
         <div
+          onClick={() => router.push("/")}
           className="h-7 relative shrink-0 w-[122px]"
           data-name="Logo-Full"
           data-node-id="42:2070"
@@ -128,6 +131,7 @@ export default function Navbar() {
           data-node-id="42:2089"
         >
           <button
+            onClick={() => router.push("https://quiz.siahealth.in")}
             className="px-6 py-2 rounded-full text-white font-medium text-sm hover:opacity-90 transition-opacity"
             style={{
               background: "linear-gradient(90deg, #EB5200 0%, #FF7E29 100%)",

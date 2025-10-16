@@ -48,7 +48,7 @@ function Blog1() {
       {/* Featured Image */}
       <div className="w-full max-w-[1200px] mx-auto mb-12 px-6">
         <Image
-          src="/blogs/3.jpg"
+          src="/blogs/2.jpg"
           alt="Healthcare professionals collaborating"
           width={1200}
           height={600}
@@ -318,101 +318,6 @@ function Blog1() {
             feedback and emerging research.
           </p>
         </section>
-
-        <section className="bg-gradient-to-br from-[#ff914d] to-[#d9661b] p-12 rounded-2xl text-center mt-16">
-          <h2
-            className={`text-white text-[42px] mb-4 m-0 font-bold ${merriweather.className}`}
-          >
-            Join the Movement
-          </h2>
-          <p className="text-white text-lg mb-8 m-0 opacity-95">
-            Whether you&apos;re a healthcare provider interested in implementing
-            integrated care, a payer looking to improve outcomes and reduce
-            costs, or a patient seeking comprehensive, coordinated treatment,
-            we&apos;d love to hear from you.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="/contact"
-              className="py-3.5 px-8 rounded-lg text-base font-semibold no-underline inline-block transition-all duration-300 bg-white text-[#d9661b] hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.15)]"
-            >
-              Contact Us
-            </a>
-            <a
-              href="/learn"
-              className="py-3.5 px-8 rounded-lg text-base font-semibold no-underline inline-block transition-all duration-300 bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#d9661b]"
-            >
-              Learn More
-            </a>
-          </div>
-        </section>
-      </div>
-
-      {/* Share Section */}
-      <div className="max-w-[800px] mx-auto my-12 px-6 py-8 border-t border-b border-gray-200">
-        <h3
-          className={`text-xl text-[#0b0b0b] mb-4 m-0 font-bold ${merriweather.className}`}
-        >
-          Share this article
-        </h3>
-        <div className="flex gap-3 flex-wrap">
-          <button className="py-2.5 px-5 bg-gray-100 border border-gray-200 rounded-md text-sm font-semibold text-gray-800 cursor-pointer transition-all duration-200 hover:bg-[#ff914d] hover:text-white hover:border-[#ff914d]">
-            LinkedIn
-          </button>
-          <button className="py-2.5 px-5 bg-gray-100 border border-gray-200 rounded-md text-sm font-semibold text-gray-800 cursor-pointer transition-all duration-200 hover:bg-[#ff914d] hover:text-white hover:border-[#ff914d]">
-            Twitter
-          </button>
-          <button className="py-2.5 px-5 bg-gray-100 border border-gray-200 rounded-md text-sm font-semibold text-gray-800 cursor-pointer transition-all duration-200 hover:bg-[#ff914d] hover:text-white hover:border-[#ff914d]">
-            Facebook
-          </button>
-          <button className="py-2.5 px-5 bg-gray-100 border border-gray-200 rounded-md text-sm font-semibold text-gray-800 cursor-pointer transition-all duration-200 hover:bg-[#ff914d] hover:text-white hover:border-[#ff914d]">
-            Email
-          </button>
-        </div>
-      </div>
-
-      {/* Related Articles */}
-      <div className="max-w-[1200px] mx-auto mb-16 px-6 py-12 bg-gray-50">
-        <h3
-          className={`text-[32px] text-[#0b0b0b] mb-8 m-0 font-bold text-center ${merriweather.className}`}
-        >
-          Related Articles
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.1)] hover:border-[#ff914d]">
-            <h4
-              className={`text-xl text-[#0b0b0b] mb-3 m-0 font-bold ${merriweather.className}`}
-            >
-              Understanding Value-Based Care
-            </h4>
-            <p className="text-base text-gray-600 m-0 leading-relaxed">
-              How shifting from fee-for-service to value-based models improves
-              outcomes.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.1)] hover:border-[#ff914d]">
-            <h4
-              className={`text-xl text-[#0b0b0b] mb-3 m-0 font-bold ${merriweather.className}`}
-            >
-              Mental Health in Primary Care
-            </h4>
-            <p className="text-base text-gray-600 m-0 leading-relaxed">
-              Breaking the stigma and integrating mental health screening into
-              routine visits.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.1)] hover:border-[#ff914d]">
-            <h4
-              className={`text-xl text-[#0b0b0b] mb-3 m-0 font-bold ${merriweather.className}`}
-            >
-              Technology&apos;s Role in Modern Healthcare
-            </h4>
-            <p className="text-base text-gray-600 m-0 leading-relaxed">
-              Exploring how digital tools enhance patient engagement and care
-              coordination.
-            </p>
-          </div>
-        </div>
       </div>
     </article>
   );

@@ -13,8 +13,9 @@ function page() {
     <div>
       <Navbar />
       {/* <WhatWeDo /> */}
-      <Roadmap />
+      <div className="mb-25 " ></div>
       <Contact />
+      <Roadmap />
       <Testimonials />
       <Footer />
     </div>

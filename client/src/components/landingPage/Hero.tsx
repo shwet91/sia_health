@@ -5,6 +5,7 @@ import Image from "next/image";
 // import { Lato } from "next/font/google";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
+import { useRouter } from "next/navigation";
 
 const merriweatherFont = Merriweather({
   subsets: ["latin"],
@@ -15,6 +16,8 @@ const merriweatherFont = Merriweather({
 // const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <div
       className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
@@ -61,6 +64,7 @@ export default function Hero() {
               className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}
             >
               <button
+              onClick={() => router.push("/contact")}
                 className="w-full sm:w-auto px-8 py-4 rounded-xl text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{
                   background:
@@ -93,6 +97,7 @@ export default function Hero() {
 
         <div className="flex justify-center w-full mt-18">
           <button
+            onClick={() => router.push("https://quiz.siahealth.in")}
             className={`px-6 sm:px-8 py-4 rounded-xl bg-[#EB5200] text-white font-medium text-sm sm:text-base hover:bg-[#FF7E29] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${merriweatherFont.className}`}
           >
             Take the Hormone Test Now !

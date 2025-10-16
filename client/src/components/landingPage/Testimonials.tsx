@@ -205,15 +205,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="text-center mt-8">
-          <a
-            href="#"
-            className="text-[#FF4B00] font-medium inline-flex items-center gap-2 hover:underline"
-          >
-            See More Transformations
-            <span className="text-xl">→</span>
-          </a>
-        </div>
       </div>
     </section>
   );
