@@ -88,7 +88,7 @@ export default function Contact() {
           {
             description: (
               <span className="text-[#FF4B00]">
-                We'll get back to you soon. Thank you for contacting us!
+                We&apos;ll get back to you soon. Thank you for contacting us!
               </span>
             ),
             duration: 5000,
