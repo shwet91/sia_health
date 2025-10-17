@@ -69,15 +69,39 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  // Carousel state: show 3 cards at a time, advance by 1
-  const visible = 3;
-  const step = 1; // advance by 1 card at a time
-  const [currentIndex, setCurrentIndex] = React.useState(0); // index of left-most visible card
-  const slideCount = testimonials.length;
-  const maxIndex = slideCount - visible; // maximum index for sliding
+  // Carousel state for simple sliding
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [visibleCards, setVisibleCards] = React.useState(3);
   const autoplayInterval = 3000; // 3 seconds
   const autoplayRef = React.useRef<number | null>(null);
   const isHoveredRef = React.useRef(false);
+
+  // Calculate max index based on visible cards
+  const maxIndex = Math.max(0, testimonials.length - visibleCards);
+
+  // Track visible cards for proper navigation
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(1); // mobile
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2); // tablet
+      } else {
+        setVisibleCards(3); // desktop
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Reset index if it exceeds max after resize
+  React.useEffect(() => {
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [currentIndex, maxIndex]);
 
   React.useEffect(() => {
     // autoplay: advance by 1 every interval
@@ -86,7 +110,7 @@ export default function Testimonials() {
       autoplayRef.current = window.setInterval(() => {
         if (!isHoveredRef.current) {
           setCurrentIndex((i) => {
-            const nextIndex = i + step;
+            const nextIndex = i + 1;
             return nextIndex > maxIndex ? 0 : nextIndex;
           });
         }
@@ -97,20 +121,14 @@ export default function Testimonials() {
     return () => {
       if (autoplayRef.current) window.clearInterval(autoplayRef.current);
     };
-  }, [maxIndex, step]);
+  }, [maxIndex]);
 
-  const goTo = (idx: number) =>
-    setCurrentIndex(Math.max(0, Math.min(maxIndex, idx)));
   const next = () =>
     setCurrentIndex((i) => {
-      const nextIndex = i + step;
+      const nextIndex = i + 1;
       return nextIndex > maxIndex ? 0 : nextIndex;
     });
-  const prev = () =>
-    setCurrentIndex((i) => {
-      const prevIndex = i - step;
-      return prevIndex < 0 ? 0 : prevIndex;
-    });
+  const prev = () => setCurrentIndex((i) => Math.max(0, i - 1));
 
   return (
     <section className="w-full Helvetica py-16 bg-[#FFF4EB]" id="testimonials">
@@ -131,20 +149,20 @@ export default function Testimonials() {
           onMouseEnter={() => (isHoveredRef.current = true)}
           onMouseLeave={() => (isHoveredRef.current = false)}
         >
-          {/* Slides container: use flex and translateX for sliding animation */}
+          {/* Slides container with responsive grid */}
           <div className="overflow-hidden">
+            {/* Mobile: 1 card at a time (100%), Tablet: 2 cards (50%), Desktop: 3 cards (33.33%) */}
             <div
-              className="flex transition-transform duration-700 ease-in-out"
+              className="flex transition-transform duration-700 ease-in-out 
+                         [--slide-width:100%] md:[--slide-width:50%] lg:[--slide-width:33.333%]"
               style={{
-                width: `${(slideCount / visible) * 100}%`,
-                transform: `translateX(-${(currentIndex / slideCount) * 100}%)`,
+                transform: `translateX(calc(-${currentIndex} * var(--slide-width)))`,
               }}
             >
               {testimonials.map((t, idx) => (
                 <div
                   key={idx}
-                  className="px-2"
-                  style={{ width: `${100 / slideCount}%` }}
+                  className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2"
                 >
                   <div className="p-4 h-full flex items-stretch">
                     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer w-full">
@@ -178,33 +196,32 @@ export default function Testimonials() {
           <button
             aria-label="Previous"
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 z-10"
           >
             ‹
           </button>
           <button
             aria-label="Next"
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 z-10"
           >
             ›
           </button>
 
-          {/* Indicators: show one indicator per page (maxIndex + 1 pages) */}
+          {/* Indicators - show dots based on possible slide positions */}
           <div className="flex justify-center gap-2 mt-6">
             {Array.from({ length: maxIndex + 1 }).map((_, i) => (
               <button
                 key={i}
-                onClick={() => goTo(i)}
-                aria-label={`Go to set starting at ${i + 1}`}
-                className={`w-3 h-3 rounded-full ${
+                onClick={() => setCurrentIndex(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`w-3 h-3 rounded-full transition-colors ${
                   i === currentIndex ? "bg-[#FF4B00]" : "bg-gray-300"
                 }`}
               />
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
