@@ -76,6 +76,13 @@ export default function Testimonials() {
   const autoplayRef = React.useRef<number | null>(null);
   const isHoveredRef = React.useRef(false);
 
+  // Touch/drag state
+  const [isDragging, setIsDragging] = React.useState(false);
+  const [startX, setStartX] = React.useState(0);
+  const [currentTranslate, setCurrentTranslate] = React.useState(0);
+  const [prevTranslate, setPrevTranslate] = React.useState(0);
+  const sliderRef = React.useRef<HTMLDivElement>(null);
+
   // Calculate max index based on visible cards
   const maxIndex = Math.max(0, testimonials.length - visibleCards);
 
@@ -130,6 +137,75 @@ export default function Testimonials() {
     });
   const prev = () => setCurrentIndex((i) => Math.max(0, i - 1));
 
+  // Touch/drag handlers
+  const handleDragStart = (clientX: number) => {
+    setIsDragging(true);
+    setStartX(clientX);
+    setPrevTranslate(currentTranslate);
+    isHoveredRef.current = true; // Pause autoplay while dragging
+  };
+
+  const handleDragMove = (clientX: number) => {
+    if (!isDragging) return;
+    const currentPosition = clientX;
+    const diff = currentPosition - startX;
+    setCurrentTranslate(prevTranslate + diff);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    isHoveredRef.current = false;
+
+    const movedBy = currentTranslate - prevTranslate;
+    const threshold = 50; // Minimum swipe distance to trigger slide
+
+    if (movedBy < -threshold && currentIndex < maxIndex) {
+      // Swiped left - go to next
+      setCurrentIndex((i) => i + 1);
+    } else if (movedBy > threshold && currentIndex > 0) {
+      // Swiped right - go to previous
+      setCurrentIndex((i) => i - 1);
+    }
+
+    // Reset translate values
+    setCurrentTranslate(0);
+    setPrevTranslate(0);
+  };
+
+  // Mouse event handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleDragStart(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    handleDragMove(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    handleDragEnd();
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      handleDragEnd();
+    }
+  };
+
+  // Touch event handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    handleDragStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    handleDragMove(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    handleDragEnd();
+  };
+
   return (
     <section className="w-full Helvetica py-16 bg-[#FFF4EB]" id="testimonials">
       <div className="max-w-7xl mx-auto px-4">
@@ -147,16 +223,30 @@ export default function Testimonials() {
         <div
           className="relative"
           onMouseEnter={() => (isHoveredRef.current = true)}
-          onMouseLeave={() => (isHoveredRef.current = false)}
+          onMouseLeave={() => {
+            isHoveredRef.current = false;
+            handleMouseLeave();
+          }}
         >
           {/* Slides container with responsive grid */}
-          <div className="overflow-hidden">
+          <div
+            className="overflow-hidden cursor-grab active:cursor-grabbing"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            ref={sliderRef}
+          >
             {/* Mobile: 1 card at a time (100%), Tablet: 2 cards (50%), Desktop: 3 cards (33.33%) */}
             <div
-              className="flex transition-transform duration-700 ease-in-out 
-                         [--slide-width:100%] md:[--slide-width:50%] lg:[--slide-width:33.333%]"
+              className="flex [--slide-width:100%] md:[--slide-width:50%] lg:[--slide-width:33.333%]"
               style={{
-                transform: `translateX(calc(-${currentIndex} * var(--slide-width)))`,
+                transform: `translateX(calc(-${currentIndex} * var(--slide-width) + ${
+                  isDragging ? currentTranslate : 0
+                }px))`,
+                transition: isDragging ? "none" : "transform 700ms ease-in-out",
               }}
             >
               {testimonials.map((t, idx) => (

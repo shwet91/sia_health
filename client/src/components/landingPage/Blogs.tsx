@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import "../../styles/landingPage.css";
 
 interface BlogPost {
@@ -9,32 +12,36 @@ interface BlogPost {
   readTime: string;
   title: string;
   description: string;
+  link: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    image: "/blogs/6.jpg",
+    image: "/blogs/b1.avif",
     readTime: "5 min read",
-    title: "Understanding PCOS: Beyond the Diagnosis",
+    title: "How Fad Diets Mess up Your Hormones?",
     description:
-      "Dive deep into the root causes of PCOS and discover natural approaches to managing symptoms.",
+      "There are so many diets which keep on popping our feed in this Social Media World like Keto, One meal a day etc. Let's decode them today",
+    link: "/Blogs/1",
   },
   {
     id: 2,
-    image: "/blogs/2.jpg",
+    image: "/blogs/b2.avif",
     readTime: "5 min read",
-    title: "Thyroid Health: The Master Metabolic Regulator",
+    title: "Stress and PCOS: How Cortisol Worsens Hormonal Imbalance",
     description:
-      "Learn how thyroid dysfunction affects every aspect of your health and how to optimize function naturally.",
+      "Learn how chronic stress affects PCOS symptoms like weight gain, acne, and irregular periods and discover 6 natural ways to reduce stress and restore balance.",
+    link: "/Blogs/2",
   },
   {
     id: 3,
-    image: "/blogs/3.jpg",
+    image: "/blogs/b3.avif",
     readTime: "10 min read",
-    title: "The Hormone-Weight Connection",
+    title: "Strength Training for PCOS: The Ultimate Workout",
     description:
-      "Discover why traditional dieting fails and how hormonal balance is the key to sustainable weight management.",
+      "Discover why strength training is the best PCOS workout for hormonal balance, insulin resistance & sustainable weight loss. Your gym guide starts here.",
+    link: "/Blogs/3",
   },
   // {
   //   id: 4,
@@ -63,6 +70,12 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function Blogs() {
+  const router = useRouter();
+
+  const handleCardClick = (link: string) => {
+    router.push(link);
+  };
+
   return (
     <section className="w-full bg-white py-16 md:py-20 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -71,6 +84,7 @@ export default function Blogs() {
             <article
               key={post.id}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgb(198,61,0,0.5)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              onClick={() => handleCardClick(post.link)}
             >
               <div className="relative w-full h-56">
                 <Image
