@@ -98,7 +98,7 @@ export default function Hero() {
         <div className="flex justify-center w-full mt-18">
           <button
             onClick={() => router.push("https://quiz.siahealth.in")}
-            className={`px-6 sm:px-8 py-4 rounded-xl bg-[#EB5200] text-white font-medium text-sm sm:text-base hover:bg-[#FF7E29] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${merriweatherFont.className}`}
+            className={`px-6 sm:px-8 py-4 rounded-xl bg-[#fadeb4] font-bold text-[#FF7E29] border-[#FF7E29] text-sm sm:text-base hover:bg-[#ffdda9] hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-xl ${merriweatherFont.className}`}
           >
             Take the Hormone Test Now !
           </button>
