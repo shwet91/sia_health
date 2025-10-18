@@ -36,7 +36,10 @@ export default function RootLayout({
           richColors
           toastOptions={{
             classNames: {
-              success: "[&>div>svg]:!text-[#FF4B00]",
+              success: "[&>div>svg]:!text-[#FF4B00] [&>div]:!text-[#FF4B00]",
+              error: "[&>div>svg]:!text-[#FF4B00] [&>div]:!text-[#FF4B00]",
+              info: "[&>div>svg]:!text-[#FF4B00] [&>div]:!text-[#FF4B00]",
+              warning: "[&>div>svg]:!text-[#FF4B00] [&>div]:!text-[#FF4B00]",
             },
           }}
         />

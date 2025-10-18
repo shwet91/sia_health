@@ -1,12 +1,45 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Heart } from "lucide-react";
+import { toast } from "sonner";
 import "../../styles/landingPage.css";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/NewsLetter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(data.message || "Successfully subscribed to newsletter!");
+        setEmail("");
+      } else {
+        toast.error(data.error || "Failed to subscribe. Please try again.");
+      }
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+      toast.error("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-gray-100 text-white py-16 Helvetica">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -124,18 +157,25 @@ export default function Footer() {
               Get wellness tips and updates delivered to your inbox and stay
               healthy with us!
             </p>
-            <form className="flex flex-col gap-3">
+            <form
+              className="flex flex-col gap-3"
+              onSubmit={handleNewsletterSubmit}
+            >
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF4B00] focus:border-transparent"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isSubmitting}
               />
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#FF4B00] text-white rounded-lg font-semibold hover:bg-[#E04300] transition-colors"
+                className="w-full px-6 py-3 bg-[#FF4B00] text-white rounded-lg font-semibold hover:bg-[#E04300] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
               >
-                Subscribe
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>
