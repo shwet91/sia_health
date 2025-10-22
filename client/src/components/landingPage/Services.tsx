@@ -62,21 +62,32 @@ export default function Services() {
         </div>
 
         {/* Use Approach-style image cards for visual parity */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
           {services.map((s, idx) => {
+            // const images = [
+            //   "/Solutions/1.avif",
+            //   "/Solutions/2.avif",
+            //   "/Solutions/3.avif",
+            //   "/Solutions/4.avif",
+            //   "/Solutions/5.avif",
+            //   "/Solutions/6.avif",
+            // ];
+
             const images = [
-              "/Solutions/1.avif",
-              "/Solutions/2.avif",
-              "/Solutions/3.avif",
-              "/Solutions/4.avif",
-              "/Solutions/5.avif",
-              "/Solutions/6.avif",
+              "https://i.pinimg.com/736x/68/8a/9c/688a9c85e73fad2dda5a002921cfcb80.jpg",
+              "https://i.pinimg.com/1200x/c3/43/db/c343db9e157695432f1ca4415ec85437.jpg",
+              "https://i.pinimg.com/736x/a7/5b/59/a75b59fbd7d8dbcd4c750fe5e8c6bae6.jpg",
+              "https://i.pinimg.com/736x/66/fb/13/66fb131c2d73afe73ea42514220f0f96.jpg",
+              "https://i.pinimg.com/736x/ff/2d/60/ff2d608fc0833538e2ebc3bccca4da4f.jpg",
+              "https://i.pinimg.com/736x/61/c9/61/61c9616ccb27d8511134cee1c019f15b.jpg",
+              "https://i.pinimg.com/1200x/55/12/80/5512808adf46954e80a236a10ecdd331.jpg",
+              "https://i.pinimg.com/1200x/4f/58/90/4f589009f97e02f818773bad680bb3dd.jpg",
             ];
             const img = images[idx % images.length];
             return (
               <div
                 key={s.title}
-                className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-48 group"
+                className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-32 sm:h-36 lg:h-48 group"
               >
                 <Image
                   src={img}
@@ -88,8 +99,8 @@ export default function Services() {
                 {/* Stronger gradient + tint layer to make the cards darker */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 transition-all duration-300"></div>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
-                  <h3 className="text-white font-bold text-lg leading-tight drop-shadow-lg">
+                <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-3 lg:p-4 text-center">
+                  <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight drop-shadow-lg">
                     {s.title}
                   </h3>
                 </div>

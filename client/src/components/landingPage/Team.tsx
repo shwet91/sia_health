@@ -69,7 +69,7 @@ export default function Team() {
               </div>
 
               {/* Info Card with overlay styling - Fixed Height */}
-              <div className="w-[70%] 1bg-black/40 backdrop-blur-sm rounded-lg p-4 text-center min-h-[120px] flex flex-col justify-center ">
+              <div className="w-[70%] mb-3 bg-black/40 backdrop-blur-sm rounded-lg p-4 text-center min-h-[120px] flex flex-col justify-center ">
                 <h3 className="text-lg md:text-xl font-bold text-white mb-1">
                   {member.name}
                 </h3>

@@ -97,7 +97,7 @@ export default function WhatWeDo() {
           </p>
         </div>
 
-        <div className="mt-16 relative">
+        <div className="mt-8 md:mt-16 relative">
           {/* Connection lines for desktop */}
           <div
             className="hidden lg:block absolute top-8 left-0 right-0 h-0.5"
@@ -127,7 +127,7 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 relative">
             {steps.map((step, index) => {
               const isVisible = visibleSteps.includes(index);
               return (
@@ -145,7 +145,7 @@ export default function WhatWeDo() {
                   }}
                 >
                   <div
-                    className="w-16 h-16 bg-[#FFF4EB] rounded-full flex items-center justify-center mb-6 relative shadow-lg"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#FFF4EB] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 relative shadow-lg"
                     style={{
                       transform: isVisible ? "rotate(0deg)" : "rotate(-180deg)",
                       transition: `transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${
@@ -154,11 +154,11 @@ export default function WhatWeDo() {
                     }}
                   >
                     <step.icon
-                      className="w-8 h-8 text-[#FF4B00]"
+                      className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#FF4B00]"
                       strokeWidth={1.5}
                     />
                     <div
-                      className="absolute -top-2 -right-2 w-6 h-6 bg-[#FF4B00] rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md"
+                      className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-5 h-5 sm:w-6 sm:h-6 bg-[#FF4B00] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-md"
                       style={{
                         transform: isVisible ? "scale(1)" : "scale(0)",
                         transition: `transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
@@ -181,7 +181,7 @@ export default function WhatWeDo() {
                   </div>
 
                   <h3
-                    className="text-xl font-bold text-[#2D1810] mb-3"
+                    className="text-base sm:text-lg md:text-xl font-bold text-[#2D1810] mb-2 sm:mb-3 px-1"
                     style={{
                       opacity: isVisible ? 1 : 0,
                       transform: isVisible
@@ -193,7 +193,7 @@ export default function WhatWeDo() {
                     {step.title}
                   </h3>
                   <p
-                    className="text-[#663014] text-sm leading-relaxed"
+                    className="text-[#663014] text-xs sm:text-sm leading-relaxed px-1"
                     style={{
                       opacity: isVisible ? 1 : 0,
                       transform: isVisible
@@ -212,8 +212,9 @@ export default function WhatWeDo() {
 
         <div className="text-center mt-12">
           <button
-          onClick={() => router.push("/aboutUs")}
-          className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
+            onClick={() => router.push("/aboutUs")}
+            className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center"
+          >
             Explore Your Journey
             <svg
               className="ml-2 w-4 h-4"

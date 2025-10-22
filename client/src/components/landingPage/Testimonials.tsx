@@ -1,7 +1,15 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import "../../styles/landingPage.css";
 import { Merriweather } from "next/font/google";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const merriweatherFont = Merriweather({
   subsets: ["latin"],
@@ -31,6 +39,37 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
+  const TestimonialCard = ({
+    testimonial,
+  }: {
+    testimonial: (typeof testimonials)[0];
+  }) => (
+    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out h-full">
+      <div className="flex flex-col items-center text-center">
+        <div className="aspect-square h-20 w-20 rounded-full overflow-hidden relative">
+          <Image
+            src={testimonial.image}
+            alt={testimonial.name}
+            fill
+            className="object-cover rounded-full object-center"
+          />
+        </div>
+
+        <p className={`font-medium mt-4 mb-3 ${merriweatherFont.className}`}>
+          {testimonial.name}
+        </p>
+
+        <p className="text-center italic text-sm">
+          &ldquo;{testimonial.quote}&rdquo;
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <section className="w-full Helvetica py-16 bg-[#FFF4EB]" id="testimonials">
       <div className="max-w-7xl mx-auto px-4">
@@ -45,33 +84,32 @@ export default function Testimonials() {
           personalized approach.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Mobile Carousel */}
+        <div className="md:hidden max-w-6xl mx-auto">
+          <Carousel
+            plugins={[autoplayPlugin.current]}
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            onMouseEnter={() => autoplayPlugin.current.stop()}
+            onMouseLeave={() => autoplayPlugin.current.play()}
+          >
+            <CarouselContent>
+              {testimonials.map((t, idx) => (
+                <CarouselItem key={idx}>
+                  <TestimonialCard testimonial={t} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((t, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="aspect-square h-20 w-20 rounded-full overflow-hidden relative">
-                  <Image
-                    src={t.image}
-                    alt={t.name}
-                    fill
-                    className="object-cover rounded-full object-center"
-                  />
-                </div>
-
-                <p
-                  className={`font-medium mt-4 mb-3 ${merriweatherFont.className}`}
-                >
-                  {t.name}
-                </p>
-
-                <p className="text-center italic text-sm">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-              </div>
-            </div>
+            <TestimonialCard key={idx} testimonial={t} />
           ))}
         </div>
       </div>
