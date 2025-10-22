@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 import { useRouter } from "next/navigation";
+import { MoveRight } from "lucide-react";
 
 const merriweatherFont = Merriweather({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function Hero() {
       <div className={` Helvetica container mx-auto max-w-7xl`}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
-            <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-xl text-[#2e1300] text-sm md:text-base font-medium">
+            <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-lg text-[#2e1300] text-sm md:text-base font-medium">
               Hormonal empathy meets warm science
             </div>
 
@@ -64,8 +65,8 @@ export default function Hero() {
               className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}
             >
               <button
-              onClick={() => router.push("/contact")}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
+                onClick={() => router.push("/contact")}
+                className="w-full sm:w-auto px-8 py-3 rounded-sm text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
                 style={{
                   background:
                     "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
@@ -73,6 +74,15 @@ export default function Hero() {
                 aria-label="Give a Harmone Test in a minute"
               >
                 Book a Free Expert Consult
+              </button>
+            </div>
+
+            <div className="flex justify-center w-full mt-0">
+              <button
+                onClick={() => router.push("https://quiz.siahealth.in")}
+                className={`px-6 sm:px-6 py-3 rounded-sm  font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
+              >
+                Take the Hormone Test Now <MoveRight className="inline-block"></MoveRight>
               </button>
             </div>
 
@@ -98,7 +108,7 @@ export default function Hero() {
         <div className="flex justify-center w-full mt-18">
           <button
             onClick={() => router.push("https://quiz.siahealth.in")}
-            className={`px-6 sm:px-8 py-4 rounded-xl bg-[#fadeb4] font-bold text-[#FF7E29] border-[#FF7E29] text-sm sm:text-base hover:bg-[#ffdda9] hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-xl ${merriweatherFont.className}`}
+            className={` hidden px-6 sm:px-8 py-4 rounded-xl  font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
           >
             Take the Hormone Test Now !
           </button>

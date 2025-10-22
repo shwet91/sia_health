@@ -10,7 +10,8 @@ import FAQ from "@/components/landingPage/FAQ";
 import Contact from "@/components/landingPage/Contact";
 import Footer from "@/components/landingPage/Footer";
 import WhySia2 from "@/components/landingPage/WhySia2";
-import MembersJoining from "@/components/landingPage/MembersJoining";
+// import MembersJoining from "@/components/landingPage/MembersJoining";
+import Video from "@/components/landingPage/Video";
 
 export default function Home() {
   return (
@@ -22,10 +23,11 @@ export default function Home() {
         <Approach />
         <WhatWeDo />
         <WhySia2 />
-        <MembersJoining />
+        {/* <MembersJoining /> */}
         <Services />
         <Team />
         <Contact />
+        <Video />
         <FAQ />
         <Blogs />
         <Footer />

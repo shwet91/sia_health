@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import "../../styles/landingPage.css";
+import { useRouter } from "next/navigation";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ const formSchema = z.object({
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   // Initialize form with react-hook-form and zod validation
   const form = useForm<z.infer<typeof formSchema>>({
@@ -260,20 +262,9 @@ export default function Contact() {
                 {/* Submit Button */}
                 <div className="flex items-center gap-3 mt-0">
                   <button
-                    type="button"
-                    disabled={isSubmitting}
-                    className={`${merriweather.className} bg-white text-[#FF4B00] border border-[#FF4B00] py-3 px-7 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0`}
-                    onClick={() =>
-                      console.log("Current form values:", form.getValues())
-                    }
-                  >
-                    Submit
-                  </button>
-
-                  <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-7 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-[#FF4B00] flex items-center gap-2`}
+                    className={`${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-21 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-[#FF4B00] flex items-center gap-2`}
                   >
                     {isSubmitting ? (
                       <>
@@ -283,6 +274,27 @@ export default function Contact() {
                     ) : (
                       "Book A Call"
                     )}
+                  </button>
+                </div>
+
+                <p className={`text-xs tracking-wider mb-1 flex items-center uppercase ${merriweather.className}`}>
+                  <span className="inline-block w-8 h-0.5 bg-[#FF4B00] mr-2"></span>
+                  <span className="text-[#FF4B00] mr-2 font-bold uppercase"> Pick a Date</span>
+                  <span className="text-[#130e2e] font-bold">Of Your Choice</span>
+                </p>
+
+                {/* Title */}
+
+                <div className="flex items-center gap-10">
+                  <button
+                    type="button"
+                    disabled={isSubmitting}
+                    className={`${merriweather.className} bg-white text-[#FF4B00]1 border border-[#FF4B00] py-3 px-17 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0`}
+                    onClick={() =>
+                     router.push("https://calendly.com/aditi-siahealth/30min?month=2025-10")
+                    }
+                  >
+                    <span className="text-[#FF4B00]">Pick a Date Now</span>
                   </button>
                 </div>
               </form>

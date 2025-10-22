@@ -105,17 +105,17 @@ export default function Approach() {
             className={` text-4xl lg:text-5xl font-serif text-gray-900 ${merriweather.className}`}
           >
             {" "}
-            <span>We Take Care of Everything, So You Don`t Have To</span>
+            <span>We Take Care of Everything, So You Don&apos;t Have To</span>
           </h2>
           <p className="mt-4 text-gray-500 max-w-xl">
-            Women already juggle a lot — work, family,
-            responsibilities — and their health often takes the back seat.
+            Women already juggle a lot with work, family,
+            responsibilities and their health often takes the back seat.
           </p>
 
           <div className="mt-6 text-gray-700 max-w-xl space-y-4">
             <p className="text-gray-700">
               We take the mental load off your shoulders, guiding you from
-              diagnosis to daily nutrition and lifestyle changes — all with
+              diagnosis to daily nutrition and lifestyle changes all with
               continuous support, clinical expertise, and empathy.
             </p>
           </div>

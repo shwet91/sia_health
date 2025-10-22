@@ -30,7 +30,8 @@ export default function Team() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/TeamBG.jpg"
+          // src="/TeamBG.jpg"
+          src={"https://i.pinimg.com/1200x/93/e4/df/93e4df97cc701d0ce08d2fd714c9c703.jpg"}
           alt="Background"
           fill
           className="object-cover opacity-30"
@@ -68,7 +69,7 @@ export default function Team() {
               </div>
 
               {/* Info Card with overlay styling - Fixed Height */}
-              <div className="w-full 1bg-black/40 backdrop-blur-sm rounded-lg p-4 mb-4 text-center min-h-[120px] flex flex-col justify-center">
+              <div className="w-[70%] 1bg-black/40 backdrop-blur-sm rounded-lg p-4 mb-4 text-center min-h-[120px] flex flex-col justify-center ">
                 <h3 className="text-lg md:text-xl font-bold text-white mb-1">
                   {member.name}
                 </h3>
