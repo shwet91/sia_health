@@ -72,9 +72,12 @@ export default function MoreAboutServices() {
               Nutrition Support & Supplement Guidance
             </h2>
             <p className="text-[#663014] text-lg mb-4">
-              Your nutrition plan is designed around your body’s unique
-              requirements - whether it’s inflammation, insulin resistance,
-              digestive concerns, or fatigue
+              Your nutrition plan is tailored to your body’s unique needs,
+              addressing inflammation, insulin resistance, digestive issues, or
+              fatigue. We combine expert guidance with evidence-based
+              supplements to support hormonal balance, energy, and overall
+              wellbeing. This holistic approach ensures you heal from within,
+              creating sustainable health improvements.
             </p>
           </div>
 

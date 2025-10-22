@@ -11,22 +11,22 @@ const merriweatherFont = Merriweather({
 // 3 static testimonials
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Kanchan",
     quote:
-      "SIA didn't just treat my PCOS—they helped me understand my body for the first time in years.",
-    image: "/testimonials/sarah.jpg",
+      "After struggling to find the right balance in my diet to manage both migraine and PCOS, Sia Health came to my rescue with their deep understanding of the unique needs of a PCOS-affected female body. Their guidance has significantly boosted my body strength, improved my immune system, and I am truly grateful for their expertise and care.",
+    image: "/testimonials/Kanchan.jpeg",
   },
   {
-    name: "Maria L.",
+    name: "Sakshi, 27",
     quote:
-      "My thyroid levels are finally balanced, and I feel like myself again. The personalized approach made all the difference.",
-    image: "/testimonials/maria.jpg",
+      "I’ve always been confused about where to go when it comes to my health. I needed a place where there is ongoing support so I can understand my body better and build habits accordingly. Sia Health is that place. The safe haven I needed.",
+    image: "/testimonials/Sakhshi.jpeg",
   },
   {
-    name: "Jessica K.",
+    name: "Anjali",
     quote:
-      "From struggling with weight to feeling empowered about my health journey—SIA transformed everything.",
-    image: "/testimonials/jessica.jpg",
+      "Before joining SIA Health( then Triya Health), I struggled to stay consistent and was confused about what to eat and how much. The personalized health chart, structured workouts, and daily check-ins helped me stay on track. For the first time, I felt clear, supported, and truly understood my body. I now feel stronger, healthier - and this journey has been a game-changer.",
+    image: "/testimonials/Anjali.jpeg",
   },
 ];
 
@@ -57,15 +57,18 @@ export default function Testimonials() {
                     src={t.image}
                     alt={t.name}
                     fill
-                    className="object-cover rounded-full"
+                    className="object-cover rounded-full object-center"
                   />
                 </div>
 
-                <p className="text-center italic mb-3 mt-4 text-sm">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <p className={`font-medium ${merriweatherFont.className}`}>
+                <p
+                  className={`font-medium mt-4 mb-3 ${merriweatherFont.className}`}
+                >
                   {t.name}
+                </p>
+
+                <p className="text-center italic text-sm">
+                  &ldquo;{t.quote}&rdquo;
                 </p>
               </div>
             </div>
