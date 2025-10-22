@@ -1,16 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Heart,
-  Zap,
-  Scale,
-  Star,
-  Calendar,
-  Smile,
-  Brain,
-  Moon,
-} from "lucide-react";
+import Image from "next/image";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 
@@ -20,42 +11,34 @@ const services = [
   {
     title: "PCOS/PCOD & Irregular Periods",
     desc: "Restore your hormonal balance and regain cycle control — naturally and sustainably.",
-    icon: <Heart className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Thyroid Disorders & Imbalances",
     desc: "Stabilize your energy, mood, and metabolism with targeted thyroid care.",
-    icon: <Zap className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Gut Issues, Bloating & Digestion",
     desc: "Heal your gut, improve digestion, and reduce bloating from within.",
-    icon: <Scale className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Skin, Hair, Immunity & More",
     desc: "Glow from the inside out with balanced hormones and better nutrition.",
-    icon: <Star className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Fatigue, Low Energy & Burnout",
     desc: "Reclaim your energy and feel refreshed — all day, every day.",
-    icon: <Calendar className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Menopause (Peri & Post)",
     desc: "Navigate hormonal shifts smoothly with expert, compassionate care.",
-    icon: <Moon className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Weight Management & Metabolism",
     desc: "Balance hormones to achieve sustainable, long-term weight goals.",
-    icon: <Smile className="w-4 h-4 text-[#FF7E29]" />,
   },
   {
     title: "Fertility & Pre-conception Care",
     desc: "Support your body naturally for healthy cycles and conception readiness.",
-    icon: <Brain className="w-4 h-4 text-[#FF7E29]" />,
   },
 ];
 
@@ -78,54 +61,43 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Use Approach-style image cards for visual parity */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-          {services.slice(0, 4).map((s) => (
-            <div
-              key={s.title}
-              className={
-                "bg-white rounded-xl p-3 sm:p-4 shadow-sm hover:shadow-[0_6px_20px_rgb(198,61,0,0.35)] hover:-translate-y-1 transition-all duration-300 relative group overflow-hidden border border-[rgba(102,43,0,0.05)]"
-              }
-              style={{
-                backgroundImage:
-                  "radial-gradient(rgba(102,43,0,0.12) 1px, transparent 1px)",
-                backgroundSize: "6px 6px",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-[rgba(255,244,235,0.6)] mb-3">
-                {s.icon}
+          {services.map((s, idx) => {
+            const images = [
+              "/Solutions/1.avif",
+              "/Solutions/2.avif",
+              "/Solutions/3.avif",
+              "/Solutions/4.avif",
+              "/Solutions/5.avif",
+              "/Solutions/6.avif",
+            ];
+            const img = images[idx % images.length];
+            return (
+              <div
+                key={s.title}
+                className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-48 group"
+              >
+                <Image
+                  src={img}
+                  alt={s.title}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+                {/* Stronger gradient + tint layer to make the cards darker */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
+                  <h3 className="text-white font-bold text-lg leading-tight drop-shadow-lg">
+                    {s.title}
+                  </h3>
+                </div>
+                {/* Keep description only for screen readers - no visual reveal on hover */}
+                <p className="sr-only">{s.desc}</p>
               </div>
-              <h3 className="text-sm font-bold text-[#2D1810] mb-2 text-center">
-                {s.title}
-              </h3>
-              <p className="text-xs text-[#663014] text-center">{s.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-4 lg:mt-6">
-          {services.slice(4).map((s) => (
-            <div
-              key={s.title}
-              className={
-                "bg-white rounded-xl p-3 sm:p-4 shadow-sm hover:shadow-[0_6px_20px_rgb(198,61,0,0.35)] hover:-translate-y-1 transition-all duration-300 relative group overflow-hidden border border-[rgba(102,43,0,0.05)]"
-              }
-              style={{
-                backgroundImage:
-                  "radial-gradient(rgba(102,43,0,0.12) 1px, transparent 1px)",
-                backgroundSize: "6px 6px",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-[rgba(255,244,235,0.6)] mb-3">
-                {s.icon}
-              </div>
-              <h3 className="text-sm font-bold text-[#2D1810] mb-2 text-center">
-                {s.title}
-              </h3>
-              <p className="text-xs text-[#663014] text-center">{s.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

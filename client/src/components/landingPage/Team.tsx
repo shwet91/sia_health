@@ -47,7 +47,7 @@ export default function Team() {
               merriweather.className
             }
           >
-            What Our Advisors Say
+            What Our Experts and Doctors say
           </h2>
           <p className="text-lg md:text-xl text-white/90">
             All of our plans & processes our co-created with hormonal health
@@ -55,7 +55,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 w-full max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 lg:gap-12 w-full max-w-[1100px] mx-auto">
           {teamMembers.map((member, index) => (
             <div key={index} className="w-full flex flex-col items-center">
               {/* Profile Image */}
@@ -69,7 +69,7 @@ export default function Team() {
               </div>
 
               {/* Info Card with overlay styling - Fixed Height */}
-              <div className="w-[70%] 1bg-black/40 backdrop-blur-sm rounded-lg p-4 mb-4 text-center min-h-[120px] flex flex-col justify-center ">
+              <div className="w-[70%] 1bg-black/40 backdrop-blur-sm rounded-lg p-4 text-center min-h-[120px] flex flex-col justify-center ">
                 <h3 className="text-lg md:text-xl font-bold text-white mb-1">
                   {member.name}
                 </h3>
@@ -82,7 +82,7 @@ export default function Team() {
               </div>
 
               {/* Testimonial Quote - Fixed Height */}
-              <div className="w-full 1bg-black/30 1backdrop-blur-sm rounded-lg p-4 text-center h-[160px] md:h-[140px] flex items-center justify-center">
+              <div className="w-full 1bg-black/30 1backdrop-blur-sm rounded-lg p-4 text-center h-[100px] md:h-[140px] flex items-center justify-center">
                 <p className="text-white text-sm md:text-base leading-relaxed">
                   {member.quote}
                 </p>
