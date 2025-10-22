@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <div
-      className="w-full min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
+      className="w-full 1min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
       style={{ background: "#fef7e5" }}
@@ -37,7 +37,7 @@ export default function Hero() {
               className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
             >
               <h1
-                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-6xl 1font-light 1leading-tight"
+                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center"
                 style={{
                   backgroundImage:
                     "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
@@ -77,16 +77,16 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="flex justify-center w-full mt-0">
+            <div className="flex justify-center w-full sm:w-auto mt-0">
               <button
                 onClick={() => router.push("https://quiz.siahealth.in")}
-                className={`px-6 sm:px-6 py-3 rounded-sm  font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
+                className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
               >
-                Take the Hormone Test Now <MoveRight className="inline-block"></MoveRight>
+                Take the Hormone Test Now <MoveRight></MoveRight>
               </button>
             </div>
 
-            <div className="mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center md:text-left ">
+            <div className="mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
               92% of users reported improved symptoms within 3 months.
             </div>
           </div>
