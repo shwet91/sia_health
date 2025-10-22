@@ -19,7 +19,7 @@ const merriweatherFont = Merriweather({
 // 3 static testimonials
 const testimonials = [
   {
-    name: "Kanchan",
+    name: "Kanchan, 26",
     quote:
       "After struggling to find the right balance in my diet to manage both migraine and PCOS, Sia Health came to my rescue with their deep understanding of the unique needs of a PCOS-affected female body. Their guidance has significantly boosted my body strength, improved my immune system, and I am truly grateful for their expertise and care.",
     image: "/testimonials/Kanchan.jpeg",
@@ -31,7 +31,7 @@ const testimonials = [
     image: "/testimonials/Sakhshi.jpeg",
   },
   {
-    name: "Anjali",
+    name: "Anjali, 27",
     quote:
       "Before joining SIA Health( then Triya Health), I struggled to stay consistent and was confused about what to eat and how much. The personalized health chart, structured workouts, and daily check-ins helped me stay on track. For the first time, I felt clear, supported, and truly understood my body. I now feel stronger, healthier - and this journey has been a game-changer.",
     image: "/testimonials/Anjali.jpeg",

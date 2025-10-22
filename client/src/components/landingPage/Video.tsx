@@ -9,7 +9,7 @@ type Props = {
   title?: string;
 };
 
-const DEFAULT_VIDEO_ID = "dQw4w9WgXcQ";
+const DEFAULT_VIDEO_ID = "6TPce1DDm_U";
 
 const Video: React.FC<Props> = ({
   videoId = DEFAULT_VIDEO_ID,
