@@ -86,7 +86,7 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
+            <div className="hidden sm:block mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
               92% of users reported improved symptoms within 3 months.
             </div>
           </div>
@@ -102,6 +102,10 @@ export default function Hero() {
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
+          </div>
+
+          <div className="sm:hidden mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
+            92% of users reported improved symptoms within 3 months.
           </div>
         </div>
 

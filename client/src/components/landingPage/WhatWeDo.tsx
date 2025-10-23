@@ -130,10 +130,13 @@ export default function WhatWeDo() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 relative">
             {steps.map((step, index) => {
               const isVisible = visibleSteps.includes(index);
+              const isLastCard = index === steps.length - 1;
               return (
                 <div
                   key={index}
-                  className="flex flex-col items-center text-center relative"
+                  className={`flex flex-col items-center text-center relative ${
+                    isLastCard ? "col-span-2 sm:col-span-1" : ""
+                  }`}
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible
@@ -145,65 +148,73 @@ export default function WhatWeDo() {
                   }}
                 >
                   <div
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#FFF4EB] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 relative shadow-lg"
-                    style={{
-                      transform: isVisible ? "rotate(0deg)" : "rotate(-180deg)",
-                      transition: `transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${
-                        index * 0.1 + 0.2
-                      }s`,
-                    }}
+                    className={`flex flex-col items-center ${
+                      isLastCard ? "max-w-[50%] sm:max-w-none" : ""
+                    }`}
                   >
-                    <step.icon
-                      className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#FF4B00]"
-                      strokeWidth={1.5}
-                    />
                     <div
-                      className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-5 h-5 sm:w-6 sm:h-6 bg-[#FF4B00] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-md"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#FFF4EB] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 relative shadow-lg"
                       style={{
-                        transform: isVisible ? "scale(1)" : "scale(0)",
-                        transition: `transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
-                          index * 0.1 + 0.4
+                        transform: isVisible
+                          ? "rotate(0deg)"
+                          : "rotate(-180deg)",
+                        transition: `transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${
+                          index * 0.1 + 0.2
                         }s`,
                       }}
                     >
-                      {index + 1}
+                      <step.icon
+                        className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#FF4B00]"
+                        strokeWidth={1.5}
+                      />
+                      <div
+                        className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-5 h-5 sm:w-6 sm:h-6 bg-[#FF4B00] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-md"
+                        style={{
+                          transform: isVisible ? "scale(1)" : "scale(0)",
+                          transition: `transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
+                            index * 0.1 + 0.4
+                          }s`,
+                        }}
+                      >
+                        {index + 1}
+                      </div>
+
+                      {/* Subtle static glow (removed continuous blinking) */}
+                      {isVisible && (
+                        <div
+                          className="absolute inset-0 bg-[#FF4B00] rounded-full opacity-15"
+                          style={{
+                            boxShadow: "0 0 18px rgba(255,75,0,0.35)",
+                          }}
+                        ></div>
+                      )}
                     </div>
 
-                    {/* Subtle static glow (removed continuous blinking) */}
-                    {isVisible && (
-                      <div
-                        className="absolute inset-0 bg-[#FF4B00] rounded-full opacity-15"
-                        style={{
-                          boxShadow: "0 0 18px rgba(255,75,0,0.35)",
-                        }}
-                      ></div>
-                    )}
+                    <h3
+                      className="text-base sm:text-lg md:text-xl font-bold text-[#2D1810] mb-2 sm:mb-3 px-1"
+                      style={{
+                        opacity: isVisible ? 1 : 0,
+                        transform: isVisible
+                          ? "translateY(0)"
+                          : "translateY(10px)",
+                        transition: `all 0.4s ease ${index * 0.1 + 0.3}s`,
+                      }}
+                    >
+                      {step.title}
+                    </h3>
+                    <p
+                      className="text-[#663014] text-xs sm:text-sm leading-relaxed px-1"
+                      style={{
+                        opacity: isVisible ? 1 : 0,
+                        transform: isVisible
+                          ? "translateY(0)"
+                          : "translateY(10px)",
+                        transition: `all 0.4s ease ${index * 0.1 + 0.4}s`,
+                      }}
+                    >
+                      {step.description}
+                    </p>
                   </div>
-
-                  <h3
-                    className="text-base sm:text-lg md:text-xl font-bold text-[#2D1810] mb-2 sm:mb-3 px-1"
-                    style={{
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible
-                        ? "translateY(0)"
-                        : "translateY(10px)",
-                      transition: `all 0.4s ease ${index * 0.1 + 0.3}s`,
-                    }}
-                  >
-                    {step.title}
-                  </h3>
-                  <p
-                    className="text-[#663014] text-xs sm:text-sm leading-relaxed px-1"
-                    style={{
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible
-                        ? "translateY(0)"
-                        : "translateY(10px)",
-                      transition: `all 0.4s ease ${index * 0.1 + 0.4}s`,
-                    }}
-                  >
-                    {step.description}
-                  </p>
                 </div>
               );
             })}

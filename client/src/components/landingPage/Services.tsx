@@ -97,15 +97,20 @@ export default function Services() {
                   className="w-full h-full object-cover"
                 />
                 {/* Stronger gradient + tint layer to make the cards darker */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 transition-all duration-300"></div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-3 lg:p-4 text-center">
-                  <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight drop-shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 group-hover:from-black/60 group-hover:via-black/70 group-hover:to-black/80 transition-all duration-500 ease-in-out"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500 ease-in-out"></div>
+
+                {/* Title - always visible */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-2 sm:p-3 lg:p-4 text-center">
+                  <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight drop-shadow-lg transition-all duration-300 ease-in-out group-hover:transform group-hover:-translate-y-1">
                     {s.title}
                   </h3>
+
+                  {/* Description - only visible on hover with slide-up animation */}
+                  <p className="text-white text-[8px] sm:text-[9px] lg:text-xs leading-tight drop-shadow-md mt-1 sm:mt-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out max-h-0 group-hover:max-h-20 overflow-hidden">
+                    {s.desc}
+                  </p>
                 </div>
-                {/* Keep description only for screen readers - no visual reveal on hover */}
-                <p className="sr-only">{s.desc}</p>
               </div>
             );
           })}

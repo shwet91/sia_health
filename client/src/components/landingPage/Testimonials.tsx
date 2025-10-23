@@ -8,6 +8,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -40,8 +42,20 @@ const testimonials = [
 
 export default function Testimonials() {
   const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   );
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [api, setApi] = React.useState<any>();
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    setCurrentSlide(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const TestimonialCard = ({
     testimonial,
@@ -79,14 +93,15 @@ export default function Testimonials() {
           Real Stories{" "}
           <span className="text-[#FF4B00] font-bold">Real Results</span>
         </h2>
-        <p className="text-2xl text-center text-[#522b1c] mb-12 w-full md:w-1/2 mx-auto">
+        <p className="text-lg text-center text-[#522b1c] mb-12 w-full md:w-1/2 mx-auto">
           See how women like you have transformed their health with our
-          personalized approach.
+          personalized approach
         </p>
 
         {/* Mobile Carousel */}
-        <div className="md:hidden max-w-6xl mx-auto">
+        <div className="md:hidden max-w-6xl mx-auto relative">
           <Carousel
+            setApi={setApi}
             plugins={[autoplayPlugin.current]}
             className="w-full"
             opts={{
@@ -103,7 +118,25 @@ export default function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className=" hidden left-2 h-10 w-10 border-none bg-gray-300 text-white   rounded-md shadow-lg transition-all duration-300" />
+            <CarouselNext className=" hidden right-2 h-10 w-10 border-none bg-gray-300 text-white  shadow-lg rounded-md transition-all duration-300" />
           </Carousel>
+
+          {/* Indicator Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => api?.scrollTo(idx)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  idx === currentSlide
+                    ? "w-8 bg-[#FF4B00]"
+                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Desktop Grid */}

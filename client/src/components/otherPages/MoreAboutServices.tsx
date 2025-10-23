@@ -44,16 +44,16 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4"
+                " text-center text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4"
               }
             >
               Health Analysis & Root Cause Discovery
             </h2>
-            <p className="text-[#663014] text-lg mb-4">
+            <p className="text-[#663014] text-lg mb-4 text-center">
               We start by asking the right questions : analyzing your health
               history, patterns, and lab reports.
             </p>
-            <p className="text-[#663014] text-lg">
+            <p className="text-[#663014] text-lg text-center">
               Our team helps you identify the “why” behind your symptoms - so
               your care is truly aligned to your needs.
             </p>
@@ -66,13 +66,13 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4"
+                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center"
               }
             >
               Nutrition Support & Supplement Guidance
             </h2>
-            <p className="text-[#663014] text-lg mb-4">
-              Your nutrition plan is tailored to your body’s unique needs,
+            <p className="text-[#663014] text-lg mb-4 text-center">
+              Your nutrition plan is tailored to your body&apos;s unique needs,
               addressing inflammation, insulin resistance, digestive issues, or
               fatigue. We combine expert guidance with evidence-based
               supplements to support hormonal balance, energy, and overall
@@ -112,16 +112,16 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4"
+                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center"
               }
             >
               Health Analysis & Root Cause Discovery
             </h2>
-            <p className="text-[#663014] text-lg mb-4">
+            <p className="text-[#663014] text-lg mb-4 text-center">
               We start by asking the right questions : analyzing your health
               history, patterns, and lab reports.
             </p>
-            <p className="text-[#663014] text-lg">
+            <p className="text-[#663014] text-lg text-center">
               Our team helps you identify the “why” behind your symptoms - so
               your care is truly aligned to your needs.
             </p>

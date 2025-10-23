@@ -26,15 +26,15 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="w-full Helvetica py-8 md:py-12 bg-black relative">
+    <section className="w-full Helvetica py-8 md:py-12 bg-black1 bg-[#F5DEB3] relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           // src="/TeamBG.jpg"
-          src={"https://i.pinimg.com/1200x/93/e4/df/93e4df97cc701d0ce08d2fd714c9c703.jpg"}
+          src={"https://i.pinimg.com/1200x/e6/29/8d/e6298de1bb0995583f00157a3a438f88.jpg"}
           alt="Background"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-0"
           priority
         />
       </div>
@@ -43,13 +43,13 @@ export default function Team() {
         <div className="text-center mb-8 max-w-3xl mx-auto">
           <h2
             className={
-              "text-3xl md:text-4xl font-bold mb-3 text-white " +
+              "text-3xl md:text-4xl font-bold mb-3 text-[#2D1810] " +
               merriweather.className
             }
           >
             What Our Experts and Doctors say
           </h2>
-          <p className="text-lg md:text-xl text-white/90">
+          <p className="text-lg md:text-xl text-[#663014]">
             All of our plans & processes our co-created with hormonal health
             experts. Meet some of them:
           </p>
@@ -82,8 +82,8 @@ export default function Team() {
               </div>
 
               {/* Testimonial Quote - Fixed Height */}
-              <div className="w-full 1bg-black/30 1backdrop-blur-sm rounded-lg p-4 text-center h-[100px] md:h-[140px] flex items-center justify-center">
-                <p className="text-white text-sm md:text-base leading-relaxed">
+              <div className="w-full 1bg-black/30 1backdrop-blur-sm  rounded-lg p-4 text-center h-[100px] md:h-[140px] flex items-center justify-center">
+                <p className="text-[#663014] text-sm md:text-base leading-relaxed">
                   {member.quote}
                 </p>
               </div>
