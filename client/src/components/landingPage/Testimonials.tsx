@@ -10,6 +10,7 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -45,7 +46,7 @@ export default function Testimonials() {
     Autoplay({ delay: 3000, stopOnInteraction: false })
   );
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [api, setApi] = React.useState<any>();
+  const [api, setApi] = React.useState<CarouselApi>();
 
   React.useEffect(() => {
     if (!api) return;

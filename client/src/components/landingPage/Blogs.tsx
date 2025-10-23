@@ -11,6 +11,7 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -53,26 +54,6 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
-const mobileBlogPosts: BlogPost[] = [
-  {
-    id: 1,
-    image: "/blogs/b1.avif",
-    readTime: "5 min read",
-    title: "How Fad Diets Mess up Your Hormones?",
-    description:
-      "There are so many diets which keep on popping our feed in this Social Media World like Keto, One meal a day etc. Let's decode them today",
-    link: "/Blogs/1",
-  },
-  {
-    id: 2,
-    image: "/blogs/b2.avif",
-    readTime: "5 min read",
-    title: "Stress and PCOS: How Cortisol Worsens Hormonal Imbalance",
-    description:
-      "Learn how chronic stress affects PCOS symptoms like weight gain, acne, and irregular periods and discover 6 natural ways to reduce stress and restore balance.",
-    link: "/Blogs/2",
-  },
-];
 
 export default function Blogs() {
   const router = useRouter();
@@ -80,7 +61,7 @@ export default function Blogs() {
     Autoplay({ delay: 3000, stopOnInteraction: false })
   );
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [api, setApi] = React.useState<any>();
+  const [api, setApi] = React.useState<CarouselApi>();
 
   React.useEffect(() => {
     if (!api) return;

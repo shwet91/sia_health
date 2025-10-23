@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import "../../styles/landingPage.css";
-import { Patrick_Hand } from "next/font/google";
+// import { Patrick_Hand } from "next/font/google";
 import { Merriweather } from "next/font/google";
 import { useRouter } from "next/navigation";
 
-const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
+// const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
 const merriweather = Merriweather({ subsets: ["latin"], weight: ["400" , "400"] });
 
 function WhySia2() {
