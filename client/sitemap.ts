@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://siahealth.com"; // Replace with your actual domain
+  const baseUrl = "https://www.thebalancedyou.in/"; // Replace with your actual domain
   const lastModified = new Date();
 
   return [
