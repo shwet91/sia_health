@@ -96,14 +96,14 @@ export default function Navbar() {
             Home
           </Link>
           <a
-            href="/solutions"
+            href="/services"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >
             Solutions
           </a>
           <a
-            href="/aboutUs"
+            href="/about-us"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-[#EB5200] transition-colors"
           >

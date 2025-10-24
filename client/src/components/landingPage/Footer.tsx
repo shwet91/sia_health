@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/about"
+                  href="/about-us"
                   className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   About Us
@@ -92,7 +92,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/team"
+                  href="/services"
                   className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Meet the Team
@@ -101,14 +101,14 @@ export default function Footer() {
               <li>
                 <Link
                   href="/resources"
-                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
+                  className="text-gray-600 hover:text-gray-900 transition-colors inline-block1 hidden"
                 >
                   Hormone Library
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/quiz"
+                  href="https://quiz.siahealth.in/"
                   className="text-gray-600 hover:text-gray-900 transition-colors inline-block"
                 >
                   Take the Quiz
@@ -128,22 +128,18 @@ export default function Footer() {
             <ul className="space-y-5">
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-[#FF4B00] flex-shrink-0" />
-                <span className="text-gray-600">(555) 123-4567</span>
+                <span className="text-gray-600">7007640890</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-[#FF4B00] flex-shrink-0" />
-                <span className="text-gray-600">hello@siahealth.com</span>
+                <span className="text-gray-600">support@siahealth.in</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin
                   size={20}
                   className="text-[#FF4B00] flex-shrink-0 mt-1"
                 />
-                <span className="text-gray-600">
-                  123 Wellness Way
-                  <br />
-                  Health City, HC 12345
-                </span>
+                <span className="text-gray-600">Bengaluru, India</span>
               </li>
             </ul>
           </div>
@@ -185,7 +181,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              © 2024 SIA Health. All rights reserved. HIPAA Compliant.
+              © 2024 SIA Health. All rights reserved. 
             </p>
             <div className="flex items-center gap-6">
               <Link
@@ -202,7 +198,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="/hipaa"
-                className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
+                className="text-gray-600 hover:text-gray-900 text-sm transition-colors hidden"
               >
                 HIPAA Notice
               </Link>

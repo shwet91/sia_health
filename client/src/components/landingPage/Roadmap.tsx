@@ -211,7 +211,7 @@ export default function Roadmap() {
         </div>
 
         <div
-        onClick={() => router.push("/aboutUs")}
+        onClick={() => router.push("/about-us")}
         className="text-center mt-12">
           <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
             Explore Your Journey
