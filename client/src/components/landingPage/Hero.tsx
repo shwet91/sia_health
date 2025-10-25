@@ -26,20 +26,22 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8  items-center text-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center text-center">
           {/* Left Content */}
-          <div className="space-y-6  md:ml-0 lg:ml-16">
+          <div className="space-y-6 md:flex md:flex-col md:items-center md:ml-32 lg:ml-44">
             <h1
-              className={`${merriweatherFont.className} text-4xl md:text-5xl lg:text-6xl font-bold`}
+              className={`${merriweatherFont.className} text-4xl md:text-5xl lg:text-6xl font-bold md:text-center`}
             >
-              <span className="text-orange-600">
+              <span className="text-orange-600 lg:whitespace-nowrap">
                 Personalised Hormonal Care
               </span>
               <br />
-              <span className="text-gray-800">that actually works</span>
+              <span className="text-gray-800 lg:whitespace-nowrap">
+                that actually works
+              </span>
             </h1>
 
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-700 text-lg md:text-center lg:whitespace-nowrap">
               <span className="font-semibold">
                 PCOS/PCOD || Thyroid || Fertility || Perimenopause and more.
               </span>
@@ -52,7 +54,7 @@ export default function Hero() {
               Book a FREE Expert consult
             </button>
 
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-center md:max-w-md">
               Talk to our hormonal health coaches and get a clear{" "}
               <span className="font-semibold">next step</span> for your goals.
             </p>
@@ -72,9 +74,9 @@ export default function Hero() {
         </div>
 
         {/* Bottom Features */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="sm:grid md:grid-cols-3 gap-8 mt-16 hidden">
           {/* Feature 1 */}
-          <div className="hidden sm:block text-center space-y-3">
+          <div className="text-center space-y-3 bg-white/30 backdrop-blur-sm border border-orange-200/50 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
             <h3 className="text-orange-600 text-xl font-semibold">
               All in one care
             </h3>
@@ -85,7 +87,7 @@ export default function Hero() {
           </div>
 
           {/* Feature 2 */}
-          <div className="hidden sm:block text-center space-y-3">
+          <div className="text-center space-y-3 bg-white/30 backdrop-blur-sm border border-orange-200/50 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
             <h3 className="text-orange-600 text-xl font-semibold">
               Your Health, Our Team
             </h3>
@@ -96,7 +98,7 @@ export default function Hero() {
           </div>
 
           {/* Feature 3 */}
-          <div className="hidden sm:block text-center space-y-3">
+          <div className="text-center space-y-3 bg-white/30 backdrop-blur-sm border border-orange-200/50 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
             <h3 className="text-orange-600 text-xl font-semibold">
               Expert-Led Support
             </h3>
@@ -108,7 +110,7 @@ export default function Hero() {
         </div>
 
         {/* Hormone Test Button - Moved to Bottom */}
-        <div className="flex flex-col items-center justify-center w-full sm:mt-8 gap-3 1hidden">
+        <div className="flex flex-col items-center justify-center w-full mt-5 sm:mt-8 gap-3 1hidden">
           <button
             onClick={() => router.push("https://quiz.siahealth.in")}
             className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
