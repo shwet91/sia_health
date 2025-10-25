@@ -136,21 +136,21 @@ export default function Contact() {
             {/* Subtitle with line */}
             <p className="text-[#FF4B00] text-xs font-medium tracking-wider mb-1 uppercase flex items-center">
               <span className="inline-block w-8 h-0.5 bg-[#FF4B00] mr-2"></span>
-              Reservation
+              {/* Reservation */}
             </p>
 
             {/* Title */}
             <h2
               className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-2 leading-tight ${merriweather.className}`}
             >
-              Book An <span className="text-[#FF4B00]">Appointment Now!</span>
+              Book Free{" "}
+              <span className="text-[#FF4B00]">Expert Consultation!</span>
             </h2>
 
             {/* Description */}
             <p className="text-[#130e2e] text-sm leading-relaxed mb-4">
-              Sia Health provides great services. We are dedicated to helping
-              you achieve optimal health and wellness through personalized care
-              and expert guidance.
+              Expert care is only few details away. Just share this information
+              and our experts will reach out to you.
             </p>
 
             {/* Form */}
@@ -264,7 +264,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-21 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-[#FF4B00] flex items-center gap-2`}
+                    className={`${merriweather.className} bg-[#FF4B00] text-white border-none py-3 px-24 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#dd4200] hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(126,217,87,0.3)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-[#FF4B00] flex items-center gap-2`}
                   >
                     {isSubmitting ? (
                       <>
@@ -272,15 +272,22 @@ export default function Contact() {
                         Submitting...
                       </>
                     ) : (
-                      "Book A Call"
+                      "Submit"
                     )}
                   </button>
                 </div>
 
-                <p className={`text-xs tracking-wider mb-1 flex items-center uppercase ${merriweather.className}`}>
+                <p
+                  className={`text-xs tracking-wider mb-1 flex items-center uppercase ${merriweather.className}`}
+                >
                   <span className="inline-block w-8 h-0.5 bg-[#FF4B00] mr-2"></span>
-                  <span className="text-[#FF4B00] mr-2 font-bold uppercase"> Pick a Date</span>
-                  <span className="text-[#130e2e] font-bold">Of Your Choice</span>
+                  <span className="text-[#FF4B00] mr-2 font-bold uppercase">
+                    {" "}
+                    Pick a Date
+                  </span>
+                  <span className="text-[#130e2e] font-bold">
+                    Of Your Choice
+                  </span>
                 </p>
 
                 {/* Title */}
@@ -291,7 +298,9 @@ export default function Contact() {
                     disabled={isSubmitting}
                     className={`${merriweather.className} bg-white text-[#FF4B00]1 border border-[#FF4B00] py-3 px-17 text-xs font-bold tracking-wider transition-all duration-300 w-fit rounded hover:bg-[#fff2ec] hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0`}
                     onClick={() =>
-                     router.push("https://calendly.com/aditi-siahealth/30min?month=2025-10")
+                      router.push(
+                        "https://calendly.com/aditi-siahealth/30min?month=2025-10"
+                      )
                     }
                   >
                     <span className="text-[#FF4B00]">Pick a Date Now</span>
