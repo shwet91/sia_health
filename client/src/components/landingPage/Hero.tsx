@@ -41,7 +41,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-gray-700 text-lg md:text-center">
+            <p className="text-gray-700 text-lg md:text-center lg:whitespace-nowrap">
               <span className="font-semibold">
                 PCOS/PCOD || Thyroid || Fertility || Perimenopause and more.
               </span>
