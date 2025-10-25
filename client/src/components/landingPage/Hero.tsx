@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 import { useRouter } from "next/navigation";
+import { MoveRight } from "lucide-react";
 
 const merriweatherFont = Merriweather({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8  items-center ">
+        <div className="grid md:grid-cols-2 gap-8  items-center text-center">
           {/* Left Content */}
           <div className="space-y-6  md:ml-0 lg:ml-16">
             <h1
@@ -73,7 +74,7 @@ export default function Hero() {
         {/* Bottom Features */}
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           {/* Feature 1 */}
-          <div className="text-center space-y-3">
+          <div className="hidden sm:block text-center space-y-3">
             <h3 className="text-orange-600 text-xl font-semibold">
               All in one care
             </h3>
@@ -84,7 +85,7 @@ export default function Hero() {
           </div>
 
           {/* Feature 2 */}
-          <div className="text-center space-y-3">
+          <div className="hidden sm:block text-center space-y-3">
             <h3 className="text-orange-600 text-xl font-semibold">
               Your Health, Our Team
             </h3>
@@ -95,7 +96,7 @@ export default function Hero() {
           </div>
 
           {/* Feature 3 */}
-          <div className="text-center space-y-3">
+          <div className="hidden sm:block text-center space-y-3">
             <h3 className="text-orange-600 text-xl font-semibold">
               Expert-Led Support
             </h3>
@@ -104,6 +105,20 @@ export default function Hero() {
               Approach
             </p>
           </div>
+        </div>
+
+        {/* Hormone Test Button - Moved to Bottom */}
+        <div className="flex flex-col items-center justify-center w-full sm:mt-8 gap-3 1hidden">
+          <button
+            onClick={() => router.push("https://quiz.siahealth.in")}
+            className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
+          >
+            Take the 2-minute hormone test <MoveRight></MoveRight>
+          </button>
+          <p className="text-[#662b00] text-xs sm:text-sm text-center max-w-[280px] sm:max-w-xs">
+            Find the root cause behind your hormonal concerns with our quick
+            online quiz
+          </p>
         </div>
       </div>
     </section>
