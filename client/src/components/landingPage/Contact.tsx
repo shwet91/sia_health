@@ -143,7 +143,7 @@ export default function Contact() {
             <h2
               className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-2 leading-tight ${merriweather.className}`}
             >
-              Book Free{" "}
+              Book A Free{" "}
               <span className="text-[#FF4B00]">Expert Consultation!</span>
             </h2>
 
@@ -280,19 +280,19 @@ export default function Contact() {
                 <p
                   className={`text-xs tracking-wider mb-1 flex items-center uppercase ${merriweather.className}`}
                 >
-                  <span className="inline-block w-8 h-0.5 bg-[#FF4B00] mr-2"></span>
-                  <span className="text-[#FF4B00] mr-2 font-bold uppercase">
+                  <span className="inline-block1 w-8 h-0.5 bg-[#FF4B00] mr-2 hidden"></span>
+                  <span className="text-[#FF4B00] mr-2 font-bold uppercase hidden">
                     {" "}
                     Pick a Date
                   </span>
-                  <span className="text-[#130e2e] font-bold">
+                  <span className="text-[#130e2e] font-bold hidden">
                     Of Your Choice
                   </span>
                 </p>
 
                 {/* Title */}
 
-                <div className="flex items-center gap-10">
+                <div className="flex1 items-center gap-10 hidden">
                   <button
                     type="button"
                     disabled={isSubmitting}
