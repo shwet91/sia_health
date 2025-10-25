@@ -1,123 +1,111 @@
 "use client";
 
 import Image from "next/image";
-// import { Rubik } from "next/font/google";
-// import { Lato } from "next/font/google";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 import { useRouter } from "next/navigation";
-import { MoveRight } from "lucide-react";
 
 const merriweatherFont = Merriweather({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-// const rubikFont = Rubik({ subsets: ["latin"], weight: ["300", "300", "700"] });
-// const latoFont = Lato({ subsets: ["latin"], weight: ["400", "700"] });
-
 export default function Hero() {
   const router = useRouter();
 
   return (
-    <div
-      className="w-full 1min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
-      data-name="Hero Section"
-      data-node-id="42:1942"
-      style={{ background: "#fef7e5" }}
-    >
-      <div className={` Helvetica container mx-auto max-w-7xl`}>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
-          <div className="w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
-            <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-lg text-[#2e1300] text-sm md:text-base font-medium">
-              Hormonal empathy meets warm science
-            </div>
+    <section className="bg-gradient-to-b bg-[#FFF4EB] py-16 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Tagline */}
+        <div className="text-center mb-12 mt-8 md:mt-5">
+          <p className="text-gray-700 text-lg">
+            Made for <span className="font-semibold italic">Women</span>, guided
+            by doctors & health coaches.
+          </p>
+        </div>
 
-            <div
-              className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
+        {/* Main Content */}
+        <div className="grid md:grid-cols-2 gap-8  items-center ">
+          {/* Left Content */}
+          <div className="space-y-6  md:ml-0 lg:ml-16">
+            <h1
+              className={`${merriweatherFont.className} text-4xl md:text-5xl lg:text-6xl font-bold`}
             >
-              <h1
-                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
-                }}
-              >
-                Personalised Support
-              </h1>
-              <p className="text-[#522b1c] text-xl md:text-2xl font-normal">
-                for
-              </p>
-              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-6xl text-center">
-                Women&apos;s Hormonal Health
-              </h1>
-            </div>
+              <span className="text-orange-600">
+                Personalised Hormonal Care
+              </span>
+              <br />
+              <span className="text-gray-800">that actually works</span>
+            </h1>
 
-            <div className=" flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
-              <p className="text-base sm:text-lg md:text-xl font-normal text-center">
-                Personalized, expert-led care for PCOS, thyroid, fertility &
-                more.
-              </p>
-            </div>
+            <p className="text-gray-700 text-lg">
+              <span className="font-semibold">
+                PCOS/PCOD || Thyroid || Fertility || Perimenopause and more.
+              </span>
+            </p>
 
-            {/* Large themed CTA placed just below the two buttons */}
-            <div
-              className={` ${merriweatherFont.className} mt-0 w-full sm:w-auto`}
+            <button
+              onClick={() => router.push("/contact")}
+              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              <button
-                onClick={() => router.push("/contact")}
-                className="w-full sm:w-auto px-8 py-3 rounded-sm text-white text-lg shadow-xl transition-transform hover:scale-[0.995]"
-                style={{
-                  background:
-                    "linear-gradient(170.948deg, #EB5200 0%, #FF7E29 100%)",
-                }}
-                aria-label="Give a Harmone Test in a minute"
-              >
-                Book a Free Expert Consult
-              </button>
-            </div>
+              Book a FREE Expert consult
+            </button>
 
-            <div className="flex justify-center w-full sm:w-auto mt-0">
-              <button
-                onClick={() => router.push("https://quiz.siahealth.in")}
-                className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
-              >
-                Take the Hormone Test Now <MoveRight></MoveRight>
-              </button>
-            </div>
-
-            <div className="hidden sm:block mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
-              92% of users reported improved symptoms within 3 months.
-            </div>
+            <p className="text-gray-600 text-sm">
+              Talk to our hormonal health coaches and get a clear{" "}
+              <span className="font-semibold">next step</span> for your goals.
+            </p>
           </div>
 
-          <div className="w-full md:w-[50%]  flex justify-center items-center">
-            <div className="relative aspect-square w-full 1max-w-[400px]">
-              <Image
-                src="/del.avif"
-                alt="Hero Image"
-                fill
-                className="object-cover rounded-3xl shadow-lg"
-                priority
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
-          </div>
-
-          <div className="sm:hidden mt-4 bg-[rgba(255,244,235,0.4)] border-2 border-[rgba(102,43,0,0.1)] rounded-lg px-6 py-3 text-[#2e1300] text-sm md:text-base font-medium text-center 1md:text-left ">
-            92% of users reported improved symptoms within 3 months.
+          {/* Right Image */}
+          <div className="relative flex justify-center md:justify-end">
+            <Image
+              src="/Herp.jpeg"
+              alt="Hormonal health coach with calendar"
+              width={400}
+              height={400}
+              className="w-auto h-auto max-w-[300px] md:max-w-[350px] rounded-lg border"
+              priority
+            />
           </div>
         </div>
 
-        <div className="flex justify-center w-full mt-18">
-          <button
-            onClick={() => router.push("https://quiz.siahealth.in")}
-            className={` hidden px-6 sm:px-8 py-4 rounded-xl  font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl ${merriweatherFont.className}`}
-          >
-            Take the Hormone Test Now !
-          </button>
+        {/* Bottom Features */}
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          {/* Feature 1 */}
+          <div className="text-center space-y-3">
+            <h3 className="text-orange-600 text-xl font-semibold">
+              All in one care
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Everything your hormones need. Meal plans backed by Medical
+              Insights, Health Analysis fitness & Lifestyle
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="text-center space-y-3">
+            <h3 className="text-orange-600 text-xl font-semibold">
+              Your Health, Our Team
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Doctors, nutritionists and coaches working together for lasting
+              results.
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="text-center space-y-3">
+            <h3 className="text-orange-600 text-xl font-semibold">
+              Expert-Led Support
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Root-cause plans tailored to your goals . Evidence backed, No FAD
+              Approach
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

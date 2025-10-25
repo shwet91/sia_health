@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -8,7 +8,10 @@ import { Merriweather } from "next/font/google";
 import { useRouter } from "next/navigation";
 
 // const patrickHand = Patrick_Hand({ subsets: ["latin"], weight: ["400" , "400"] });
-const merriweather = Merriweather({ subsets: ["latin"], weight: ["400" , "400"] });
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "400"],
+});
 
 function WhySia2() {
   const services = [
@@ -120,16 +123,21 @@ function WhySia2() {
                 className="rounded-2xl object-cover"
               />
             </div>
-            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight ${merriweather.className}`}>
-              Why choose <span className="text-[#FF4B00] font-bold">Sia Health ?</span>
+            <h2
+              className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight ${merriweather.className}`}
+            >
+              Why choose{" "}
+              <span className="text-[#FF4B00] font-bold">Sia Health ?</span>
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
-              From curated properties to end-to-end management, we simplify
-              investing so you can focus on growing your wealth
+              SIA Health helps women regain clarity, confidence, and control
+              over their hormones with science-backed, empathetic, and
+              long-term support designed just for you.
             </p>
             <button
-            onClick={() => router.push("https://quiz.siahealth.in")}
-            className="bg-[#FF4B00] text-white px-6 py-2 rounded-md hover:bg-[#ff6827] transition-colors duration-300 text-xs md:text-sm font-medium">
+              onClick={() => router.push("https://quiz.siahealth.in")}
+              className="bg-[#FF4B00] text-white px-6 py-2 rounded-md hover:bg-[#ff6827] transition-colors duration-300 text-xs md:text-sm font-medium"
+            >
               Find the best for you
             </button>
           </div>
