@@ -5,10 +5,10 @@ function ResponseHeader() {
     <div className="relative">
       {/* Hero Section with Background Image */}
       <div
-        className="relative h-[450px] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[450px] bg-cover bg-top flex items-center justify-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/girl_swings.jpg')",
+            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.pinimg.com/1200x/ad/65/bc/ad65bc14d0c1bf6ae43d0ab1a80ba301.jpg')",
         }}
       >
         <div className="text-center text-white px-4 max-w-4xl">
