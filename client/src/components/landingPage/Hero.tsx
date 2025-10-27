@@ -15,7 +15,7 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <section className="bg-gradient-to-b bg-[#FFF4EB] py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-gradient-to-b bg-[#FFF4EB] pt-13 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Tagline */}
         <div className="text-center mb-12 mt-8 md:mt-5">
@@ -54,7 +54,7 @@ export default function Hero() {
               Book a FREE Expert consult
             </button>
 
-            <p className="text-gray-600 text-sm md:text-center md:max-w-md">
+            <p className="text-gray-600 text-sm md:text-center md:max-w-md lg:whitespace-nowrap">
               Talk to our hormonal health coaches and get a clear{" "}
               <span className="font-semibold">next step</span> for your goals.
             </p>
@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom Features */}
-        <div className="sm:grid md:grid-cols-3 gap-8 mt-16 hidden">
+        <div className="sm:grid md:grid-cols-3 gap-8 mt-3 hidden">
           {/* Feature 1 */}
           <div className="text-center space-y-3 bg-white/30 backdrop-blur-sm border border-orange-200/50 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
             <h3 className="text-orange-600 text-xl font-semibold">
