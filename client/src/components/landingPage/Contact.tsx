@@ -129,7 +129,7 @@ export default function Contact() {
       id="contact"
       className="w-full Helvetica bg-gray-1001 bg-white p-0 my-5 flex justify-center px-4 sm:px-0"
     >
-      <div className="max-w-2xl w-full bg-[#FFE4D3] rounded-md overflow-hidden">
+      <div className="max-w-2xl w-full bg-[#FFF4EB] rounded-md overflow-hidden">
         {/* Form */}
         <div className="bg-[#1a1a1a]1 flex items-center justify-center px-6 py-4 lg:px-12">
           <div className="w-full max-w-[500px]">

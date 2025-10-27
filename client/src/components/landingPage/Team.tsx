@@ -26,7 +26,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="w-full Helvetica py-8 md:py-12 bg-black1 bg-[#F5DEB3] relative">
+    <section className="w-full Helvetica py-8 md:py-12 bg-black1 bg-[#FFF4EB] relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

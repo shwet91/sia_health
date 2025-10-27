@@ -12,6 +12,7 @@ import Footer from "@/components/landingPage/Footer";
 import WhySia2 from "@/components/landingPage/WhySia2";
 // import MembersJoining from "@/components/landingPage/MembersJoining";
 import Video from "@/components/landingPage/Video";
+import ApproachV2 from "@/components/landingPage/ApproachV2";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <div className="w-full">
         <Hero />
         <Testimonials />
-        <Approach />
+        {/* <Approach /> */}
+        <ApproachV2 />
         <WhatWeDo />
         <WhySia2 />
         {/* <MembersJoining /> */}
