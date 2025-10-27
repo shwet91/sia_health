@@ -26,11 +26,11 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8 items-center text-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-0 lg:gap-28 items-center text-center">
           {/* Left Content */}
-          <div className="space-y-6 md:flex md:flex-col md:items-center md:ml-32 lg:ml-44">
+          <div className="space-y-6 md:flex md:flex-col md:items-center md:ml-2 lg:ml-44">
             <h1
-              className={`${merriweatherFont.className} text-4xl md:text-5xl lg:text-6xl font-bold md:text-center`}
+              className={`${merriweatherFont.className} text-4xl md:text-3xl lg:text-4xl xl:text-6xl font-bold md:text-center`}
             >
               <span className="text-orange-600 lg:whitespace-nowrap">
                 Personalised Hormonal Care
@@ -49,7 +49,7 @@ export default function Hero() {
 
             <button
               onClick={() => router.push("/contact")}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg px-8 py-4 rounded-sm transition-all duration-300 shadow-lg hover:shadow-xl lg:whitespace-nowrap"
             >
               Book a FREE Expert consult
             </button>
