@@ -15,7 +15,7 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <section className="bg-gradient-to-b bg-[#FFF4EB] py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-gradient-to-b bg-[#FFF4EB] pt-13 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Tagline */}
         <div className="text-center mb-12 mt-8 md:mt-5">
@@ -26,11 +26,11 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8 items-center text-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-0 lg:gap-28 items-center text-center">
           {/* Left Content */}
-          <div className="space-y-6 md:flex md:flex-col md:items-center md:ml-32 lg:ml-44">
+          <div className="space-y-6 md:flex md:flex-col md:items-center md:ml-2 lg:ml-44">
             <h1
-              className={`${merriweatherFont.className} text-4xl md:text-5xl lg:text-6xl font-bold md:text-center`}
+              className={`${merriweatherFont.className} text-4xl md:text-3xl lg:text-4xl xl:text-6xl font-bold md:text-center`}
             >
               <span className="text-orange-600 lg:whitespace-nowrap">
                 Personalised Hormonal Care
@@ -49,12 +49,12 @@ export default function Hero() {
 
             <button
               onClick={() => router.push("/contact")}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg px-8 py-4 rounded-sm transition-all duration-300 shadow-lg hover:shadow-xl lg:whitespace-nowrap"
             >
               Book a FREE Expert consult
             </button>
 
-            <p className="text-gray-600 text-sm md:text-center md:max-w-md">
+            <p className="text-gray-600 text-sm md:text-center md:max-w-md lg:whitespace-nowrap">
               Talk to our hormonal health coaches and get a clear{" "}
               <span className="font-semibold">next step</span> for your goals.
             </p>
@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom Features */}
-        <div className="sm:grid md:grid-cols-3 gap-8 mt-16 hidden">
+        <div className="sm:grid md:grid-cols-3 gap-8 mt-3 hidden">
           {/* Feature 1 */}
           <div className="text-center space-y-3 bg-white/30 backdrop-blur-sm border border-orange-200/50 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
             <h3 className="text-orange-600 text-xl font-semibold">

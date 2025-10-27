@@ -103,7 +103,7 @@ export default function FAQ() {
           </div>
 
           {/* Right Side Content Panel */}
-          <div className=" bg-[#FFE4D3] 1bg-gray-200 rounded-xl p-6 text-gray-900 flex flex-col justify-center">
+          <div className=" bg-[#FFF4EB] 1bg-gray-200 rounded-xl p-6 text-gray-900 flex flex-col justify-center">
             <div className="space-y-4">
               <h3
                 className={`${merriweather.className} text-xl md:text-2xl font-bold`}

@@ -44,7 +44,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full Helvetica bg-[rgba(255,244,235,0.6)] py-6 md:py-8 lg:py-10 overflow-hidden">
+    <section className="w-full Helvetica bg-[#FFF4EB] py-6 md:py-8 lg:py-10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-5xl">
         <div className="text-center mb-6 lg:mb-8 px-4 lg:px-0">
           <h2

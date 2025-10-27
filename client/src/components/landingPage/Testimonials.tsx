@@ -22,21 +22,21 @@ const merriweatherFont = Merriweather({
 // 3 static testimonials
 const testimonials = [
   {
-    name: "Kanchan, 26",
+    name: "Sukhan, 26",
     quote:
-      "After struggling to find the right balance in my diet to manage both migraine and PCOS, Sia Health came to my rescue with their deep understanding of the unique needs of a PCOS-affected female body. Their guidance has significantly boosted my body strength, improved my immune system, and I am truly grateful for their expertise and care.",
+      "I joined SIA Health when I felt very lost with my PCOS. With their simple diet plans and lifestyle support, I lost 8 kgs in 6 weeks, and got my periods for the first time in  6 months. All the credit goes to the SIA team for this",
     image: "/testimonials/Kanchan.jpeg",
   },
   {
     name: "Sakshi, 27",
     quote:
-      "I’ve always been confused about where to go when it comes to my health. I needed a place where there is ongoing support so I can understand my body better and build habits accordingly. Sia Health is that place. The safe haven I needed.",
+      "I needed support that didn’t end after one consultation.SIA Health helped me understand my body, stay consistent, rebuild healthy habits, and even guided me on which blood tests to do and how to move forward. They made the whole Hormonal Imbalance thing finally make sense",
     image: "/testimonials/Sakhshi.jpeg",
   },
   {
-    name: "Anjali, 27",
+    name: "Preeti, 27",
     quote:
-      "Before joining SIA Health( then Triya Health), I struggled to stay consistent and was confused about what to eat and how much. The personalized health chart, structured workouts, and daily check-ins helped me stay on track. For the first time, I felt clear, supported, and truly understood my body. I now feel stronger, healthier - and this journey has been a game-changer.",
+      "I joined SIA Health thinking I was entering perimenopause after years of PCOS. Within 2 months my acne improved, I lost 4  kgs, and, more importantly, I feel toned, confident, and ready for this next phase of life.",
     image: "/testimonials/Anjali.jpeg",
   },
 ];
@@ -86,7 +86,23 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="w-full Helvetica py-16 bg-[#FFF4EB]" id="testimonials">
+    <section
+      className="w-full Helvetica py-16 bg-[#FFF4EB] relative overflow-hidden"
+      id="testimonials"
+    >
+      {/* Vertical text on the right side */}
+      <div className="absolute right-4 md:right-10 lg:-right-33 xl:-right-30 top-40 md:top-80 lg:top-104 xl:top-1/2 md:-translate-y-1/2 hidden lg:flex">
+        <p
+          className="text-[10px] md:text-xs text-gray-500 whitespace-nowrap"
+          style={{
+            transform: "rotate(-90deg)",
+            transformOrigin: "center center",
+          }}
+        >
+          *Internal study by the SIA Health team, October 2025
+        </p>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4">
         <h2
           className={`${merriweatherFont.className} text-4xl md:text-6xl font-bold text-center mb-4 mx-auto`}
@@ -95,8 +111,8 @@ export default function Testimonials() {
           <span className="text-[#FF4B00] font-bold">Real Results</span>
         </h2>
         <p className="text-lg text-center text-[#522b1c] mb-12 w-full md:w-1/2 mx-auto">
-          See how women like you have transformed their health with our
-          personalized approach
+          92% of our members experience improved symptoms like gut health,
+          energy and cycle regularity within 6 to 8 weeks.*
         </p>
 
         {/* Mobile Carousel */}
@@ -138,6 +154,11 @@ export default function Testimonials() {
               />
             ))}
           </div>
+
+          {/* Horizontal study note for mobile & tablet only (hidden on lg and up) */}
+          <p className="text-[10px] md:text-xs text-gray-500 text-center mt-2 lg:hidden">
+            *Internal study by the SIA Health team, October 2025
+          </p>
         </div>
 
         {/* Desktop Grid */}
