@@ -43,7 +43,7 @@ const testimonials = [
     name: "Anjali, 26",
     quote:
       "I was with SIA Health for three months and took their complete support across nutrition, medical guidance, fitness, and lifestyle. For the first time, I was actually able to follow a plan that made sense for me. I gained clarity about my  hormonal imbalances, my skin improved,  lost 4 kilos, and felt more energetic than I have in years. Honestly, I feel like I am back to my healthiest self.",
-    image: "/testimonials/anjali.jpeg",
+    image: "/testimonials/Anjali.jpeg",
   },
   {
     name: "Aditi, 25",
