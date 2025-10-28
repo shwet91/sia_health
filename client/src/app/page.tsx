@@ -1,7 +1,7 @@
 // import Hero from "@/components/landingPage/Hero";
 import Navbar from "@/components/landingPage/Navbar";
 import Testimonials from "@/components/landingPage/Testimonials";
-// import Approach from "@/components/landingPage/Approach";
+// import Apphroach from "@/components/landingPage/Approach";
 import Team from "@/components/landingPage/Team";
 import Services from "@/components/landingPage/Services";
 import WhatWeDo from "@/components/landingPage/WhatWeDo";

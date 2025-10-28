@@ -24,7 +24,7 @@ export default function Hero2() {
       className="w-full 1min-h-screen pt-16 flex flex-col items-center justify-center py-8 sm:pt-14 md:pt-20 px-4 sm:px-6 md:px-10 overflow-hidden"
       data-name="Hero Section"
       data-node-id="42:1942"
-      style={{ background: "#fef7e5" }}
+      style={{ background: "#FFF4EB" }}
     >
       <div className={` Helvetica container mx-auto max-w-7xl `}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
@@ -37,7 +37,7 @@ export default function Hero2() {
               className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
             >
               <h1
-                className=" bg-clip-text text-transparent text-5xl sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center"
+                className=" bg-clip-text text-transparent text-4xl sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center whitespace-nowrap sm:whitespace-normal"
                 style={{
                   backgroundImage:
                     "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
@@ -48,13 +48,13 @@ export default function Hero2() {
               <p className="text-[#522b1c] text-xl md:text-2xl font-normal">
                 for
               </p>
-              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-6xl text-center">
+              <h1 className="text-[#522b1c] bg-clip-text 1text-transparent text-4xl sm:text-6xl text-center">
                 Women&apos;s Hormonal Health
               </h1>
             </div>
 
             <div className=" flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
-              <p className="text-base sm:text-lg md:text-xl font-normal text-center">
+              <p className="text-xs sm:text-lg md:text-xl font-normal text-center whitespace-nowrap sm:whitespace-normal">
                 Personalized, expert-led care for PCOS, thyroid, fertility &
                 more.
               </p>
@@ -83,15 +83,15 @@ export default function Hero2() {
           </div>
 
           <div className=" w-full md:w-[50%] flex justify-center items-center  ">
-            <div className=" relative aspect-square w-full max-w-[450px] flex">
+            <div className=" relative aspect-square1 w-full max-w-[400px] flex">
               <Image
-                src="/del.avif"
+                src="/heroFounder.jpeg"
                 alt="Hero Image"
                 // fill
-                // width={450}
-                // height={450}
-                fill
-                className="object-cover rounded-3xl shadow-lg"
+                width={450}
+                height={450}
+                // fill
+                className="object-fill "
                 priority
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
