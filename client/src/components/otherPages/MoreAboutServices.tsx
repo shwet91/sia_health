@@ -115,15 +115,14 @@ export default function MoreAboutServices() {
                 " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center"
               }
             >
-              Health Analysis & Root Cause Discovery
+              Fitness Support and Live Classes
             </h2>
             <p className="text-[#663014] text-lg mb-4 text-center">
-              We start by asking the right questions : analyzing your health
-              history, patterns, and lab reports.
-            </p>
-            <p className="text-[#663014] text-lg text-center">
-              Our team helps you identify the “why” behind your symptoms - so
-              your care is truly aligned to your needs.
+              We understand that fitness looks different for everyone depending
+              on age, goals, and symptoms. Our experts help you find exercises
+              that work best for your body and hormonal health. You get
+              structured fitness guidance along with optional live sessions so
+              that staying active feels simple, safe, and enjoyable.
             </p>
           </div>
         </div>

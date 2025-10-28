@@ -15,29 +15,33 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "How is SIA Health different from my regular doctor?",
+    question: "How will my journey with SIA Health look once I join?",
     answer:
-      "While your regular doctor focuses on disease management, we specialize in optimization and prevention. We spend more time with you, run comprehensive testing, and create personalized protocols that address root causes rather than just managing symptoms.",
+      "You’ll start with an onboarding call where we go through your reports, symptoms, and goals. Your health coach then creates a personalized daily plan with meals, fitness, and habits that fit your routine. You’ll get regular check ins through WhatsApp and our app, progress reviews, and expert support across nutrition, fitness, and medical guidance all in one place.",
   },
   {
-    question: "What types of testing do you recommend?",
+    question:
+      "I already have a nutritionist or take supplements. Do I still need SIA Health?",
     answer:
-      "We offer comprehensive hormone panels, thyroid function tests, nutrient testing, and advanced metabolic assessments. Our testing is tailored to your specific symptoms and health goals, going beyond standard blood work to uncover underlying imbalances.",
+      "Absolutely. Our goal isn’t to replace what’s working for you but to connect all the pieces. SIA brings your nutrition, medical insights, fitness, and lifestyle guidance under one roof with experts reviewing your progress daily. If you already have a nutritionist or supplement plan, our team can align with that and ensure it’s scientifically consistent and working with your hormones, not against them.",
   },
   {
-    question: "How long does it take to see results?",
+    question:
+      "Why should I come to SIA Health if I already have a gynecologist?",
     answer:
-      "Most patients begin to notice improvements within 4-6 weeks of starting their personalized protocol. However, sustainable healing takes time, and our comprehensive programs typically run for 3-6 months for optimal results.",
+      "We’re not a replacement for your gynecologist. We are your day to day support system. We handle meal planning, symptom tracking, fitness adjustments, lifestyle tweaks, and expert consultations when needed. Think of us as your personalized long term chronic care partner.",
   },
   {
-    question: "Do you accept insurance?",
+    question:
+      "What makes SIA Health different from other health or wellness platforms?",
     answer:
-      "We provide detailed invoices and documentation that you can submit to your insurance for potential reimbursement. While we don't accept direct insurance payments, many of our services may be eligible for HSA/FSA funds.",
+      "Hormonal health isn’t a small category for us. It is our entire focus. Every SIA expert, from doctors and nutritionists to fitness coaches, is trained in hormonal science and follows an evidence based, empathy first approach. You don’t just get a plan. You get a care team that stays with you every step of the way.",
   },
   {
-    question: "Can you work with my existing medications?",
+    question:
+      "How much do the plans cost, and how do I know SIA Health is worth it?",
     answer:
-      "Yes, we work collaboratively with your current healthcare providers and can incorporate existing medications into your treatment plan. Our goal is to optimize your health while ensuring safety and compatibility with your current treatments.",
+      "Our plans start from ₹600/month and go up to ₹4,000/month depending on the level of support. You’re not paying for one consultation. You’re investing in ongoing personalized care. You get access to a coordinated team of doctors, nutritionists, fitness trainers, and health coaches working together daily to help you improve your health sustainably.",
   },
 ];
 
@@ -119,7 +123,7 @@ export default function FAQ() {
                     <span className="text-lg">📧</span>
                   </div>
                   <div>
-                    <p className="text-sm font-medium">info@siahealth.com</p>
+                    <p className="text-sm font-medium">support@siahealth.in</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -127,7 +131,7 @@ export default function FAQ() {
                     <span className="text-lg">📞</span>
                   </div>
                   <div>
-                    <p className="text-sm font-medium">+1 (555) 123-4567</p>
+                    <p className="text-sm font-medium">+91 (700) 764-0890</p>
                   </div>
                 </div>
               </div>

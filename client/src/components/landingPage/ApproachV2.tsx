@@ -30,6 +30,8 @@ export default function ApproachV2() {
             marginBottom: 12,
             fontSize: 12,
           }}
+
+          className="hidden"
         >
           - Services -
         </p>
@@ -38,7 +40,7 @@ export default function ApproachV2() {
           style={{ fontSize: 36, margin: 0, fontWeight: 700 }}
           className={`${merriweather.className}`}
         >
-          What we offer
+          How Sia helps you 
         </h2>
 
         <p style={{ color: "#6b7a70", marginTop: 12, marginBottom: 40 }}>
@@ -52,7 +54,7 @@ export default function ApproachV2() {
               className={`${merriweather.className} approach-img w-full h-full relative`}
             >
               <img
-                src="/help3.jpeg"
+                src="/help3.jpg"
                 alt="Medical & Health Analysis"
                 className="absolute inset-0 w-full h-full object-top"
               />
