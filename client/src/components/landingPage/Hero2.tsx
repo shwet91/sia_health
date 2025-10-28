@@ -82,8 +82,8 @@ export default function Hero2() {
             </div>
           </div>
 
-          {/* <div className=" w-full md:w-[50%] flex justify-center items-center  ">
-            <div className=" relative aspect-square1 w-full max-w-[400px] flex md:max-w-[300px] ">
+          {/* <div className=" w-full md:w-[50%] flex justify-center items-center hidden ">
+            <div className=" relative aspect-square1 w-full max-w-[400px] flex md:max-w-[400px] ">
               <Image
                 src="/heroFounder.jpeg"
                 alt="Hero Image"
@@ -98,16 +98,16 @@ export default function Hero2() {
             </div>
           </div> */}
 
-            <div className="w-full md:w-[50%] flex justify-center items-center">
-            <div className="relative aspect-square1 w-full 1max-w-[180px] flex justify-center items-center ">
+            <div className="w-full md:w-[50%] flex justify-center items-center hidden1">
+            <div className="relative aspect-square1 w-full sm:max-w-[400px] xl:max-w-[400px] flex justify-center items-center ">
               <Image
                 src="/heroFounder.jpeg"
                 alt="Hero Image"
                 width={180}
                 height={180}
-                className="object-fill w-[250px] h-[280px] md:w-[400px] md:h-[400px]"
+                className="object-fill w-[250px] h-[280px] md:w-[400px] md:h-[400px] lg:h-[450px] lg:w-[450px] xl:h-[500px] xl:w-[500px]"
                 priority
-                // sizes="(max-width: 768px) 60vw, 40vw"
+                sizes="(max-width: 768px) 60vw, 40vw"
               />
             </div>
           </div>

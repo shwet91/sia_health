@@ -25,7 +25,7 @@ const testimonials = [
     name: "Sukhan, 26",
     quote:
       "I joined SIA Health when I felt very lost with my PCOS. With their simple diet plans and lifestyle support, I lost 8 kgs in 6 weeks, and got my periods for the first time in  6 months. All the credit goes to the SIA team for this",
-    image: "/testimonials/Kanchan.jpeg",
+    image: "/testimonials/sukhan.jpeg",
   },
   {
     name: "Sakshi, 27",
@@ -37,19 +37,19 @@ const testimonials = [
     name: "Preeti, 27",
     quote:
       "I joined SIA Health thinking I was entering perimenopause after years of PCOS. Within 2 months my acne improved, I lost 4  kgs, and, more importantly, I feel toned, confident, and ready for this next phase of life.",
-    image: "/testimonials/Anjali.jpeg",
+    image: "/testimonials/preeti.jpeg",
   },
   {
-    name: "Louis, 27",
+    name: "Anjali, 26",
     quote:
-      "I joined SIA Health thinking I was entering perimenopause after years of PCOS. Within 2 months my acne improved, I lost 4  kgs, and, more importantly, I feel toned, confident, and ready for this next phase of life.",
-    image: "/testimonials/Anjali.jpeg",
+      "I was with SIA Health for three months and took their complete support across nutrition, medical guidance, fitness, and lifestyle. For the first time, I was actually able to follow a plan that made sense for me. I gained clarity about my  hormonal imbalances, my skin improved,  lost 4 kilos, and felt more energetic than I have in years. Honestly, I feel like I am back to my healthiest self.",
+    image: "/testimonials/anjali.jpeg",
   },
   {
-    name: "Gwen, 27",
+    name: "Aditi, 25",
     quote:
-      "I joined SIA Health thinking I was entering perimenopause after years of PCOS. Within 2 months my acne improved, I lost 4  kgs, and, more importantly, I feel toned, confident, and ready for this next phase of life.",
-    image: "/testimonials/Anjali.jpeg",
+      "I joined SIA Health (then known as Triya) after trying several other  PCOS plans before, but what truly stood out here was the daily care and empathy. The guidance was clear, the plans were realistic, and the follow-ups kept me consistent. I lost weight, felt more toned, and  saw my HbA1c levels improve.",
+    image: "/testimonials/aditi.jpeg",
   },
 ];
 

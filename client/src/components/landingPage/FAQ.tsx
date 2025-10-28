@@ -17,7 +17,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How will my journey with SIA Health look once I join?",
     answer:
-      "You’ll start with an onboarding call where we go through your reports, symptoms, and goals. Your health coach then creates a personalized daily plan — with meals, fitness, and habits that fit your routine. You’ll get regular check-ins through WhatsApp & our app, progress reviews, and expert support across nutrition, fitness, and medical guidance — all in one place.",
+      "You’ll start with an onboarding call where we go through your reports, symptoms, and goals. Your health coach then creates a personalized daily plan with meals, fitness, and habits that fit your routine. You’ll get regular check ins through WhatsApp and our app, progress reviews, and expert support across nutrition, fitness, and medical guidance all in one place.",
   },
   {
     question:
@@ -29,19 +29,19 @@ const faqItems: FAQItem[] = [
     question:
       "Why should I come to SIA Health if I already have a gynecologist?",
     answer:
-      "We’re not a replacement for your gynecologist — we are your day-to-day support system. We handle meal planning, symptom tracking, fitness adjustments, lifestyle tweaks, and expert consultations when needed. Think of us as your personalized, long-term chronic care partner.",
+      "We’re not a replacement for your gynecologist. We are your day to day support system. We handle meal planning, symptom tracking, fitness adjustments, lifestyle tweaks, and expert consultations when needed. Think of us as your personalized long term chronic care partner.",
   },
   {
     question:
       "What makes SIA Health different from other health or wellness platforms?",
     answer:
-      "Hormonal health isn’t a small category for us — it’s our entire focus. Every SIA expert, from doctors and nutritionists to fitness coaches, is trained in hormonal science and follows an evidence-based, empathy-first approach. You don’t just get a plan — you get a care team that stays with you every step of the way.",
+      "Hormonal health isn’t a small category for us. It is our entire focus. Every SIA expert, from doctors and nutritionists to fitness coaches, is trained in hormonal science and follows an evidence based, empathy first approach. You don’t just get a plan. You get a care team that stays with you every step of the way.",
   },
   {
     question:
       "How much do the plans cost, and how do I know SIA Health is worth it?",
     answer:
-      "Our plans start from ₹600/month and go up to ₹4,000/month depending on the level of support. You’re not paying for one consultation — you’re investing in ongoing, personalized care. You get access to a coordinated team of doctors, nutritionists, fitness trainers, and health coaches working together daily to help you improve your health sustainably.",
+      "Our plans start from ₹600/month and go up to ₹4,000/month depending on the level of support. You’re not paying for one consultation. You’re investing in ongoing personalized care. You get access to a coordinated team of doctors, nutritionists, fitness trainers, and health coaches working together daily to help you improve your health sustainably.",
   },
 ];
 
