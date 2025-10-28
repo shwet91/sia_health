@@ -54,7 +54,7 @@ export default function ApproachV2() {
               className={`${merriweather.className} approach-img w-full h-full relative`}
             >
               <img
-                src="/help3.jpeg"
+                src="/help3.jpg"
                 alt="Medical & Health Analysis"
                 className="absolute inset-0 w-full h-full object-top"
               />
