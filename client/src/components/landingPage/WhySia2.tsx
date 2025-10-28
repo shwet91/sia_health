@@ -26,9 +26,9 @@ function WhySia2() {
         </svg>
       ),
       title: "Root-Cause Healing",
-      subtitle: "Heal from within.",
+      subtitle: "",
       description:
-        "We fix the cause, not just the symptoms — through personalized nutrition, fitness, and lifestyle care.",
+        "We do not just manage symptoms. We address what is actually causing them.",
     },
     {
       icon: (
@@ -41,10 +41,10 @@ function WhySia2() {
           <path d="M12 17l-4-4h3V9h2v4h3l-4 4z" fill="white" />
         </svg>
       ),
-      title: "Truly Personalized",
-      subtitle: "Your body, your plan.",
+      title: "Personalized, Not Prescribed",
+      subtitle: "",
       description:
-        "Every plan is tailored to your hormones, habits, and goals — never one-size-fits-all.",
+        "Every woman’s body is unique, and so is her care. Your plans are created around your schedule.",
     },
     {
       icon: (
@@ -56,10 +56,10 @@ function WhySia2() {
           <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
         </svg>
       ),
-      title: "Human Support",
-      subtitle: "Experts who listen.",
+      title: "Transparent Care",
+      subtitle: "",
       description:
-        "Real coaches and doctors guide you daily — with care, empathy, and accountability.",
+        "You will always know what is happening and why. We keep you informed and involved at every step.",
     },
     {
       icon: (
@@ -71,12 +71,12 @@ function WhySia2() {
           <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z" />
         </svg>
       ),
-      title: "Science + Empathy",
-      subtitle: "Logic meets care.",
-      description:
-        "Evidence-based plans delivered with compassion — because healing needs both.",
+      title: "Real, Human Support",
+      subtitle: "",
+      description: "Daily support from a team of experts that truly listens.",
     },
   ];
+
   const router = useRouter();
 
   return (
@@ -96,13 +96,19 @@ function WhySia2() {
             <h2
               className={`text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 leading-tight ${merriweather.className}`}
             >
-              Why choose{" "}
-              <span className="text-[#FF4B00] font-bold">Sia Health ?</span>
+              See the{" "}
+              <span className="text-[#FF4B00] font-bold">SIA Difference</span>
             </h2>
             <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
               SIA Health helps women regain clarity, confidence, and control
               over their hormones with science-backed, empathetic, and long-term
               support designed just for you.
+            </p>
+            <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed hidden xl:block">
+              Women already juggle enough with work, home, and responsibilities.
+              Your health should not be another burden. At SIA Health, we help you take control of your
+              hormones through real, daily support so you can focus on feeling
+              better.
             </p>
             <button
               onClick={() => router.push("https://quiz.siahealth.in")}

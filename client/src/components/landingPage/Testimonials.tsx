@@ -22,7 +22,7 @@ const merriweatherFont = Merriweather({
 // 3 static testimonials
 const testimonials = [
   {
-    name: "Sukhan, 26",
+    name: "Sukhan, 21",
     quote:
       "I joined SIA Health when I felt very lost with my PCOS. With their simple diet plans and lifestyle support, I lost 8 kgs in 6 weeks, and got my periods for the first time in  6 months. All the credit goes to the SIA team for this",
     image: "/testimonials/sukhan.jpeg",
@@ -34,7 +34,7 @@ const testimonials = [
     image: "/testimonials/Sakhshi.jpeg",
   },
   {
-    name: "Preeti, 27",
+    name: "Preeti, 37",
     quote:
       "I joined SIA Health thinking I was entering perimenopause after years of PCOS. Within 2 months my acne improved, I lost 4  kgs, and, more importantly, I feel toned, confident, and ready for this next phase of life.",
     image: "/testimonials/preeti.jpeg",
