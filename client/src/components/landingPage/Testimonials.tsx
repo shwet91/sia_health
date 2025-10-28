@@ -83,6 +83,7 @@ export default function Testimonials() {
             alt={testimonial.name}
             fill
             className="object-cover rounded-full object-center"
+            priority
           />
         </div>
 
