@@ -30,7 +30,7 @@ export default function WhatWeDo() {
       icon: LineChart,
       title: "Map",
       description:
-        "Advanced testing to identify your unique hormonal landscape",
+        "We map your bloodworks, patterns and lifestyle to find rootcause behind your symptoms",
     },
     {
       icon: FileText,

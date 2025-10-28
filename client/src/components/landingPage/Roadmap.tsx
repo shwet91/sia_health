@@ -30,7 +30,7 @@ export default function Roadmap() {
       icon: LineChart,
       title: "Hormone Test",
       description:
-        "Advanced testing to identify your unique hormonal landscape",
+        "Take our online hormonal quiz to help find rootcause",
     },
     {
       icon: FileText,

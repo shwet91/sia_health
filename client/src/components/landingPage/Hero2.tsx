@@ -55,8 +55,8 @@ export default function Hero2() {
 
             <div className=" flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
               <p className="text-xs sm:text-lg md:text-xl font-normal text-center whitespace-nowrap sm:whitespace-normal">
-                Personalized, expert-led care for PCOS, thyroid, infertility &
-                more.
+                Daily, expert-led care for PCOS/PCOD, Thyroid, Perimenopause,
+                Fertility & more
               </p>
             </div>
 
@@ -98,7 +98,7 @@ export default function Hero2() {
             </div>
           </div> */}
 
-            <div className="w-full md:w-[50%] flex justify-center items-center hidden1">
+          <div className="w-full md:w-[50%] flex justify-center items-center hidden1">
             <div className="relative aspect-square1 w-full sm:max-w-[400px] xl:max-w-[400px] flex justify-center items-center ">
               <Image
                 src="/heroFounder.jpeg"
@@ -111,7 +111,6 @@ export default function Hero2() {
               />
             </div>
           </div>
-
         </div>
       </div>
 
