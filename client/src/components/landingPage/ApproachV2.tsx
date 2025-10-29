@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 import { MoveRight } from "lucide-react";

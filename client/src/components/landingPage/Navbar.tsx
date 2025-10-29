@@ -137,7 +137,7 @@ export default function Navbar() {
               background: "linear-gradient(90deg, #EB5200 0%, #FF7E29 100%)",
             }}
           >
-            Start Free Quiz
+            Take the hormone test
           </button>
         </div>
       </div>
