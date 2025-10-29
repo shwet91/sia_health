@@ -66,7 +66,7 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
+                " text-3xl md:text-4xl lg:text-4xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
               }
             >
               Nutrition Support & Supplement Guidance
@@ -112,7 +112,7 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
+                " text-3xl md:text-4xl lg:text-4xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
               }
             >
               Fitness Support and Live Classes
