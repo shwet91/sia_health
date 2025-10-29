@@ -213,7 +213,7 @@ export default function Roadmap() {
         <div
         onClick={() => router.push("/aboutUs")}
         className="text-center mt-12">
-          <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
+          <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-sm font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
             Explore Your Journey
             <svg
               className="ml-2 w-4 h-4"
