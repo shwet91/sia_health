@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
+import { MoveRight } from "lucide-react";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -30,17 +31,16 @@ export default function ApproachV2() {
             marginBottom: 12,
             fontSize: 12,
           }}
-
           className="hidden"
         >
           - Services -
         </p>
 
         <h2
-          style={{ fontSize: 36, margin: 0, fontWeight: 700 }}
-          className={`${merriweather.className}`}
+          // style={{ fontSize: 36, margin: 0, fontWeight: 700 }}
+          className={`${merriweather.className} text-4xl md:text-6xl`}
         >
-          How Sia helps you 
+          How Sia helps you
         </h2>
 
         <p style={{ color: "#6b7a70", marginTop: 12, marginBottom: 40 }}>
@@ -114,10 +114,23 @@ export default function ApproachV2() {
           </div>
         </div>
 
-        <p style={{ marginTop: 26, color: "#4a6157" }}>
+        <p style={{ marginTop: 26, color: "#4a6157" }} className="hidden">
           We take the mental load off your shoulders so you can focus on getting
           better.
         </p>
+        {/* Hormone Test Button - Moved to Bottom */}
+        <div className="flex flex-col items-center justify-center w-full mt-5 sm:mt-8 gap-3 1hidden">
+          <button
+            // onClick={() => router.push("https://quiz.siahealth.in")}
+            className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl `}
+          >
+            Take the 2-minute hormone test <MoveRight></MoveRight>
+          </button>
+          <p className="text-[#662b00] text-xs sm:text-sm text-center max-w-[280px] sm:max-w-xs">
+            Find the root cause behind your hormonal concerns with our quick
+            online quiz
+          </p>
+        </div>
       </div>
     </section>
   );

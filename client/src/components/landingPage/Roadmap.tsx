@@ -24,29 +24,29 @@ export default function Roadmap() {
       icon: ClipboardList,
       title: "Book a Consultation",
       description:
-        "Comprehensive intake form and detailed health history review",
+        "Meet your health coach and share your goals, symptoms, and health history.",
     },
     {
       icon: LineChart,
       title: "Hormone Test",
       description:
-        "Take our online hormonal quiz to help find rootcause",
+        "A quick quiz that helps us understand your symptoms and root cause better.",
     },
     {
       icon: FileText,
       title: "Talk to Health Coach",
       description:
-        "Personalized treatment plan tailored to your specific needs",
+        "Get your personalized roadmap, designed around your lifestyle, not someone else's.",
     },
     {
       icon: Users,
       title: "Personalised nutrition & Lifestyle Plan",
-      description: "Ongoing support and regular check-ins with your care team",
+      description: "Daily meal, fitness, and habit guidance backed by your medical data.",
     },
     {
       icon: RefreshCcw,
       title: "Reclaim your Hormonal Health",
-      description: "Continuous optimization based on your progress and results",
+      description: "Track your progress with ongoing support and expert reviews every step of the way.",
     },
   ];
 
@@ -213,8 +213,8 @@ export default function Roadmap() {
         <div
         onClick={() => router.push("/about-us")}
         className="text-center mt-12">
-          <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
-            Explore Your Journey
+          <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-sm font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
+            Take the hormone test
             <svg
               className="ml-2 w-4 h-4"
               viewBox="0 0 24 24"

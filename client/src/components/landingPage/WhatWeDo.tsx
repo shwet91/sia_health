@@ -224,7 +224,7 @@ export default function WhatWeDo() {
         <div className="text-center mt-12">
           <button
             onClick={() => router.push("/contact")}
-            className="bg-[#FF4B00] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center"
+            className="bg-[#FF4B00] text-white px-8 py-3 rounded-sm font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center"
           >
             Book Free Discovery Call
             <svg

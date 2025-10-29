@@ -131,7 +131,7 @@ export default function FAQ() {
                     <span className="text-lg">📞</span>
                   </div>
                   <div>
-                    <p className="text-sm font-medium">+91 (700) 764-0890</p>
+                    <p className="text-sm font-medium">+91-7007640890</p>
                   </div>
                 </div>
               </div>

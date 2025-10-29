@@ -15,27 +15,28 @@ export default function MoreAboutServices() {
           <h1
             className={
               merriweather.className +
-              " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810]"
+              " text-3xl md:text-4xl lg:text-6xl font-bold text-[#2D1810]"
             }
           >
-            Let&apos;s read more about OUR services
+            Let&apos;s read more about{" "}
+            <span className="text-[#FF4B00]">our services</span>
           </h1>
-          <p className="mt-4 text-[#663014] text-lg max-w-3xl mx-auto">
+          <p className="mt-4 text-[#6b7a70] text-lg max-w-3xl mx-auto">
             Our goal is help you completely in your health journey: From
             Diagnosis to Daily Lifestyle interventions. We are there with you
             every step of the way, giving you exactly what you need.
           </p>
         </div>
         {/* Article 1: Image left, text right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 lg:mb-24">
           <div className="order-1 lg:order-1">
-            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-lg overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="/Solutions/1.avif"
+                src="/contactImg/1.jpeg"
                 alt="Health Analysis"
                 width={900}
                 height={280}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
           </div>
@@ -44,34 +45,33 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-center text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4"
+                " text-center text-3xl md:text-4xl lg:text-4xl font-bold text-[#2D1810] mb-4 leading-tight"
               }
             >
               Health Analysis & Root Cause Discovery
             </h2>
-            <p className="text-[#663014] text-lg mb-4 text-center">
-              We start by asking the right questions : analyzing your health
-              history, patterns, and lab reports.
-            </p>
-            <p className="text-[#663014] text-lg text-center">
-              Our team helps you identify the “why” behind your symptoms - so
-              your care is truly aligned to your needs.
+            <p className="text-[#6b7a70] text-lg mb-4 text-center">
+              We start by asking the right questions, analyzing your health
+              history, patterns, and lab reports. Helping you get bloodwork
+              done, if something is missing. Our team helps you identify the
+              rootcause behind your symptoms, so your care is truly aligned to
+              your needs.
             </p>
           </div>
         </div>
 
         {/* Article 2: Text left, image right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 lg:mb-24">
           <div className="order-2 lg:order-1">
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center"
+                " text-3xl md:text-4xl lg:text-4xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
               }
             >
               Nutrition Support & Supplement Guidance
             </h2>
-            <p className="text-[#663014] text-lg mb-4 text-center">
+            <p className="text-[#6b7a70] text-lg mb-4 text-center">
               Your nutrition plan is tailored to your body&apos;s unique needs,
               addressing inflammation, insulin resistance, digestive issues, or
               fatigue. We combine expert guidance with evidence-based
@@ -82,9 +82,9 @@ export default function MoreAboutServices() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="/Solutions/2.avif"
+                src="/contactImg/2.jpg"
                 alt="Nutrition Support"
                 width={900}
                 height={280}
@@ -95,15 +95,15 @@ export default function MoreAboutServices() {
         </div>
 
         {/* Article 3: Image left, text right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="order-1 lg:order-1">
-            <div className="rounded-2xl overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="/Solutions/3.avif"
+                src="/contactImg/3.jpg"
                 alt="Health Analysis"
                 width={900}
                 height={280}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-left"
               />
             </div>
           </div>
@@ -112,12 +112,12 @@ export default function MoreAboutServices() {
             <h2
               className={
                 merriweather.className +
-                " text-3xl md:text-4xl lg:text-5xl font-bold text-[#2D1810] mb-4 text-center"
+                " text-3xl md:text-4xl lg:text-4xl font-bold text-[#2D1810] mb-4 text-center leading-tight"
               }
             >
               Fitness Support and Live Classes
             </h2>
-            <p className="text-[#663014] text-lg mb-4 text-center">
+            <p className="text-[#6b7a70] text-lg mb-4 text-center">
               We understand that fitness looks different for everyone depending
               on age, goals, and symptoms. Our experts help you find exercises
               that work best for your body and hormonal health. You get
