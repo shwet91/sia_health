@@ -30,7 +30,7 @@ export default function MoreAboutServices() {
         {/* Article 1: Image left, text right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16 lg:mb-24">
           <div className="order-1 lg:order-1">
-            <div className="rounded-lg overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-lg overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
                 src="/contactImg/1.jpeg"
                 alt="Health Analysis"
@@ -82,9 +82,9 @@ export default function MoreAboutServices() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="rounded-sm overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="https://plus.unsplash.com/premium_photo-1661842518850-139922210584?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1343"
+                src="https://media.istockphoto.com/id/953638668/photo/vegan-sweet-potato-chickpea-curry-in-wooden-bowl-on-light-background-top-view-copy-space.jpg?s=2048x2048&w=is&k=20&c=JkXWoQo_Q6S3-cukX52XLwe4EWxQ9qZxe102hZ3Nzrg="
                 alt="Nutrition Support"
                 width={900}
                 height={280}
@@ -97,13 +97,13 @@ export default function MoreAboutServices() {
         {/* Article 3: Image left, text right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="order-1 lg:order-1">
-            <div className="rounded-sm overflow-hidden shadow-md h-[380px]">
+            <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="/contactImg/2.jpeg"
+                src="https://media.istockphoto.com/id/1295315075/photo/african-american-woman-doing-stretching-at-home-she-sits-on-a-training-mat-in-front-of-a.jpg?s=2048x2048&w=is&k=20&c=U3RONFFgmjjkLB6b3TIylT4-304XuSzW3deS0JZSNW8="
                 alt="Health Analysis"
                 width={900}
                 height={280}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-left"
               />
             </div>
           </div>
