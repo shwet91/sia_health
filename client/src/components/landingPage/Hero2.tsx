@@ -54,7 +54,9 @@ export default function Hero2() {
             </div>
 
             <div className=" flex flex-col gap-2 text-[#662b00] max-w-md mx-auto md:mx-0">
-              <p className={`text-xs sm:text-lg md:text-xl font-normal text-center ${merriweatherFont.className}`}>
+              <p
+                className={`text-xs sm:text-lg md:text-xl font-normal text-center ${merriweatherFont.className}`}
+              >
                 Daily, expert-led care for PCOS/PCOD, Thyroid, Perimenopause,
                 Fertility & more
               </p>
@@ -98,7 +100,7 @@ export default function Hero2() {
             </div>
           </div> */}
 
-          <div className="w-full md:w-[50%] flex justify-center items-center hidden1">
+          <div className="w-full md:w-[50%] flex justify-center items-center hidden1 pt-10">
             <div className="relative aspect-square1 w-full sm:max-w-[400px] xl:max-w-[400px] flex justify-center items-center ">
               <Image
                 src="/heroFounder.jpeg"
