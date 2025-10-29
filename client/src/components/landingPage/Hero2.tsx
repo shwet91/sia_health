@@ -105,7 +105,7 @@ export default function Hero2() {
                 alt="Hero Image"
                 width={180}
                 height={180}
-                className="object-fill w-[250px] h-[280px] md:w-[400px] md:h-[400px] lg:h-[450px] lg:w-[450px] xl:h-[500px] xl:w-[500px]"
+                className="object-fill w-[250px] h-[280px] md:w-[400px] md:h-[400px] lg:h-[450px] lg:w-[450px] xl:h-[400px] xl:w-[500px]"
                 priority
                 sizes="(max-width: 768px) 60vw, 40vw"
               />
