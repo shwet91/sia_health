@@ -84,7 +84,7 @@ export default function MoreAboutServices() {
           <div className="order-1 lg:order-2">
             <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="https://media.istockphoto.com/id/953638668/photo/vegan-sweet-potato-chickpea-curry-in-wooden-bowl-on-light-background-top-view-copy-space.jpg?s=2048x2048&w=is&k=20&c=JkXWoQo_Q6S3-cukX52XLwe4EWxQ9qZxe102hZ3Nzrg="
+                src="/contactImg/2.jpg"
                 alt="Nutrition Support"
                 width={900}
                 height={280}
@@ -99,7 +99,7 @@ export default function MoreAboutServices() {
           <div className="order-1 lg:order-1">
             <div className="rounded-sm overflow-hidden shadow-md h-[280px] sm:h-[380px]">
               <Image
-                src="https://media.istockphoto.com/id/1295315075/photo/african-american-woman-doing-stretching-at-home-she-sits-on-a-training-mat-in-front-of-a.jpg?s=2048x2048&w=is&k=20&c=U3RONFFgmjjkLB6b3TIylT4-304XuSzW3deS0JZSNW8="
+                src="/contactImg/3.jpg"
                 alt="Health Analysis"
                 width={900}
                 height={280}
