@@ -43,7 +43,7 @@ export default function Team() {
         <div className="text-center mb-8 max-w-3xl mx-auto">
           <h2
             className={
-              "text-3xl md:text-4xl font-bold mb-3 text-[#2D1810] " +
+              "text-3xl md:text-6xl font-bold mb-3 text-[#2D1810] " +
               merriweather.className
             }
           >

@@ -15,7 +15,7 @@ const merriweather = Merriweather({
 export default function ApproachV2() {
   return (
     <section
-      className={"approach-v2-container " + merriweather.className}
+      className={"approach-v2-container Helvetica "}
       style={{
         padding: "64px 24px",
         background: "#FFF4EB",
