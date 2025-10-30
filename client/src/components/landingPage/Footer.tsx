@@ -49,7 +49,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo5.png"
-                alt="SIA Health Logo"
+                alt="SIA Health"
                 width={120}
                 height={40}
                 className="object-contain"

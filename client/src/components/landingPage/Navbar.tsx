@@ -31,7 +31,7 @@ export default function Navbar() {
           data-node-id="42:2070"
         >
           <Image
-            alt="Sia Health Logo"
+            alt="Sia Health"
             className="block max-w-none size-full"
             src="/logo5.png"
             width={122}
