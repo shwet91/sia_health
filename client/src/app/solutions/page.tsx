@@ -6,13 +6,14 @@ import MoreAboutServices from "@/components/otherPages/MoreAboutServices";
 import IntegratedCare from "@/components/otherPages/IntegratedCare";
 import Testimonials from "@/components/landingPage/Testimonials";
 import Contact from "@/components/landingPage/Contact";
+import SolutionsRoadmap from "@/components/otherPages/solutionsRoadmap";
 
 function page() {
   return (
     <div className=" h-[100vh] w-full  " style={{ background: "#fff2e8" }}>
       <Navbar />
       <h1>Solution page</h1>
-        <WhatWeDo />
+        <SolutionsRoadmap />
         <MoreAboutServices />
         <IntegratedCare />
         <Testimonials />
