@@ -40,10 +40,10 @@ export default function Team() {
       </div>
 
       <div className="container mx-auto max-w-[1400px] px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8 max-w-3xl mx-auto">
+        <div className="text-center mb-8 max-w-4xl mx-auto">
           <h2
             className={
-              "text-3xl md:text-6xl font-bold mb-3 text-[#2D1810] " +
+              "text-3xl md:text-5xl font-bold mb-3 text-[#2D1810] lg:whitespace-nowrap" +
               merriweather.className
             }
           >

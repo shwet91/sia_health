@@ -50,7 +50,7 @@ export default function Services() {
           <h2
             className={
               merriweather.className +
-              " text-2xl md:text-3xl lg:text-6xl font-bold"
+              " text-2xl md:text-3xl lg:text-5xl font-bold"
             }
           >
             What We Treat

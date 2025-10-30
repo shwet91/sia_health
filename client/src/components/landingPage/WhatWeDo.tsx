@@ -86,7 +86,7 @@ export default function WhatWeDo() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center max-w-4xl mx-auto">
           <h2
-            className={`${merriweather.className} text-4xl md:text-6xl font-bold mb-4`}
+            className={`${merriweather.className} text-4xl md:text-5xl font-bold mb-4`}
           >
             We don&apos;t just track symptoms.{" "}
             <span className="text-[#FF4B00]">We translate them.</span>
