@@ -118,7 +118,7 @@ export default function Testimonials() {
 
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className={`${merriweatherFont.className} text-4xl md:text-6xl font-bold text-center mb-4 mx-auto`}
+          className={`${merriweatherFont.className} text-4xl md:text-5xl font-bold text-center mb-4 mx-auto`}
         >
           Real Stories{" "}
           <span className="text-[#FF4B00] font-bold">Real Results</span>

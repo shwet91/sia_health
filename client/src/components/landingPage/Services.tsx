@@ -9,36 +9,36 @@ const merriweather = Merriweather({ subsets: ["latin"] });
 
 const services = [
   {
-    title: "PCOS/PCOD & Irregular Periods",
-    desc: "Restore your hormonal balance and regain cycle control — naturally and sustainably.",
+    title: "PCOS/PCOD or Irregular Periods",
+    desc: "We focus on finding your root cause, whether it's insulin resistance, inflammation, thyroid, or stress etc. We make lifestyle changes around your symptoms, routine and blood work.",
   },
   {
-    title: "Thyroid Disorders & Imbalances",
-    desc: "Stabilize your energy, mood, and metabolism with targeted thyroid care.",
+    title: "Thyroid Imbalances",
+    desc: "Whether it's hypo or hyper-thyroid, our team helps you understand your lab reports, reduce fatigue and manage weight naturally.We work on your metabolism, stress and daily habits to support your thyroid health.",
   },
   {
-    title: "Gut Issues, Bloating & Digestion",
-    desc: "Heal your gut, improve digestion, and reduce bloating from within.",
-  },
-  {
-    title: "Skin, Hair, Immunity & More",
-    desc: "Glow from the inside out with balanced hormones and better nutrition.",
-  },
-  {
-    title: "Fatigue, Low Energy & Burnout",
-    desc: "Reclaim your energy and feel refreshed — all day, every day.",
-  },
-  {
-    title: "Menopause (Peri & Post)",
-    desc: "Navigate hormonal shifts smoothly with expert, compassionate care.",
-  },
-  {
-    title: "Weight Management & Metabolism",
-    desc: "Balance hormones to achieve sustainable, long-term weight goals.",
+    title: "Menopause / Perimenopause",
+    desc: "Joint pain, hot flashes, mood shifts or poor sleep, we help you manage them through food, movement and lifestyle changes that support hormonal transition. Our experts guide you with calm, clarity and daily care through this new phase.",
   },
   {
     title: "Fertility & Pre-conception Care",
-    desc: "Support your body naturally for healthy cycles and conception readiness.",
+    desc: "We help you prepare your body during pregnancy or for conception by improving egg health, balancing hormones and reducing inflammation. Our nutrition and lifestyle plans are tailored for your current reports and goals.",
+  },
+  {
+    title: "Weight & Metabolism",
+    desc: "We don't chase quick fixes. Instead, we help you understand your metabolism, hormones and habits that affect weight.With balanced meals and sustainable movement, results come naturally.",
+  },
+  {
+    title: "Gut & Digestion Health",
+    desc: "Your gut affects everything, from skin to mood.We build meal plans that calm inflammation, improve digestion, help with bloating and support your hormones from within.",
+  },
+  {
+    title: "Fatigue & Low Energy",
+    desc: "Constant tiredness isn't normal. We identify nutritional, hormonal or lifestyle gaps causing low energy. You get a personalised plan to feel lighter, focused and more energetic daily.",
+  },
+  {
+    title: "Skin, Hair & Immunity",
+    desc: "Hormones often show up on your skin and hair first.We address the internal causes like nutrition gaps, stress, gut health, so your glow comes back naturally.",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Services() {
           <h2
             className={
               merriweather.className +
-              " text-2xl md:text-3xl lg:text-4xl font-bold"
+              " text-2xl md:text-3xl lg:text-5xl font-bold"
             }
           >
             What We Treat
@@ -102,14 +102,16 @@ export default function Services() {
 
                 {/* Title - always visible */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-2 sm:p-3 lg:p-4 text-center">
-                  <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight drop-shadow-lg transition-all duration-300 ease-in-out group-hover:transform group-hover:-translate-y-1">
+                  <h3 className=" text-white font-bold text-sm sm:text-base lg:text-lg leading-tight drop-shadow-lg transition-all duration-300 ease-in-out group-hover:hidden group-hover:translate-y-2">
                     {s.title}
                   </h3>
 
                   {/* Description - only visible on hover with slide-up animation */}
-                  <p className="text-white text-[8px] sm:text-[9px] lg:text-xs leading-tight drop-shadow-md mt-1 sm:mt-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out max-h-0 group-hover:max-h-20 overflow-hidden">
+                  <p className="text-white text-[8px] sm:text-[9px] lg:text-xs leading-tight drop-shadow-md mt-1 sm:mt-0 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out max-h-0 group-hover:max-h-30 overflow-hidden">
                     {s.desc}
                   </p>
+
+                  <div className=" hidden h-15 w-15 border"></div>
                 </div>
               </div>
             );

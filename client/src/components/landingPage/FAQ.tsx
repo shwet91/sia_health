@@ -58,7 +58,7 @@ export default function FAQ() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-10">
           <h2
-            className={`${merriweather.className} text-3xl md:text-4xl font-bold mb-2 text-[#100f2f]`}
+            className={`${merriweather.className} text-3xl md:text-5xl font-bold mb-2 text-[#100f2f]`}
           >
             Frequently Asked Questions
           </h2>

@@ -22,31 +22,33 @@ export default function Roadmap() {
   const steps = [
     {
       icon: ClipboardList,
-      title: "Book a Consultation",
+      title: "Book a Free Consultation",
       description:
         "Meet your health coach and share your goals, symptoms, and health history.",
     },
     {
       icon: LineChart,
-      title: "Hormone Test",
+      title: "Take the Hormone Test",
       description:
         "A quick quiz that helps us understand your symptoms and root cause better.",
     },
     {
       icon: FileText,
-      title: "Talk to Health Coach",
+      title: "Talk to Your  Health Coach",
       description:
         "Get your personalized roadmap, designed around your lifestyle, not someone else's.",
     },
     {
       icon: Users,
-      title: "Personalised nutrition & Lifestyle Plan",
-      description: "Daily meal, fitness, and habit guidance backed by your medical data.",
+      title: "Nutrition & Lifestyle Plan",
+      description:
+        "Daily meal, fitness, and habit guidance backed by your medical data.",
     },
     {
       icon: RefreshCcw,
       title: "Reclaim your Hormonal Health",
-      description: "Track your progress with ongoing support and expert reviews every step of the way.",
+      description:
+        "Track your progress with ongoing support and expert reviews every step of the way.",
     },
   ];
 
@@ -86,14 +88,13 @@ export default function Roadmap() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center max-w-4xl mx-auto">
           <h2
-            className={`${merriweather.className} text-4xl md:text-5xl font-bold mb-4`}
+            className={`${merriweather.className} text-4xl md:text-6xl font-bold mb-4`}
           >
-            We don&apos;t just track symptoms.{" "}
-            <span className="text-[#FF4B00]">We translate them.</span>
+            Your Journey with <span className="text-[#FF4B00]">SIA Health</span>
           </h2>
           <p className="text-xl text-[#663014]">
-            Our proven 5-step process transforms confusion into clarity,
-            symptoms into solutions.
+            From your first call to feeling better, here’s how we help you feel
+            better everyday
           </p>
         </div>
 
@@ -211,7 +212,7 @@ export default function Roadmap() {
         </div>
 
         <div
-        onClick={() => router.push("/about-us")}
+        onClick={() => router.push("https://quiz.siahealth.in")}
         className="text-center mt-12">
           <button className="bg-[#FF4B00] text-white px-8 py-3 rounded-sm font-medium hover:bg-[#e64400] transition-colors duration-300 inline-flex items-center">
             Take the hormone test

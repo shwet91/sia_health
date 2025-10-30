@@ -141,7 +141,7 @@ export default function Contact() {
 
             {/* Title */}
             <h2
-              className={`text-[#130e2e] text-2xl lg:text-3xl font-bold mb-2 leading-tight ${merriweather.className}`}
+              className={`text-[#130e2e] text-2xl lg:text-5xl font-bold mb-2 leading-tight ${merriweather.className}`}
             >
               Book A Free{" "}
               <span className="text-[#FF4B00]">Expert Consultation!</span>

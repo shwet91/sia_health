@@ -15,7 +15,7 @@ const merriweather = Merriweather({
 export default function ApproachV2() {
   return (
     <section
-      className={"approach-v2-container " + merriweather.className}
+      className={"approach-v2-container Helvetica "}
       style={{
         padding: "64px 24px",
         background: "#FFF4EB",
@@ -38,7 +38,7 @@ export default function ApproachV2() {
 
         <h2
           // style={{ fontSize: 36, margin: 0, fontWeight: 700 }}
-          className={`${merriweather.className} text-4xl md:text-6xl`}
+          className={`${merriweather.className} text-4xl md:text-5xl`}
         >
           How Sia helps you
         </h2>
