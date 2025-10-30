@@ -18,15 +18,6 @@ export const metadata: Metadata = {
   title: "Balance Hormones Naturally :  PCOS, Thyroid Disorders ",
   description:
     "Sia Health provides expert led, evidence based care for women's hormonal health issues such as PCOS/PCOD , thyroid disorder, peri menopause etc. Our holistic approach combines personalized lifestyle, nutrition, and exercise solutions for lasting well-being and improved health.",
-  keywords: [
-    "PCOS",
-    "women's health",
-    "Hormonal health",
-  ],
-  icons: {
-    icon: "/fav_icon.png", // default
-    apple: "/fav.jpeg", // for iOS (if you have one)
-  },
 };
 
 export default function RootLayout({
