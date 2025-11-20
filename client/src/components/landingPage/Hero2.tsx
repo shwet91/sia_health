@@ -29,15 +29,15 @@ export default function Hero2() {
       <div className={` Helvetica container mx-auto max-w-7xl `}>
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className=" w-full md:w-[60%] flex flex-col gap-6 items-center justify-center text-center md:text-left">
-            <div className="mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-lg text-[#2e1300] text-sm md:text-base font-medium">
+            <div className=" hidden mt-6 md:mt-0 bg-[rgba(255,244,235,0.4)] border border-[rgba(102,43,0,0.1)] border-solid 1flex gap-3 items-center justify-center md:justify-start px-4 py-2.5 rounded-lg text-[#2e1300] text-sm md:text-base font-medium">
               Hormonal empathy meets warm science
             </div>
 
             <div
-              className={` ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
+              className={` mt-10 ${merriweatherFont.className} flex flex-col items-center gap-0 w-full `}
             >
               <h1
-                className=" bg-clip-text text-transparent text-4xl sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center whitespace-nowrap sm:whitespace-normal"
+                className=" bg-clip-text text-transparent text-[33px] sm:text-4xl md:text-6xl 1font-light 1leading-tight text-center whitespace-nowrap sm:whitespace-normal"
                 style={{
                   backgroundImage:
                     "linear-gradient(172.293deg, #EB5200 0%, #FF7E29 100%)",
