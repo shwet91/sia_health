@@ -41,9 +41,9 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // const webhookApi = "https://n8n.balancedme.in/webhook-test/f53844e6-d426-4b61-81fa-0bcb42fe4257";
+    // const webhookApi = "https://n8n.balancedme.in/webhook-test/joinCommunity";
     const webhookApi =
-      "https://n8n.balancedme.in/webhook/f53844e6-d426-4b61-81fa-0bcb42fe4257";
+      "https://n8n.balancedme.in/webhook/joinCommunity";
 
     const contactFormWebhookCall = await fetch(webhookApi, {
       method: "POST",
