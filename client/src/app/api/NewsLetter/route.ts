@@ -41,9 +41,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // const webhookApi = "https://n8n.balancedme.in/webhook-test/joinCommunity";
-    const webhookApi =
-      "https://n8n.balancedme.in/webhook/joinCommunity";
+    // production url
+    const webhookApi = "https://sia-health-n8n.up.railway.app/webhook/joinCommunity";
+    // testing url
+    // const webhookApi = "https://sia-health-n8n.up.railway.app/webhook-test/joinCommunity";
 
     const contactFormWebhookCall = await fetch(webhookApi, {
       method: "POST",
