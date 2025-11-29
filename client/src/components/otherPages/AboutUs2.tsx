@@ -58,28 +58,29 @@ export default function AboutUs2() {
           <p>
             Like many women, I struggled for years with hormonal issues that
             were dismissed, misunderstood, or treated with a one-size-fits-all
-            approach. Every doctor's visit felt rushed. Every symptom felt
-            minimized. And the worst part? I was told this was just "normal."
+            approach. Every doctor&apos;s visit felt rushed. Every symptom felt
+            minimized. And the worst part? I was told this was just
+            &ldquo;normal.&rdquo;
           </p>
 
           <p>
-            But it wasn't normal. And I knew other women were going through the
-            same thing —feeling unheard, unsupported, and unsure of where to
+            But it wasn&apos;t normal. And I knew other women were going through
+            the same thing —feeling unheard, unsupported, and unsure of where to
             turn.
           </p>
 
           <p>
-            That's why I built SIA Health. I wanted to create the kind of care I
-            wished I had received: continuous, personalized, evidence-based
-            support that treats women as whole people, not just a collection of
-            symptoms.
+            That&apos;s why I built SIA Health. I wanted to create the kind of
+            care I wished I had received: continuous, personalized,
+            evidence-based support that treats women as whole people, not just a
+            collection of symptoms.
           </p>
 
           <p>
             What started as a personal mission has become something much bigger.
-            Today, we're building a movement to change how women's health is
-            approached—with empathy, expertise, and the understanding that every
-            woman deserves care that truly sees her.
+            Today, we&apos;re building a movement to change how women&apos;s
+            health is approached—with empathy, expertise, and the understanding
+            that every woman deserves care that truly sees her.
           </p>
 
           <p className="text-gray-500 text-sm md:text-base mt-8">
@@ -118,28 +119,29 @@ export default function AboutUs2() {
           <p>
             Like many women, I struggled for years with hormonal issues that
             were dismissed, misunderstood, or treated with a one-size-fits-all
-            approach. Every doctor's visit felt rushed. Every symptom felt
-            minimized. And the worst part? I was told this was just "normal."
+            approach. Every doctor&apos;s visit felt rushed. Every symptom felt
+            minimized. And the worst part? I was told this was just
+            &ldquo;normal.&rdquo;
           </p>
 
           <p>
-            But it wasn't normal. And I knew other women were going through the
-            same thing —feeling unheard, unsupported, and unsure of where to
+            But it wasn&apos;t normal. And I knew other women were going through
+            the same thing —feeling unheard, unsupported, and unsure of where to
             turn.
           </p>
 
           <p>
-            That's why I built SIA Health. I wanted to create the kind of care I
-            wished I had received: continuous, personalized, evidence-based
-            support that treats women as whole people, not just a collection of
-            symptoms.
+            That&apos;s why I built SIA Health. I wanted to create the kind of
+            care I wished I had received: continuous, personalized,
+            evidence-based support that treats women as whole people, not just a
+            collection of symptoms.
           </p>
 
           <p>
             What started as a personal mission has become something much bigger.
-            Today, we're building a movement to change how women's health is
-            approached—with empathy, expertise, and the understanding that every
-            woman deserves care that truly sees her.
+            Today, we&apos;re building a movement to change how women&apos;s
+            health is approached—with empathy, expertise, and the understanding
+            that every woman deserves care that truly sees her.
           </p>
 
           <p className="text-gray-500 text-sm md:text-base mt-8">

@@ -42,11 +42,12 @@ export async function POST(req: NextRequest) {
     });
 
     // production url
-    const webhookApi = "https://sia-health-n8n.up.railway.app/webhook/joinCommunity";
+    const webhookApi =
+      "https://sia-health-n8n.up.railway.app/webhook/joinCommunity";
     // testing url
     // const webhookApi = "https://sia-health-n8n.up.railway.app/webhook-test/joinCommunity";
 
-    const contactFormWebhookCall = await fetch(webhookApi, {
+    await fetch(webhookApi, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
