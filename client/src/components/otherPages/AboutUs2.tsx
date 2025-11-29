@@ -47,7 +47,7 @@ export default function AboutUs2() {
         </h2>
         <p className="Helvetica text-lg md:text-xl text-gray-600 leading-relaxed">
           Built from personal experience, now growing into a shared mission to
-          change how women's health is cared for.
+          change how women&apos;s health is cared for.
         </p>
       </div>
 
@@ -216,7 +216,7 @@ export default function AboutUs2() {
             </h3>
             <p className="Helvetica text-base md:text-lg text-gray-600 leading-relaxed">
               Clear communication, honest answers, and no hidden agendas. You
-              deserve to know the 'why' behind every recommendation.
+              deserve to know the &apos;why&apos; behind every recommendation.
             </p>
           </div>
 
