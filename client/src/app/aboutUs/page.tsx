@@ -8,8 +8,8 @@ function page() {
   return (
     <div>
         <Navbar />
-        <AboutUs />
-        {/* <AboutUs2 /> */}
+        {/* <AboutUs /> */}
+        <AboutUs2 />
         <Footer />
     </div>
   )
