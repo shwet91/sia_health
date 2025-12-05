@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/landingPage/Navbar";
 import Footer from "@/components/landingPage/Footer";
-import WhatWeDo from "@/components/landingPage/WhatWeDo";
+// import WhatWeDo from "@/components/landingPage/WhatWeDo";
 import MoreAboutServices from "@/components/otherPages/MoreAboutServices";
 import IntegratedCare from "@/components/otherPages/IntegratedCare";
 import Testimonials from "@/components/landingPage/Testimonials";

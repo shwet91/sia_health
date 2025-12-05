@@ -49,17 +49,18 @@ export async function POST(request: NextRequest) {
     // test url
     // const webhookApi = "https://sia-health-n8n.up.railway.app/webhook-test/f53844e6-d426-4b61-81fa-0bcb42fe4257"
     // production url
-    const webhookApi = "https://sia-health-n8n.up.railway.app/webhook/f53844e6-d426-4b61-81fa-0bcb42fe4257"
+    const webhookApi =
+      "https://sia-health-n8n.up.railway.app/webhook/f53844e6-d426-4b61-81fa-0bcb42fe4257";
 
-    const contactFormWebhookCall = await fetch( webhookApi , {
-      method : 'POST',
+    await fetch(webhookApi, {
+      method: "POST",
       headers: {
-        'Content-Type' : 'application/json'
+        "Content-Type": "application/json",
       },
-      body : JSON.stringify({
+      body: JSON.stringify({
         user: newUser,
-      })
-    })
+      }),
+    });
 
     // Return success response
     return NextResponse.json(
