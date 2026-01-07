@@ -4,7 +4,7 @@ import Link from "next/link";
 const WhatsappIcon = () => {
   const whatsappNumber = "8660943328"; // Replace with your WhatsApp number
   const defaultMessage =
-    "Hi, I'm interested in hormone health support";
+    "Hi, I am interested in Sia Health's services";
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     defaultMessage
