@@ -4,6 +4,7 @@ import React from "react";
 import { Merriweather } from "next/font/google";
 import "../../styles/landingPage.css";
 import { MoveRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ const merriweather = Merriweather({
 // Define form validation schema
 
 export default function ApproachV2() {
+  const router = useRouter();
   return (
     <section
       className={"approach-v2-container Helvetica "}
@@ -121,7 +123,7 @@ export default function ApproachV2() {
         {/* Hormone Test Button - Moved to Bottom */}
         <div className="flex flex-col items-center justify-center w-full mt-5 sm:mt-8 gap-3 1hidden">
           <button
-            // onClick={() => router.push("https://quiz.siahealth.in")}
+            onClick={() => router.push("https://quiz.siahealth.in")}
             className={`1px-10 sm:w-auto justify-center w-full sm:px-5 py-3 rounded-sm flex gap-2 items-center font-bold text-[#662b00] border-[#FF7E29] border-1 text-sm sm:text-base hover:bg-[#ffe4d3] hover:scale-105 transition-all duration-300 hover:shadow-xl `}
           >
             Take the 2-minute hormone test <MoveRight></MoveRight>
